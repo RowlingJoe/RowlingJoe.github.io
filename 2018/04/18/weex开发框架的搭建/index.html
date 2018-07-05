@@ -16,7 +16,7 @@
 <meta property="og:description" content="body {   max-width: 980px;   border: 1px solid #ddd;   outline: 1300px solid #fff;   margin: 16px auto; }  body .markdown-body {   padding: 45px; }  @font-face {   font-family: fontawesome-mini;   sr">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328">
-<meta property="og:updated_time" content="2018-04-18T03:24:48.701Z">
+<meta property="og:updated_time" content="2018-04-18T05:34:38.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="周乐林的博客">
 <meta name="twitter:description" content="body {   max-width: 980px;   border: 1px solid #ddd;   outline: 1300px solid #fff;   margin: 16px auto; }  body .markdown-body {   padding: 45px; }  @font-face {   font-family: fontawesome-mini;   sr">
@@ -1173,41 +1173,47 @@ body .markdown-body
 </style><title>weex开发框架的搭建</title></head><body><article class="markdown-body"><div class="toc">
 <ul>
 <li><a href="#weex">weex的简单上手</a></li>
-<li><a href="#_1">最终工程目录</a></li>
 </ul>
 </div>
-<h1 id="weex"><a name="user-content-weex" href="#weex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>weex的简单上手</h1>
+<h2 id="weex"><a name="user-content-weex" href="#weex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>weex的简单上手</h2>
+<blockquote>
+<p>为了能在本地机器上打开 Android 和 iOS 项目，应该配置好客户端的开发环境。<br>
+对于 iOS，你应该安装并且配置好 Xcode。<br>
+对于 Android，首先Java环境使用java8版本，你应该安装并且配置好 Android Studio。</p>
+</blockquote>
 <ol>
 <li>参考文档 <a href="https://weex.apache.org/cn/guide/" target="_blank" rel="noopener">weex开发文档</a></li>
-<li>安装weex-toolkit<br>
+<li>安装weex-toolkit 需要npm 5.0以上；如若不是请首先升级npm<br>
     <pre><code class="javascript"> npm install weex-toolkit -g
  //升级weexpack
  weex update weexpack@1.2.1
 </code></pre></li>
 <li>创建项目<br>
-    <pre><code class="javascript">weex create helloWorld
+    <pre><code class="javascript">weex create helloWeex
 </code></pre></li>
 <li>进入项目并安装依赖运行<br>
-    <pre><code class="javascript">cd helloWorld
+    <pre><code class="javascript">cd helloWeex
 npm install
 npm start
 </code></pre></li>
 <li>添加IOS或Android平台<br>
     <pre><code class="javascript">weex platform add android
+weex platform add ios
 </code></pre></li>
 <li>编译运行<blockquote>
-<p>为了能在本地机器上打开 Android 和 iOS 项目，应该配置好客户端的开发环境。对于 iOS，你应该安装并且配置好 Xcode。对于 Android，你应该安装并且配置好 Android Studio。当开发环境准备就绪后，运行下面的命令，可以在模拟器或真实设备上启动应用：<br>
+<p>当开发环境准备就绪后，运行下面的命令，可以在模拟器或真实设备上启动应用：<br>
 <pre><code class="javascript">weex run android
 </code></pre></p>
 </blockquote>
 </li>
-</ol>
-<h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>最终工程目录</h1>
-<p><img alt="工程目录" src="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328"></p>
-<ol>
-<li>启动图标以及启动图的修改<br>
-<a href="http://liuguixue.com/15125784694068.html" target="_blank" rel="noopener">weex启动图的修改</a><br>
-目录Android/app/src/main/</li>
+<li>启动图标以及启动图的修改<blockquote>
+<p><a href="http://liuguixue.com/15125784694068.html" target="_blank" rel="noopener">weex启动图的修改</a><br>
+    目录Android/app/src/main/</p>
+</blockquote>
+</li>
+<li>weex原生功能插件<a href="http://natjs.com/#/" target="_blank" rel="noopener">插件市场</a></li>
+<li>最终工程目录<br>
+<img alt="工程目录" src="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328"></li>
 </ol></article></body></html>
       
 
@@ -1310,6 +1316,15 @@ npm start
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/07/05/空间留言板自动留言/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          空间留言板自动留言
+        
+      </div>
+    </a>
   
   
     <a href="/2018/04/17/weex开发框架的搭建/" id="article-nav-older" class="article-nav-link-wrap">

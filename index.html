@@ -144,6 +144,57 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-空间留言板自动留言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/05/空间留言板自动留言/">空间留言板自动留言</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/05/空间留言板自动留言/" class="archive-article-date">
+  	<time datetime="2018-07-05T05:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以前那谁要我给她空间留言；觉得很烦；鉴于此；就如此操作了；当然此数组有点过大了；而且是死的，可以通过聚合api等接口获取数据，写入也是可以的；简单的替换一下<br>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/05/空间留言板自动留言/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-weex开发框架的搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1169,41 +1220,47 @@ body .markdown-body
 </style><title>weex开发框架的搭建</title></head><body><article class="markdown-body"><div class="toc">
 <ul>
 <li><a href="#weex">weex的简单上手</a></li>
-<li><a href="#_1">最终工程目录</a></li>
 </ul>
 </div>
-<h1 id="weex"><a name="user-content-weex" href="#weex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>weex的简单上手</h1>
+<h2 id="weex"><a name="user-content-weex" href="#weex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>weex的简单上手</h2>
+<blockquote>
+<p>为了能在本地机器上打开 Android 和 iOS 项目，应该配置好客户端的开发环境。<br>
+对于 iOS，你应该安装并且配置好 Xcode。<br>
+对于 Android，首先Java环境使用java8版本，你应该安装并且配置好 Android Studio。</p>
+</blockquote>
 <ol>
 <li>参考文档 <a href="https://weex.apache.org/cn/guide/" target="_blank" rel="noopener">weex开发文档</a></li>
-<li>安装weex-toolkit<br>
+<li>安装weex-toolkit 需要npm 5.0以上；如若不是请首先升级npm<br>
     <pre><code class="javascript"> npm install weex-toolkit -g
  //升级weexpack
  weex update weexpack@1.2.1
 </code></pre></li>
 <li>创建项目<br>
-    <pre><code class="javascript">weex create helloWorld
+    <pre><code class="javascript">weex create helloWeex
 </code></pre></li>
 <li>进入项目并安装依赖运行<br>
-    <pre><code class="javascript">cd helloWorld
+    <pre><code class="javascript">cd helloWeex
 npm install
 npm start
 </code></pre></li>
 <li>添加IOS或Android平台<br>
     <pre><code class="javascript">weex platform add android
+weex platform add ios
 </code></pre></li>
 <li>编译运行<blockquote>
-<p>为了能在本地机器上打开 Android 和 iOS 项目，应该配置好客户端的开发环境。对于 iOS，你应该安装并且配置好 Xcode。对于 Android，你应该安装并且配置好 Android Studio。当开发环境准备就绪后，运行下面的命令，可以在模拟器或真实设备上启动应用：<br>
+<p>当开发环境准备就绪后，运行下面的命令，可以在模拟器或真实设备上启动应用：<br>
 <pre><code class="javascript">weex run android
 </code></pre></p>
 </blockquote>
 </li>
-</ol>
-<h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>最终工程目录</h1>
-<p><img alt="工程目录" src="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328"></p>
-<ol>
-<li>启动图标以及启动图的修改<br>
-<a href="http://liuguixue.com/15125784694068.html" target="_blank" rel="noopener">weex启动图的修改</a><br>
-目录Android/app/src/main/</li>
+<li>启动图标以及启动图的修改<blockquote>
+<p><a href="http://liuguixue.com/15125784694068.html" target="_blank" rel="noopener">weex启动图的修改</a><br>
+    目录Android/app/src/main/</p>
+</blockquote>
+</li>
+<li>weex原生功能插件<a href="http://natjs.com/#/" target="_blank" rel="noopener">插件市场</a></li>
+<li>最终工程目录<br>
+<img alt="工程目录" src="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328"></li>
 </ol></article></body></html>
       
 
@@ -1255,30 +1312,36 @@ npm start
     <div class="article-entry" itemprop="articleBody">
       
         <p>[TOC]</p>
-<h1 id="weex的简单上手"><a href="#weex的简单上手" class="headerlink" title="weex的简单上手"></a>weex的简单上手</h1><ol>
+<h2 id="weex的简单上手"><a href="#weex的简单上手" class="headerlink" title="weex的简单上手"></a>weex的简单上手</h2><blockquote>
+<p>为了能在本地机器上打开 Android 和 iOS 项目，应该配置好客户端的开发环境。<br>对于 iOS，你应该安装并且配置好 Xcode。<br>对于 Android，首先Java环境使用java8版本，你应该安装并且配置好 Android Studio。</p>
+</blockquote>
+<ol>
 <li>参考文档 <a href="https://weex.apache.org/cn/guide/" target="_blank" rel="noopener">weex开发文档</a></li>
-<li><p>安装weex-toolkit</p>
+<li><p>安装weex-toolkit 需要npm 5.0以上；如若不是请首先升级npm</p>
  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install weex-toolkit -g</span><br><span class="line"><span class="comment">//升级weexpack</span></span><br><span class="line">weex update weexpack@<span class="number">1.2</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建项目</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weex create helloWorld</span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weex create helloWeex</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>进入项目并安装依赖运行</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd helloWorld</span><br><span class="line">npm install</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd helloWeex</span><br><span class="line">npm install</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>添加IOS或Android平台</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weex platform add android</span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">weex platform add android</span><br><span class="line">weex platform add ios</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>编译运行</p>
 <blockquote>
-<p>为了能在本地机器上打开 Android 和 iOS 项目，应该配置好客户端的开发环境。对于 iOS，你应该安装并且配置好 Xcode。对于 Android，你应该安装并且配置好 Android Studio。当开发环境准备就绪后，运行下面的命令，可以在模拟器或真实设备上启动应用：</p>
+<p>当开发环境准备就绪后，运行下面的命令，可以在模拟器或真实设备上启动应用：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weex run android</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-</ol>
-<h1 id="最终工程目录"><a href="#最终工程目录" class="headerlink" title="最终工程目录"></a>最终工程目录</h1><p><img src="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328" alt="工程目录"></p>
-<ol start="7">
-<li>启动图标以及启动图的修改<br><a href="http://liuguixue.com/15125784694068.html" target="_blank" rel="noopener">weex启动图的修改</a><br>目录Android/app/src/main/</li>
+<li><p>启动图标以及启动图的修改</p>
+<blockquote>
+<p>  <a href="http://liuguixue.com/15125784694068.html" target="_blank" rel="noopener">weex启动图的修改</a><br> 目录Android/app/src/main/</p>
+</blockquote>
+</li>
+<li>weex原生功能插件<a href="http://natjs.com/#/" target="_blank" rel="noopener">插件市场</a></li>
+<li>最终工程目录<br><img src="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328" alt="工程目录"></li>
 </ol>
 
       
@@ -1708,68 +1771,6 @@ npm start
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/11/10/利用Node快速搭建一个文件发送服务器/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-node中的JavaScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/02/node中的JavaScript/">node中的JavaScript</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/02/node中的JavaScript/" class="archive-article-date">
-  	<time datetime="2016-11-02T13:11:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Node 是一个平台，Node 是一个框架，基于 Ecmascript 语言，在这个平台（或者说框架）之上<br>给 Ecmascript 提供了很多操作系统级别的编程接口。做 Node 编程实际上就是通过 Ecmascript、Node平台内置的核心模块、第三方社区提供的模块构建高度模块化的程序。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/02/node中的JavaScript/">展开全文 >></a>
         </p>
       
 
