@@ -8,14 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>微信扫码登录pc网站 | 周乐林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="根据微信资源中心api提供一个链接，链接url里包括这些信息 | 参数      | 是否必须           | 描述  | | ------------- |:-------------:| -----:| | appid           |  是       |     应用唯一标识；每个公众号都有的 | | redirect_uri  |  是         |  重定向的u">
+<meta property="og:type" content="article">
 <meta property="og:title" content="微信扫码登录pc网站">
 <meta property="og:url" content="http://yoursite.com/2018/04/01/微信扫码登录pc网站/index.html">
 <meta property="og:site_name" content="周乐林的博客">
+<meta property="og:description" content="根据微信资源中心api提供一个链接，链接url里包括这些信息 | 参数      | 是否必须           | 描述  | | ------------- |:-------------:| -----:| | appid           |  是       |     应用唯一标识；每个公众号都有的 | | redirect_uri  |  是         |  重定向的u">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-01T12:16:21.182Z">
+<meta property="og:updated_time" content="2018-07-10T07:06:53.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信扫码登录pc网站">
+<meta name="twitter:description" content="根据微信资源中心api提供一个链接，链接url里包括这些信息 | 参数      | 是否必须           | 描述  | | ------------- |:-------------:| -----:| | appid           |  是       |     应用唯一标识；每个公众号都有的 | | redirect_uri  |  是         |  重定向的u">
   
     <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
   
@@ -163,7 +166,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><--more--></--more--></p>
+<ol>
+<li>根据微信资源中心<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">api</a><pre><code>提供一个链接，链接url里包括这些信息
+| 参数      | 是否必须           | 描述  |
+| ------------- |:-------------:| -----:|
+| appid           |  是       |     应用唯一标识；每个公众号都有的 |
+| redirect_uri  |  是         |  重定向的url地址；必须在微信公众号的安全域下，且需要进行urlEncode加密 |
+| response_type |  是         |  填code |
+| scope            |  是       | 应用授权作用域，拥有多个作用域用逗号（,）分隔，网页应用目前仅填写snsapi_login即可     |
+| state            |  否      |    用于保持请求和回调的状态，授权请求后原样带回给第三方。该参数可用于防止csrf攻击（跨站请求伪造攻击），建议第三方带上该参数，可设置为简单的随机数加session进行校验    |
+</code></pre> 本来想跳到我们的<a href="http://web.li-shang-bin.com/#/login页面的；但发现微信识别不了#" target="_blank" rel="noopener">http://web.li-shang-bin.com/#/login页面的；但发现微信识别不了#</a><br> 此处我们的项目填写的url是<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;</a><br> appid:wxc649fbdaa41fc636<br> redirect_uri:<a href="http://web.li-shang-bin.com" target="_blank" rel="noopener">http://web.li-shang-bin.com</a>;<br> 用户点击此链接后会跳到一个二维码界面<ol start="2">
+<li>用户扫面二维码界面并点击确定后则跳到redirec_uri定义的url里并且把code（后台可以通过code获取用户的openid及昵称等信息）带过来形成<br> redirec_uri?code=<strong><em>**</em></strong>&amp;state=***;此处我们还没用到state只用了code</li>
+<li>在此页面通过解析页面的url获取到code<pre><code class="javascript"><span class="comment">//可以用此方法解析url</span>
+getUrlVars(url) {
+         <span class="keyword">var</span> hash;
+         <span class="keyword">var</span> myJson = {};
+         <span class="keyword">var</span> hashes = url.slice(url.indexOf(<span class="string">'?'</span>) + <span class="number">1</span>).split(<span class="string">'&amp;'</span>);
+         <span class="keyword">var</span> arr=[];
+         <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; hashes.length; i++) {
+             hash = hashes[i].split(<span class="string">'='</span>);
+             <span class="keyword">if</span>(myJson.hasOwnProperty(hash[<span class="number">0</span>])){
+                 myJson[hash[<span class="number">0</span>]]=myJson[hash[<span class="number">0</span>]]+<span class="string">','</span>+hash[<span class="number">1</span>]
+             }<span class="keyword">else</span>{
+                 myJson[hash[<span class="number">0</span>]] = hash[<span class="number">1</span>]                        
+             }
+         }
+         <span class="keyword">return</span> myJson;
+     }
+</code></pre>
+将code传给后台让他获取用户的信息获取信息后后台分以下几步<ol>
+<li>获取了用户的openid；从数据根据openid查找看是否有此用户；<br> 如果没有没有返回给前端false(0)；让其跳到注册页面，并把openid，等信息页传递过去；前端存在缓存里<pre><code>此时用户注册会在基础注册上增加openid等信息；完成用户和微信的绑定；然后删除缓存
+</code></pre> 如果有，将查询到的用户信息返回给前端，前端完成登录</li>
+<li>跳到个人信息页的问题；<br> 开始用的是路由跳转router.push的方法跳转到用户信息页；但发现此方法会在url?code=<em>**</em>&amp;state=后面追加相关路由；<br> 然后改用window.location.href=‘你想跳的页面url’；但也还是在后面继续追加；具体原因依然不明<br> 现在使用的是window.open(‘你想跳的页面url’,’_self’)使其跳转<br>至此登录完成；</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
       
 
       
