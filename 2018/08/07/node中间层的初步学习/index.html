@@ -15,13 +15,14 @@
 <meta property="og:site_name" content="周乐林的博客">
 <meta property="og:description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://img-blog.csdn.net/20151214135841733">
-<meta property="og:image" content="https://img-blog.csdn.net/20151214140006300">
-<meta property="og:updated_time" content="2018-08-07T07:33:08.208Z">
+<meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/content.png?raw=true">
+<meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140006300.png?raw=true">
+<meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140614959.png?raw=true">
+<meta property="og:updated_time" content="2018-08-07T09:41:42.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node中间层的初步学习">
 <meta name="twitter:description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
-<meta name="twitter:image" content="https://img-blog.csdn.net/20151214135841733">
+<meta name="twitter:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/content.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
   
@@ -196,9 +197,27 @@
 </blockquote>
 <h2 id="怎么做前后端分离"><a href="#怎么做前后端分离" class="headerlink" title="怎么做前后端分离"></a>怎么做前后端分离</h2><p>前端：负责View和Controller层<br>后端：负责Model层，业务处理/数据等</p>
 <blockquote>
-<p><img src="https://img-blog.csdn.net/20151214135841733" alt="架构图片"><br>试想一下，如果前端掌握了Controller，我们可以做url design，我们可以根据场景决定在服务端同步渲染，还是根据view层输出json数据，我们还可以根据表现层需求很容易的做Bigpipe,Conet，Socket等等，完全是需求决定开发方式</p>
+<p><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/content.png?raw=true" alt="架构图片"><br>试想一下，如果前端掌握了Controller，我们可以做url design，我们可以根据场景决定在服务端同步渲染，还是根据view层输出json数据，我们还可以根据表现层需求很容易的做Bigpipe,Conet，Socket等等，完全是需求决定开发方式</p>
 </blockquote>
-<h1 id="基于NodeJS全栈式开发"><a href="#基于NodeJS全栈式开发" class="headerlink" title="基于NodeJS全栈式开发"></a>基于NodeJS全栈式开发</h1><p><img src="https://img-blog.csdn.net/20151214140006300" alt="前后端分层图"><br>按图上理解前端做UI层的界面开发，</p>
+<h1 id="基于NodeJS全栈式开发"><a href="#基于NodeJS全栈式开发" class="headerlink" title="基于NodeJS全栈式开发"></a>基于NodeJS全栈式开发</h1><p><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140006300.png?raw=true" alt="前后端分层图"><br>按图上理解前端做UI层的界面开发，同伙Node中间层进行转发后台服务</p>
+<h2 id="为什么要增加一层NodeJS？"><a href="#为什么要增加一层NodeJS？" class="headerlink" title="为什么要增加一层NodeJS？"></a>为什么要增加一层NodeJS？</h2><p>现阶段我们主要以后端MVC的模式进行开发，这种模式严重阻碍了前端开发效率，也让后端不能专注于业务开发。<br>解决方案是让前端能控制Controller层，但是如果在现有技术体系下很那做到，因为不可能让所有前端都学Java，安装后端的开发环境，写VM。<br>NodeJS就能很好的解决这个问题，我们无需学习一门新的语言，就能做到以前开发帮我们做的事情，一切都显得那么自然</p>
+<h2 id="性能问题"><a href="#性能问题" class="headerlink" title="性能问题"></a>性能问题</h2><p>分层就涉及每层之间的通讯，肯定会有一定的性能损耗，但是合理的分层能让职责清晰，也方便协作，会大大提高开发效率。分层带来的损失一定能在其他方面的收益弥补回来。另外，一旦决定分层，我们可以通过优化通讯方式、通讯协议，尽可能把损耗降到最低<br>举个例子：</p>
+<blockquote>
+<p>淘宝宝贝详情页静态化之后，还是有不少需要实时获取的信息，比如物流、促销等等，因为这些信息在不同业务系统中，所以需要前端发送5，6个异步请求来回填这些内容。<br>有了NodeJS之后，前端可以在NodeJS中去代理这5个异步请求，还能很容易的做Bigpipe，这块的优化能让整个渲染效率提升很多，<br>可能在PC上发5，6个异步请求也没什么，但是在无线端，在客户手机上建立一个HTTP请求开销很大，有了这个优化，性能一下提升好几倍</p>
+</blockquote>
+<h2 id="前端的工作量是否增加了"><a href="#前端的工作量是否增加了" class="headerlink" title="前端的工作量是否增加了"></a>前端的工作量是否增加了</h2><p>相对于只切页面，做demo，肯定是增加了一点，但是总体开发效率会提升很多。</p>
+<h2 id="淘宝基于Node的前后端分离"><a href="#淘宝基于Node的前后端分离" class="headerlink" title="淘宝基于Node的前后端分离"></a>淘宝基于Node的前后端分离</h2><p><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140614959.png?raw=true" alt="淘宝架构"></p>
+<ul>
+<li>最上端是服务端，就是我们常说的后端。后端对于我们来说，就是一个接口的集合，服务端提供各种各样的借口供我们使用。因为有Node层，也不用局限于什么形式的服务。对于后端来说，他们只用关心业务代码的接口实现</li>
+<li>服务端下面是Node应用</li>
+<li>Node应用中有一层Model Proxy与服务端进行通讯。这一层主要目前是抹平我们对不同接口的调用方式，封装一些view层需要的Model</li>
+<li>Node层还能轻松实现原来的vmcommon,tms（引用淘宝内容管理系统）等需求</li>
+<li>Node层要使用什么框架有开发者自己决定，不过推荐使用express+xTemplate的组合，xTemplate能做到前后端公用</li>
+<li>我们可以使用Node轻松实现我们想要的输出方式：JSON/JSONP/RESTful/HTML/BigPipe/Comet/Socket</li>
+<li>浏览器层在我们这个架构中没有变化，也不希望因为引入Node改变你以前在浏览器开发中的认知</li>
+<li>引入Node，只是把本该前端控制的部分交由前端掌控</li>
+</ul>
+<p><a href="http://2014.jsconf.cn/slides/herman-taobaoweb/index.html#/" target="_blank" rel="noopener">淘宝前后端分离实践️</a></p>
 
       
 
