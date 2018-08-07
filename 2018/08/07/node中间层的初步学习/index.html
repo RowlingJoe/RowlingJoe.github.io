@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 周乐林的博客</title>
+  <title>node中间层的初步学习 | 周乐林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="周乐林的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+  <meta name="description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node中间层的初步学习">
+<meta property="og:url" content="http://yoursite.com/2018/08/07/node中间层的初步学习/index.html">
 <meta property="og:site_name" content="周乐林的博客">
+<meta property="og:description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://img-blog.csdn.net/20151214135841733">
+<meta property="og:image" content="https://img-blog.csdn.net/20151214140006300">
+<meta property="og:updated_time" content="2018-08-07T07:33:08.208Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="周乐林的博客">
+<meta name="twitter:title" content="node中间层的初步学习">
+<meta name="twitter:description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20151214135841733">
   
     <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
   
@@ -142,258 +149,204 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-node中间层的初步学习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      node中间层的初步学习
+    </h1>
+  
+
+        
+        <a href="/2018/08/07/node中间层的初步学习/" class="archive-article-date">
+  	<time datetime="2018-08-07T04:53:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下<br><a id="more"></a></p>
+<h1 id="什么是前后端分离"><a href="#什么是前后端分离" class="headerlink" title="什么是前后端分离"></a>什么是前后端分离</h1><blockquote>
+<p>   大家一致认同的前后端分离的例子就是SPA(Single-page application),所有用到的展现<br>数据都是后端通过异步接口(AJAX)的方式提供，前端进行解析呈现。<br>从某种意义上来说，SPA确实做到了前后端分离，但这种方式存在一些问题</p>
+<ul>
+<li>WEB服务中SPA类占的比例很少。很多场景下还有同步/同步+异步混合的模式，SPA不能作为一种通用的解决方案</li>
+<li>现阶段的SPA开发模式接口通常是按照展现逻辑来提供的，有时候为了提高效率，后端会帮我们处理一些展现逻辑，这就意味着后端还涉足了View层的工作，不是真正的前后端分离</li>
+<li>SPA的单页应用由于页面都是通过js来实现的，因此对SEO并不是很友好</li>
+<li>再由于其生成的JS文件等都比较大，因此也会导致首页加载缓慢</li>
+</ul>
+</blockquote>
+<p>SPA式的前后端分离的，是从物理层作区分(认为只要是客户端的就是前端，服务器的就是后端)，<br>这种分法已经无法满足我们前后端分离的需求，我们认为从职责上划分才能满足我们的使用场景</p>
+<ul>
+<li>前端： 负责View和Controller层</li>
+<li>后端： 只负责Model层，业务处理/数据等</li>
+</ul>
+<h1 id="为什么要前后端分离"><a href="#为什么要前后端分离" class="headerlink" title="为什么要前后端分离"></a>为什么要前后端分离</h1><h2 id="现有开发模式的使用场景"><a href="#现有开发模式的使用场景" class="headerlink" title="现有开发模式的使用场景"></a>现有开发模式的使用场景</h2><blockquote>
+<p>不同的开发模式各有各的适用场景，没有哪一种完全取代另外一种</p>
+<ul>
+<li>比如后端为主的MVC，做一些同步展现的业务效率高，但是遇到同步异步结合的页面，与后端开发沟通会比较麻烦</li>
+<li>Ajax为主的SPA型开发模式，比较适合APP类型的场景，但是只适合做APP，因为SEO等问题不好解决，对于很多类型的系统，这种开发方式也过重</li>
+</ul>
+</blockquote>
+<h2 id="对前端发挥的局限"><a href="#对前端发挥的局限" class="headerlink" title="对前端发挥的局限"></a>对前端发挥的局限</h2><blockquote>
+<p>性能优化如果只在前端做空间非常有限，于是我们经常需要后端合作才能碰撞出火花，但由于后端框架的限制，我们很难使用Comet、Bigpipe等技术方案来优化性能。</p>
+</blockquote>
+<h2 id="怎么做前后端分离"><a href="#怎么做前后端分离" class="headerlink" title="怎么做前后端分离"></a>怎么做前后端分离</h2><p>前端：负责View和Controller层<br>后端：负责Model层，业务处理/数据等</p>
+<blockquote>
+<p><img src="https://img-blog.csdn.net/20151214135841733" alt="架构图片"><br>试想一下，如果前端掌握了Controller，我们可以做url design，我们可以根据场景决定在服务端同步渲染，还是根据view层输出json数据，我们还可以根据表现层需求很容易的做Bigpipe,Conet，Socket等等，完全是需求决定开发方式</p>
+</blockquote>
+<h1 id="基于NodeJS全栈式开发"><a href="#基于NodeJS全栈式开发" class="headerlink" title="基于NodeJS全栈式开发"></a>基于NodeJS全栈式开发</h1><p><img src="https://img-blog.csdn.net/20151214140006300" alt="前后端分层图"><br>按图上理解前端做UI层的界面开发，</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你的每一次打赏是我创作的动力！谢谢！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/5882b2b7d0a20cf4dd8ab77b7f094b36acaf9978.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2f738bd4b31c87012fa3fb422e7f9e2f0708ff79.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/17/关于SEO的那些事儿/" class="archive-article-date">
-  	<time datetime="2016-02-17T01:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/17/关于SEO的那些事儿/">关于SEO的那些事儿</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/01/01/闭包/" class="archive-article-date">
-  	<time datetime="2016-01-01T03:42:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/01/闭包/">闭包</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/12/13/HTML、XHTML、XML/" class="archive-article-date">
-  	<time datetime="2015-12-13T06:42:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/12/13/HTML、XHTML、XML/">HTML、XHTML、XML</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/08/07/node中间层的初步学习/" alt="微信分享二维码">
+    </div>
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/11/Ajax学习/" class="archive-article-date">
-  	<time datetime="2015-04-11T03:16:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/11/Ajax学习/">Ajax学习</a>
-    </h1>
+    <a href="/2018/08/07/node中间层的初步学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/05/更新config-yml/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">更新config.yml</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="node中间层的初步学习" data-title="node中间层的初步学习" data-url="http://yoursite.com/2018/08/07/node中间层的初步学习/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/02/08/博客的基本使用指南/" class="archive-article-date">
-  	<time datetime="2015-02-08T11:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-02-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/02/08/博客的基本使用指南/">博客的基本使用指南</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/02/08/CSS3的使用/" class="archive-article-date">
-  	<time datetime="2015-02-08T11:28:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-02-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/02/08/CSS3的使用/">CSS3的使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/02/07/MarkDown的书写规则/" class="archive-article-date">
-  	<time datetime="2015-02-07T08:44:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-02-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/02/07/MarkDown的书写规则/">MarkDown的书写规则</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
-  
 
 
           </div>
@@ -416,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
