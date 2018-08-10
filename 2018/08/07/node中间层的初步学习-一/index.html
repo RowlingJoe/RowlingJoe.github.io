@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>周乐林的博客</title>
+  <title>node中间层的初步学习(一) | 周乐林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="周乐林的博客">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node中间层的初步学习(一)">
+<meta property="og:url" content="http://yoursite.com/2018/08/07/node中间层的初步学习-一/index.html">
 <meta property="og:site_name" content="周乐林的博客">
+<meta property="og:description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/content.png?raw=true">
+<meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140006300.png?raw=true">
+<meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140614959.png?raw=true">
+<meta property="og:updated_time" content="2018-08-07T09:48:09.564Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="周乐林的博客">
+<meta name="twitter:title" content="node中间层的初步学习(一)">
+<meta name="twitter:description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
+<meta name="twitter:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/content.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
   
@@ -142,35 +150,108 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-编码解码url解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-node中间层的初步学习-一" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/09/编码解码url解析/">&#39;编码解码url解析&#39;</a>
+    <h1 class="article-title" itemprop="name">
+      node中间层的初步学习(一)
     </h1>
   
 
         
-        <a href="/2017/07/09/编码解码url解析/" class="archive-article-date">
-  	<time datetime="2017-07-09T14:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
+        <a href="/2018/08/07/node中间层的初步学习-一/" class="archive-article-date">
+  	<time datetime="2018-08-07T04:53:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>encodeURI 用来编码URI<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br>escape 函数可对字符串进行编码，编码城十六进制，这样就可以在所有的计算机上读取该字符串。</p>
-<h2 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h2><p>decodeURI 用来解码URI<br>unescape 函数可对字符串进行解码，decodeURIComponent</p>
-<p>##　解析url<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">var arr= &#123;&quot;周乐林&quot;:98.00%, &quot;汪亦然&quot;:98.12%, &quot;江流儿&quot;:98.34%, &quot;张庆杰&quot;:19.98%, &quot;苏一&quot;:98.88%&#125;</span><br><span class="line">在index页面需将此arr传给另一页面server，</span><br><span class="line">通过接口获取到的数据arr</span><br><span class="line">var arr = out.data.arr; </span><br><span class="line">    console.log(JSON.stringify(arr))</span><br><span class="line">    //1. 用正则匹配属性值，去掉%</span><br><span class="line">    //2. 用正则匹配&quot;去掉它</span><br><span class="line">    //3. 用正则匹配,改成&#125;,&#123;形式</span><br><span class="line">    得到arr=&#123;周乐林:98.00&#125;,&#123; 汪亦然:98.12&#125;,&#123;江流儿:98.34&#125;,&#123;张庆杰:19.98&#125;,&#123;苏一:98.88&#125;</span><br><span class="line"></span><br><span class="line">    arr = JSON.stringify(arr).replace(/\&quot;(\d+\..\d+)%\&quot;/g, &quot;$1&quot;).replace(/\&quot;/g ,&quot;&quot;).replace(/,/g , &quot;&#125;,&#123;&quot;)                </span><br><span class="line">    $(&quot;.showRight&quot;).unbind().click(function()&#123;</span><br><span class="line">         window.location.href = &quot;praxisRankingList.aspx?arr=&quot;+arr+&quot;&amp;nums=&quot;+out.data.dataList.length+&quot;&amp;accuracys=&quot;+out.data.accuracys+&quot;&amp;takeParts=&quot;+out.data.takeParts</span><br><span class="line">        &#125;)               </span><br><span class="line"></span><br><span class="line">另一页面操作</span><br><span class="line">var data = getUrlVars(window.location.href) </span><br><span class="line">        //首先进行解码 </span><br><span class="line"></span><br><span class="line">        data.stuaccuracys=decodeURI(data.stuaccuracys);  </span><br><span class="line">        //再分割成数组</span><br><span class="line">        var arr = data.stuaccuracys.split(&quot;,&quot;)</span><br><span class="line">        //arr=[&#123;周乐林:98.90&#125;,&#123;汪亦然:98.12&#125;,&#123;江流儿:98.34&#125;,&#123;张庆杰:19.98&#125;,&#123;苏一:98.88&#125;]</span><br><span class="line">        //再将内部的中午属性值用&quot;&quot;包裹并利用JSON.parse进行解析为对象</span><br><span class="line">        for(let i=0; i&lt;arr.length; i++)&#123;        </span><br><span class="line">            arr[i]=JSON.parse(arr[i].replace(/&#123;(\W+):/g, &quot;&#123;\&quot;$1\&quot;:&quot;))</span><br><span class="line">            for(var k in arr[i])&#123;</span><br><span class="line">                arr[i][&quot;num&quot;]=arr[i][k]</span><br><span class="line">                arr[i][&quot;name&quot;]=k</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">//此方法可将url里的简直对解析成对象</span><br><span class="line"></span><br><span class="line">function getUrlVars(url) &#123;</span><br><span class="line">    var hash;</span><br><span class="line">    var myJson = &#123;&#125;;</span><br><span class="line">    var hashes = url.slice(url.indexOf(&apos;?&apos;) + 1).split(&apos;&amp;&apos;);</span><br><span class="line">    for (var i = 0; i &lt; hashes.length; i++) &#123;</span><br><span class="line">        hash = hashes[i].split(&apos;=&apos;);</span><br><span class="line">        myJson[hash[0]] = hash[1];</span><br><span class="line">    &#125;</span><br><span class="line">    return myJson;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>var arr是数组格式的字符串，可用eval(“(“+arr+”)”)转为数组</p>
+        <p>最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下<br><a id="more"></a></p>
+<h1 id="什么是前后端分离"><a href="#什么是前后端分离" class="headerlink" title="什么是前后端分离"></a>什么是前后端分离</h1><blockquote>
+<p>   大家一致认同的前后端分离的例子就是SPA(Single-page application),所有用到的展现<br>数据都是后端通过异步接口(AJAX)的方式提供，前端进行解析呈现。<br>从某种意义上来说，SPA确实做到了前后端分离，但这种方式存在一些问题</p>
+<ul>
+<li>WEB服务中SPA类占的比例很少。很多场景下还有同步/同步+异步混合的模式，SPA不能作为一种通用的解决方案</li>
+<li>现阶段的SPA开发模式接口通常是按照展现逻辑来提供的，有时候为了提高效率，后端会帮我们处理一些展现逻辑，这就意味着后端还涉足了View层的工作，不是真正的前后端分离</li>
+<li>SPA的单页应用由于页面都是通过js来实现的，因此对SEO并不是很友好</li>
+<li>再由于其生成的JS文件等都比较大，因此也会导致首页加载缓慢</li>
+</ul>
+</blockquote>
+<p>SPA式的前后端分离的，是从物理层作区分(认为只要是客户端的就是前端，服务器的就是后端)，<br>这种分法已经无法满足我们前后端分离的需求，我们认为从职责上划分才能满足我们的使用场景</p>
+<ul>
+<li>前端： 负责View和Controller层</li>
+<li>后端： 只负责Model层，业务处理/数据等</li>
+</ul>
+<h1 id="为什么要前后端分离"><a href="#为什么要前后端分离" class="headerlink" title="为什么要前后端分离"></a>为什么要前后端分离</h1><h2 id="现有开发模式的使用场景"><a href="#现有开发模式的使用场景" class="headerlink" title="现有开发模式的使用场景"></a>现有开发模式的使用场景</h2><blockquote>
+<p>不同的开发模式各有各的适用场景，没有哪一种完全取代另外一种</p>
+<ul>
+<li>比如后端为主的MVC，做一些同步展现的业务效率高，但是遇到同步异步结合的页面，与后端开发沟通会比较麻烦</li>
+<li>Ajax为主的SPA型开发模式，比较适合APP类型的场景，但是只适合做APP，因为SEO等问题不好解决，对于很多类型的系统，这种开发方式也过重</li>
+</ul>
+</blockquote>
+<h2 id="对前端发挥的局限"><a href="#对前端发挥的局限" class="headerlink" title="对前端发挥的局限"></a>对前端发挥的局限</h2><blockquote>
+<p>性能优化如果只在前端做空间非常有限，于是我们经常需要后端合作才能碰撞出火花，但由于后端框架的限制，我们很难使用Comet、Bigpipe等技术方案来优化性能。</p>
+</blockquote>
+<h2 id="怎么做前后端分离"><a href="#怎么做前后端分离" class="headerlink" title="怎么做前后端分离"></a>怎么做前后端分离</h2><p>前端：负责View和Controller层<br>后端：负责Model层，业务处理/数据等</p>
+<blockquote>
+<p><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/content.png?raw=true" alt="架构图片"><br>试想一下，如果前端掌握了Controller，我们可以做url design，我们可以根据场景决定在服务端同步渲染，还是根据view层输出json数据，我们还可以根据表现层需求很容易的做Bigpipe,Conet，Socket等等，完全是需求决定开发方式</p>
+</blockquote>
+<h1 id="基于NodeJS全栈式开发"><a href="#基于NodeJS全栈式开发" class="headerlink" title="基于NodeJS全栈式开发"></a>基于NodeJS全栈式开发</h1><p><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140006300.png?raw=true" alt="前后端分层图"><br>按图上理解前端做UI层的界面开发，同伙Node中间层进行转发后台服务</p>
+<h2 id="为什么要增加一层NodeJS？"><a href="#为什么要增加一层NodeJS？" class="headerlink" title="为什么要增加一层NodeJS？"></a>为什么要增加一层NodeJS？</h2><p>现阶段我们主要以后端MVC的模式进行开发，这种模式严重阻碍了前端开发效率，也让后端不能专注于业务开发。<br>解决方案是让前端能控制Controller层，但是如果在现有技术体系下很那做到，因为不可能让所有前端都学Java，安装后端的开发环境，写VM。<br>NodeJS就能很好的解决这个问题，我们无需学习一门新的语言，就能做到以前开发帮我们做的事情，一切都显得那么自然</p>
+<h2 id="性能问题"><a href="#性能问题" class="headerlink" title="性能问题"></a>性能问题</h2><p>分层就涉及每层之间的通讯，肯定会有一定的性能损耗，但是合理的分层能让职责清晰，也方便协作，会大大提高开发效率。分层带来的损失一定能在其他方面的收益弥补回来。另外，一旦决定分层，我们可以通过优化通讯方式、通讯协议，尽可能把损耗降到最低<br>举个例子：</p>
+<blockquote>
+<p>淘宝宝贝详情页静态化之后，还是有不少需要实时获取的信息，比如物流、促销等等，因为这些信息在不同业务系统中，所以需要前端发送5，6个异步请求来回填这些内容。<br>有了NodeJS之后，前端可以在NodeJS中去代理这5个异步请求，还能很容易的做Bigpipe，这块的优化能让整个渲染效率提升很多，<br>可能在PC上发5，6个异步请求也没什么，但是在无线端，在客户手机上建立一个HTTP请求开销很大，有了这个优化，性能一下提升好几倍</p>
+</blockquote>
+<h2 id="前端的工作量是否增加了"><a href="#前端的工作量是否增加了" class="headerlink" title="前端的工作量是否增加了"></a>前端的工作量是否增加了</h2><p>相对于只切页面，做demo，肯定是增加了一点，但是总体开发效率会提升很多。</p>
+<h2 id="淘宝基于Node的前后端分离"><a href="#淘宝基于Node的前后端分离" class="headerlink" title="淘宝基于Node的前后端分离"></a>淘宝基于Node的前后端分离</h2><p><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140614959.png?raw=true" alt="淘宝架构"></p>
+<ul>
+<li>最上端是服务端，就是我们常说的后端。后端对于我们来说，就是一个接口的集合，服务端提供各种各样的借口供我们使用。因为有Node层，也不用局限于什么形式的服务。对于后端来说，他们只用关心业务代码的接口实现</li>
+<li>服务端下面是Node应用</li>
+<li>Node应用中有一层Model Proxy与服务端进行通讯。这一层主要目前是抹平我们对不同接口的调用方式，封装一些view层需要的Model</li>
+<li>Node层还能轻松实现原来的vmcommon,tms（引用淘宝内容管理系统）等需求</li>
+<li>Node层要使用什么框架有开发者自己决定，不过推荐使用express+xTemplate的组合，xTemplate能做到前后端公用</li>
+<li>我们可以使用Node轻松实现我们想要的输出方式：JSON/JSONP/RESTful/HTML/BigPipe/Comet/Socket</li>
+<li>浏览器层在我们这个架构中没有变化，也不希望因为引入Node改变你以前在浏览器开发中的认知</li>
+<li>引入Node，只是把本该前端控制的部分交由前端掌控</li>
+</ul>
+<p><a href="http://2014.jsconf.cn/slides/herman-taobaoweb/index.html#/" target="_blank" rel="noopener">淘宝前后端分离实践️</a></p>
 
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你的每一次打赏是我创作的动力！谢谢！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/5882b2b7d0a20cf4dd8ab77b7f094b36acaf9978.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2f738bd4b31c87012fa3fb422e7f9e2f0708ff79.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -179,18 +260,83 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/09/编码解码url解析/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/08/07/node中间层的初步学习-一/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2018/08/07/node中间层的初步学习-二/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          node中间层的初步学习(二)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/05/更新config-yml/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">更新config.yml</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -198,542 +344,28 @@
 
 
   
-    <article id="post-git初学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/02/git初学习/">git初学习</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/02/git初学习/" class="archive-article-date">
-  	<time datetime="2017-03-02T13:11:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。  Git的读音为/gɪt/。<br>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux<br>内核开发而开发的一个开放源码的版本控制软件。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/02/git初学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="node中间层的初步学习-一" data-title="node中间层的初步学习(一)" data-url="http://yoursite.com/2018/08/07/node中间层的初步学习-一/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-缓存" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/01/缓存/">缓存</a>
-    </h1>
-  
 
-        
-        <a href="/2017/01/01/缓存/" class="archive-article-date">
-  	<time datetime="2017-01-01T07:38:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><p>将数据临时的存储起来以提高访问效率<br>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/01/缓存/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-利用Node快速搭建一个文件发送服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/10/利用Node快速搭建一个文件发送服务器/">利用Node快速搭建一个文件发送服务器</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/10/利用Node快速搭建一个文件发送服务器/" class="archive-article-date">
-  	<time datetime="2016-11-10T07:14:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-<h2 id="方法一：-使用-ecstatic包"><a href="#方法一：-使用-ecstatic包" class="headerlink" title="方法一： 使用 ecstatic包"></a>方法一： 使用 ecstatic包</h2><ol>
-<li>$ npm init -y  快速创建packjson文件</li>
-<li>$ npm install ecstatic -save  安装ecstatic包<!--more--></li>
-<li>新建一个app.js文件<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">var</span> ecstatic = <span class="built_in">require</span>(<span class="string">'ecstatic'</span>);</span><br><span class="line">http.createServer(</span><br><span class="line">  ecstatic(&#123; <span class="attr">root</span>: __dirname + <span class="string">'/public'</span> &#125;)</span><br><span class="line">).listen(<span class="number">8080</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Listening on :8080'</span>);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>使用express包辅助也可以<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> ecstatic = <span class="built_in">require</span>(<span class="string">'ecstatic'</span>);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(ecstatic(&#123; <span class="attr">root</span>: __dirname + <span class="string">'/public'</span> &#125;));</span><br><span class="line">http.createServer(app).listen(<span class="number">8080</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Listening on :8080'</span>);</span><br></pre></td></tr></table></figure></p>
-<ol start="4">
-<li>在此目录下新建一个public文件夹，将需要共享的文件放入次文件夹中</li>
-<li>$ nodemon app.js<h2 id="方法二：-使用http-server"><a href="#方法二：-使用http-server" class="headerlink" title="方法二： 使用http-server"></a>方法二： 使用http-server</h2></li>
-<li><p>全局安装http-server </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install http-server -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在需要通过服务器访问的文件或文件夹内打开命令台输入http-server</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http-server</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/10/利用Node快速搭建一个文件发送服务器/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-node中的JavaScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/02/node中的JavaScript/">node中的JavaScript</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/02/node中的JavaScript/" class="archive-article-date">
-  	<time datetime="2016-11-02T13:11:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Node 是一个平台，Node 是一个框架，基于 Ecmascript 语言，在这个平台（或者说框架）之上<br>给 Ecmascript 提供了很多操作系统级别的编程接口。做 Node 编程实际上就是通过 Ecmascript、Node平台内置的核心模块、第三方社区提供的模块构建高度模块化的程序。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/02/node中的JavaScript/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-node中常用的API" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/02/node中常用的API/">node中常用的API</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/02/node中常用的API/" class="archive-article-date">
-  	<time datetime="2016-11-02T13:00:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>   Node.js是一个Javascript运行环境(runtime)。实际上它是对Google V8引擎进行了封装。V8引 擎执行Javascript的速度非常快，性能非常好。Node.js对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动，非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行数据密集型的实时应用。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/02/node中常用的API/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Angular自学-从菜鸟教程到RowlingJoe" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/17/Angular自学-从菜鸟教程到RowlingJoe/">Angular自学:从菜鸟教程到RowlingJoe</a>
-    </h1>
-  
-
-        
-        <a href="/2016/10/17/Angular自学-从菜鸟教程到RowlingJoe/" class="archive-article-date">
-  	<time datetime="2016-10-17T00:55:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h1><blockquote>
-<p>Angular是一个由原生JS编写的JS框架，它扩展了HTML，是得HTML能通过一些新的属性和表达式来完成以前需要JS才能完成的效果，从而可以构建一个单一页面的应用程序，如非常知名的teambition<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/10/17/Angular自学-从菜鸟教程到RowlingJoe/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-ES6的学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/10/ES6的学习/">ES6的学习</a>
-    </h1>
-  
-
-        
-        <a href="/2016/09/10/ES6的学习/" class="archive-article-date">
-  	<time datetime="2016-09-10T12:50:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ECMAScript6"><a href="#ECMAScript6" class="headerlink" title="ECMAScript6"></a>ECMAScript6</h1>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/09/10/ES6的学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-express与mongoDB的配合使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/02/express与mongoDB的配合使用/">express与mongoDB的配合使用</a>
-    </h1>
-  
-
-        
-        <a href="/2016/07/02/express与mongoDB的配合使用/" class="archive-article-date">
-  	<time datetime="2016-07-02T13:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Express 是一个简洁而灵活的 node.js Web应用框架, 提供一系列强大特性帮助你创建各种Web应用。Express 不对 node.js 已有的特性进行二次抽象，我们只是在它之上扩展了Web应用所需的功能。丰富的HTTP工具以及来自Connect框架的中间件随取随用，创建强健、友好的API变得快速又简单<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/02/express与mongoDB的配合使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-主流跨域方法及原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/10/主流跨域方法及原理/">主流跨域方法及原理</a>
-    </h1>
-  
-
-        
-        <a href="/2016/06/10/主流跨域方法及原理/" class="archive-article-date">
-  	<time datetime="2016-06-10T12:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/10/主流跨域方法及原理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -755,8 +387,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

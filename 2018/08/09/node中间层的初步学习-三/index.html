@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>node中间层的初步学习(三) | 周乐林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="部署哪些内容？当前目录下的config\、middleware\、node_modules\、.babelrc、app.js、package.json这些文件及目录部署到node服务上npm run build 后生成的dist目录部署到web容器">
+  <meta name="description" content="模板的渲染及项目的部署上面讲到通过路由到达指定的模板并将数据传入给模板。以首页模板为例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node中间层的初步学习(三)">
 <meta property="og:url" content="http://yoursite.com/2018/08/09/node中间层的初步学习-三/index.html">
 <meta property="og:site_name" content="周乐林的博客">
-<meta property="og:description" content="部署哪些内容？当前目录下的config\、middleware\、node_modules\、.babelrc、app.js、package.json这些文件及目录部署到node服务上npm run build 后生成的dist目录部署到web容器">
+<meta property="og:description" content="模板的渲染及项目的部署上面讲到通过路由到达指定的模板并将数据传入给模板。以首页模板为例">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-09T02:55:55.612Z">
+<meta property="og:updated_time" content="2018-08-10T10:47:04.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node中间层的初步学习(三)">
-<meta name="twitter:description" content="部署哪些内容？当前目录下的config\、middleware\、node_modules\、.babelrc、app.js、package.json这些文件及目录部署到node服务上npm run build 后生成的dist目录部署到web容器">
+<meta name="twitter:description" content="模板的渲染及项目的部署上面讲到通过路由到达指定的模板并将数据传入给模板。以首页模板为例">
   
     <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
   
@@ -166,7 +166,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="部署哪些内容？"><a href="#部署哪些内容？" class="headerlink" title="部署哪些内容？"></a>部署哪些内容？</h2><p>当前目录下的config\、middleware\、node_modules\、.babelrc、app.js、package.json这些文件及目录部署到node服务上<br>npm run build 后生成的dist目录部署到web容器</p>
+        <h1 id="模板的渲染及项目的部署"><a href="#模板的渲染及项目的部署" class="headerlink" title="模板的渲染及项目的部署"></a>模板的渲染及项目的部署</h1><p>上面讲到通过路由到达指定的模板并将数据传入给模板。<br>以首页模板为例<br><a id="more"></a></p>
+<blockquote>
+<p>此处的引用路径皆为渲染后的文件路径<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">block links</span><br><span class="line">    link(rel='stylesheet' href='/Contents/index.css')</span><br><span class="line">block scripts</span><br><span class="line">    script(type='text/javascript', src='/Scripts/index.js')</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>紧接着是一些模板语法，pug模板会将此渲染成静态html页面<br> 这样客户端就能有完整的静态页面结构，且也不需要引入过大的js文件等，只需要本页面所需的一些js、css等文件资源。</p>
+</blockquote>
+<h1 id="部署哪些内容？"><a href="#部署哪些内容？" class="headerlink" title="部署哪些内容？"></a>部署哪些内容？</h1><p>当前目录下的config\、middleware\、node_modules\、.babelrc、app.js、package.json这些文件及目录部署到node服务上<br>npm run build 后生成的dist目录部署到web容器<br>至此一个简单的node中间层的服务项目即成功了<br>再次感谢@西兰 <a href="http://xilan.me/" target="_blank" rel="noopener">Keyon Y</a><br>仅此记录，日后真正生产项目使用或许还有其他的问题后续补充</p>
 
       
 
@@ -269,6 +276,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/08/10/从猫开始学习小程序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          从猫开始学习小程序
+        
+      </div>
+    </a>
   
   
     <a href="/2018/08/07/node中间层的初步学习-二/" id="article-nav-older" class="article-nav-link-wrap">
