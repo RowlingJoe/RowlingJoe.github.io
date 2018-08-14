@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/content.png?raw=true">
 <meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140006300.png?raw=true">
 <meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/20151214140614959.png?raw=true">
-<meta property="og:updated_time" content="2018-08-07T09:48:09.564Z">
+<meta property="og:updated_time" content="2018-08-13T06:57:18.686Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node中间层的初步学习(一)">
 <meta name="twitter:description" content="最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下">
@@ -177,14 +177,11 @@
 <li>WEB服务中SPA类占的比例很少。很多场景下还有同步/同步+异步混合的模式，SPA不能作为一种通用的解决方案</li>
 <li>现阶段的SPA开发模式接口通常是按照展现逻辑来提供的，有时候为了提高效率，后端会帮我们处理一些展现逻辑，这就意味着后端还涉足了View层的工作，不是真正的前后端分离</li>
 <li>SPA的单页应用由于页面都是通过js来实现的，因此对SEO并不是很友好</li>
-<li>再由于其生成的JS文件等都比较大，因此也会导致首页加载缓慢</li>
-</ul>
-</blockquote>
-<p>SPA式的前后端分离的，是从物理层作区分(认为只要是客户端的就是前端，服务器的就是后端)，<br>这种分法已经无法满足我们前后端分离的需求，我们认为从职责上划分才能满足我们的使用场景</p>
-<ul>
+<li>再由于其生成的JS文件等都比较大，因此也会导致首页加载缓慢<br><a href="https://blog.csdn.net/u011413061/article/details/50371930" target="_blank" rel="noopener">参考文章</a><br>SPA式的前后端分离的，是从物理层作区分(认为只要是客户端的就是前端，服务器的就是后端)，<br>这种分法已经无法满足我们前后端分离的需求，我们认为从职责上划分才能满足我们的使用场景</li>
 <li>前端： 负责View和Controller层</li>
 <li>后端： 只负责Model层，业务处理/数据等</li>
 </ul>
+</blockquote>
 <h1 id="为什么要前后端分离"><a href="#为什么要前后端分离" class="headerlink" title="为什么要前后端分离"></a>为什么要前后端分离</h1><h2 id="现有开发模式的使用场景"><a href="#现有开发模式的使用场景" class="headerlink" title="现有开发模式的使用场景"></a>现有开发模式的使用场景</h2><blockquote>
 <p>不同的开发模式各有各的适用场景，没有哪一种完全取代另外一种</p>
 <ul>
@@ -459,6 +456,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
