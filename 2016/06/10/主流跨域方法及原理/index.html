@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>主流跨域方法及原理 | 周乐林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是跨域？">
+  <meta name="description" content="什么是跨域？是指浏览器出于安全的考虑不允许执行其他网站的脚本代码，是有浏览器的同源策略造成，的，同源是指，域名，协议，端口均相同，不明白没关系，举个栗子12345678910http://www.123.com/index.html 调用 http://www.123.com/server.PHP （非跨域）http://www.123.com/index.html 调用 http://www.4">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="主流跨域方法及原理">
 <meta property="og:url" content="http://yoursite.com/2016/06/10/主流跨域方法及原理/index.html">
 <meta property="og:site_name" content="周乐林的博客">
-<meta property="og:description" content="什么是跨域？">
+<meta property="og:description" content="什么是跨域？是指浏览器出于安全的考虑不允许执行其他网站的脚本代码，是有浏览器的同源策略造成，的，同源是指，域名，协议，端口均相同，不明白没关系，举个栗子12345678910http://www.123.com/index.html 调用 http://www.123.com/server.PHP （非跨域）http://www.123.com/index.html 调用 http://www.4">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-03-09T13:41:22.000Z">
+<meta property="og:updated_time" content="2018-08-20T02:49:35.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="主流跨域方法及原理">
-<meta name="twitter:description" content="什么是跨域？">
+<meta name="twitter:description" content="什么是跨域？是指浏览器出于安全的考虑不允许执行其他网站的脚本代码，是有浏览器的同源策略造成，的，同源是指，域名，协议，端口均相同，不明白没关系，举个栗子12345678910http://www.123.com/index.html 调用 http://www.123.com/server.PHP （非跨域）http://www.123.com/index.html 调用 http://www.4">
   
     <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
   
@@ -167,8 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h2><a id="more"></a>
-<p>是指浏览器出于安全的考虑不允许执行其他网站的脚本代码，是有浏览器的同源策略造成，的，同源是指，域名，协议，端口均相同，不明白没关系，举个栗子<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//www.123.com/index.html 调用 http://www.123.com/server.PHP （非跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com/index.html 调用 http://www.456.com/server.php （主域名不同:123/456，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//abc.123.com/index.html 调用 http://def.123.com/server.php （子域名不同:abc/def，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com:8080/index.html 调用 http://www.123.com:8081/server.php （端口不同:8080/8081，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com/index.html 调用 https://www.123.com/server.php （协议不同:http/https，跨域）</span></span><br></pre></td></tr></table></figure></p>
+        <h2 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h2><p>是指浏览器出于安全的考虑不允许执行其他网站的脚本代码，是有浏览器的同源策略造成，的，同源是指，域名，协议，端口均相同，不明白没关系，举个栗子<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//www.123.com/index.html 调用 http://www.123.com/server.PHP （非跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com/index.html 调用 http://www.456.com/server.php （主域名不同:123/456，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//abc.123.com/index.html 调用 http://def.123.com/server.php （子域名不同:abc/def，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com:8080/index.html 调用 http://www.123.com:8081/server.php （端口不同:8080/8081，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com/index.html 调用 https://www.123.com/server.php （协议不同:http/https，跨域）</span></span><br><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure></p>
 <p>这些都是跨域。<br>但是有时我们又必须通过跨域获取数据，所以又开发出两种可以跨域的方法</p>
 <h2 id="Hack类跨域方案"><a href="#Hack类跨域方案" class="headerlink" title="Hack类跨域方案"></a>Hack类跨域方案</h2><h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><ul>
 <li>原理： script标签的src可以跨域，而且在跨域脚本中可以直接回调当前脚本的函数。</li>
@@ -624,10 +623,6 @@ Content-Type: text/html; charset=utf-8
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网络优化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作记录</a>
               </li>
             
             <div class="clearfix"></div>
