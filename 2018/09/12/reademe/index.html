@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>reademe | 周乐林的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[TOC] ###Welcome to use MarkDown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="reademe">
+<meta property="og:url" content="http://yoursite.com/2018/09/12/reademe/index.html">
+<meta property="og:site_name" content="周乐林的博客">
+<meta property="og:description" content="[TOC] ###Welcome to use MarkDown">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-07T08:48:27.813Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="reademe">
+<meta name="twitter:description" content="[TOC] ###Welcome to use MarkDown">
+  
+    <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://h.hiphotos.baidu.com/image/pic/item/91ef76c6a7efce1b9a23806ea651f3deb48f650d.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="data:image/png;base64,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" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Rowling Joe</a></h1>
+		</hgroup>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/RowlingJoe" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/3160803153/profile?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="data:image/png;base64,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" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">Rowling Joe</h1>
+			</hgroup>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/RowlingJoe" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/3160803153/profile?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-reademe" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      reademe
+    </h1>
+  
+
+        
+        <a href="/2018/09/12/reademe/" class="archive-article-date">
+  	<time datetime="2018-09-12T08:51:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<p>###Welcome to use MarkDown<br><a id="more"></a></p>
+<p>##　JS sort排序方法中的坑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">如果是一个对象数组，要根据对象中的某个属性值进行排序；在属性值相同的时候sort依然会改变素组顺序</span><br><span class="line">var arr=[</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    &#123;age:13,name:&apos;张三&apos;&#125;,</span><br><span class="line">    ]</span><br><span class="line">如果此时用arr.sort(function(x,y)&#123;return x.age-y.age&#125;)那么依然会改变arr的顺序</span><br><span class="line">可以使用归并排序法</span><br><span class="line">/**</span><br><span class="line"> * [归并排序]</span><br><span class="line"> * @param  &#123;[Array]&#125; arr   [要排序的数组]</span><br><span class="line"> * @param  &#123;[String]&#125; prop  [排序字段，用于数组成员是对象时，按照其某个属性进行排序，简单数组直接排序忽略此参数]</span><br><span class="line"> * @param  &#123;[String]&#125; order [排序方式 省略或asc为升序 否则降序]</span><br><span class="line"> * @return &#123;[Array]&#125;       [排序后数组，新数组，并非在原数组上的修改]</span><br><span class="line"> * @param 给数组原先添加此方法</span><br><span class="line"> */  </span><br><span class="line">var mergeSort =(function() &#123;</span><br><span class="line">    // 合并</span><br><span class="line">    var _merge = function(left, right, prop) &#123;   </span><br><span class="line">        var result = [];   </span><br><span class="line"></span><br><span class="line">        // 对数组内成员的某个属性排序</span><br><span class="line">        if (prop) &#123;   </span><br><span class="line">            while (left.length &amp;&amp; right.length) &#123;   </span><br><span class="line">                if (left[0][prop] &lt;= right[0][prop]) &#123;   </span><br><span class="line">                    result.push(left.shift());   </span><br><span class="line">                &#125; else &#123;   </span><br><span class="line">                    result.push(right.shift());   </span><br><span class="line">                &#125;   </span><br><span class="line">            &#125;   </span><br><span class="line">        &#125; else &#123;   </span><br><span class="line">            // 数组成员直接排序</span><br><span class="line">            while (left.length &amp;&amp; right.length) &#123;   </span><br><span class="line">                if (left[0] &lt;= right[0]) &#123;   </span><br><span class="line">                    result.push(left.shift());   </span><br><span class="line">                &#125; else &#123;   </span><br><span class="line">                    result.push(right.shift());   </span><br><span class="line">                &#125;   </span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;   </span><br><span class="line"></span><br><span class="line">        while (left.length)   </span><br><span class="line">            result.push(left.shift());   </span><br><span class="line"></span><br><span class="line">        while (right.length)   </span><br><span class="line">            result.push(right.shift());   </span><br><span class="line"></span><br><span class="line">        return result;   </span><br><span class="line">    &#125;;   </span><br><span class="line"></span><br><span class="line">    var _mergeSort = function(arr, prop) &#123; // 采用自上而下的递归方法</span><br><span class="line">        var len = arr.length;   </span><br><span class="line">        if (len &lt; 2) &#123;   </span><br><span class="line">            return arr;   </span><br><span class="line">        &#125;   </span><br><span class="line">        var middle = Math.floor(len / 2),   </span><br><span class="line">            left = arr.slice(0, middle),   </span><br><span class="line">            right = arr.slice(middle);   </span><br><span class="line">        return _merge(_mergeSort(left, prop), _mergeSort(right, prop), prop);   </span><br><span class="line">    &#125;;   </span><br><span class="line"></span><br><span class="line">    return function(arr, prop, order) &#123;   </span><br><span class="line">        var result = _mergeSort(arr, prop);   </span><br><span class="line">        if (!order || order.toLowerCase() === &apos;asc&apos;) &#123;   </span><br><span class="line">            // 升序</span><br><span class="line">            return result;   </span><br><span class="line">        &#125; else &#123;   </span><br><span class="line">            // 降序</span><br><span class="line">            var _ = [];   </span><br><span class="line">            result.forEach(function(item) &#123;   </span><br><span class="line">                _.unshift(item);   </span><br><span class="line">            &#125;);   </span><br><span class="line">            return _;   </span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;;   </span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<h2 id="visual-studio-打开aspx文件无法读取相对路径的静态文件，500错误"><a href="#visual-studio-打开aspx文件无法读取相对路径的静态文件，500错误" class="headerlink" title="visual studio 打开aspx文件无法读取相对路径的静态文件，500错误"></a>visual studio 打开aspx文件无法读取相对路径的静态文件，500错误</h2><blockquote>
+<p>将web.config中的staticContent下的重复代码删除或者注释即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;staticContent&gt;</span><br><span class="line">    &lt;!--&lt;mimeMap fileExtension=&quot;.less&quot; mimeType=&quot;text/css&quot; /&gt;--&gt;</span><br><span class="line">  &lt;/staticContent&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h2><p>decodeURIComponent(unescape(“%25e7%2594%25b5%25e8%25a7%2586”));<br>encodeURI   编码<br>decodeURI   解码<br>unescape(‘%3A’)<br>escape</p>
+<h1 id="WeChact"><a href="#WeChact" class="headerlink" title="WeChact"></a>WeChact</h1><ol>
+<li><p>开始公众号底部没有出现菜单？</p>
+<blockquote>
+<p>没有执行创建菜单的函数；在page_load里面执行以下解决</p>
+</blockquote>
+</li>
+<li><p>完成后出现scope无权限错误</p>
+<blockquote>
+<p>在测试账号下更改网页授权信息，添加回调域名</p>
+</blockquote>
+</li>
+<li><p>redirect_uri参数错误</p>
+<blockquote>
+<p>浏览器缓存导致的code错误</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="获取form表单里的各项数据"><a href="#获取form表单里的各项数据" class="headerlink" title="获取form表单里的各项数据"></a>获取form表单里的各项数据</h2><p>使用jquery的serialize获取到url然后使用getUrlVars方法将url可以解析为对象，在通过decodeURI对编码的汉字进行解码<br>$(“form”).submit(function(event) {<br>                event.preventDefault()<br>                var fields = $(“form”).serialize();<br>                var jsonStr = getUrlVars(fields)<br>                //这个就是你的得到的json对象然后$.ajax传过去<br>                for(var k in jsonStr) {<br>                    jsonStr[k] = decodeURI(jsonStr[k])<br>                }<br>                jsonStr = JSON.stringify(jsonStr)<br>    })<br>/**</p>
+<ul>
+<li>改进版即使url里有相同的key可以解析为以,隔开的字符串<br>*/<br>function getUrlVars(url) {<pre><code>    var hash;
+    var myJson = {};
+    var hashes = url.slice(url.indexOf(&apos;?&apos;) + 1).split(&apos;&amp;&apos;);
+    var arr=[];
+    for(var i = 0; i &lt; hashes.length; i++) {
+        hash = hashes[i].split(&apos;=&apos;);
+        if(myJson.hasOwnProperty(hash[0])){
+            myJson[hash[0]]=myJson[hash[0]]+&apos;,&apos;+hash[1]
+        }else{
+            myJson[hash[0]] = hash[1]                       
+        }
+    }
+    return myJson;
+}
+</code></pre></li>
+</ul>
+<h2 id="MUI的下拉加载"><a href="#MUI的下拉加载" class="headerlink" title="MUI的下拉加载"></a>MUI的下拉加载</h2><p>需在ajax的success函数里加上<br>mui(“#xj-list”).pullRefresh().endPullupToRefresh(false);<br>false为还有数据<br>true则会显示没有更多数据了</p>
+<h2 id="利用Android-Virtual-Device-AVD-构建一个安卓模拟器"><a href="#利用Android-Virtual-Device-AVD-构建一个安卓模拟器" class="headerlink" title="利用Android Virtual Device(AVD)构建一个安卓模拟器"></a>利用Android Virtual Device(AVD)构建一个安卓模拟器</h2><ol>
+<li>通过android SDK Manager 下载好对应安卓版本的System Image 解决在创建AVD时CPU/ABI一栏没有可以用的systen image</li>
+<li><a href="https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement" target="_blank" rel="noopener">https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement</a><br>在此网站下载HAXM并安装</li>
+</ol>
+<h2 id="保存canvas画布为图片，html2canvas-js插件"><a href="#保存canvas画布为图片，html2canvas-js插件" class="headerlink" title="保存canvas画布为图片，html2canvas.js插件"></a>保存canvas画布为图片，html2canvas.js插件</h2><h2 id="微信c-插件"><a href="#微信c-插件" class="headerlink" title="微信c#插件"></a>微信c#插件</h2><p>WeiXinMPSDK<br><a href="https://github.com/JeffreySu/WeiXinMPSDK/tree/master/src" target="_blank" rel="noopener">https://github.com/JeffreySu/WeiXinMPSDK/tree/master/src</a></p>
+<blockquote>
+<p>文能加载程序集<br>解决方法：打开项目属性；将生成改为.Net Framework4.5<br>将IIS 程序池设置启用32位应用程序设置为true</p>
+</blockquote>
+<p>window.onbeforeunload = function () {<br>        return “确认离开当前页面吗？未保存的数据将会丢失”;<br>    }</p>
+<h2 id="2017-8-9"><a href="#2017-8-9" class="headerlink" title="2017-8-9"></a>2017-8-9</h2><p>微信公众号接口invalid signature</p>
+<p><input type="file" capture="camera" accept="imeg/*,video/*"><br>XMLHttpRequest 上传进度和断点上传<br><a href="https://mp.weixin.qq.com/s/B660QfUd5TCurXXF2HDkDg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/B660QfUd5TCurXXF2HDkDg</a><br><a href="http://blog.163.com/zhuxun_why/blog/static/268139050201721663855329/" target="_blank" rel="noopener">http://blog.163.com/zhuxun_why/blog/static/268139050201721663855329/</a></p>
+<h2 id="字符串自动换行的问题-2017-8-23"><a href="#字符串自动换行的问题-2017-8-23" class="headerlink" title="字符串自动换行的问题 2017-8-23"></a>字符串自动换行的问题 2017-8-23</h2><p>当p标签碰到4836-1123445632156312.jpg;且p标签宽度一行放不够所有的字符的时候会以-为节点进行换行<br>解决方法则是给P标签增加属性    word-wrap: break-word;  word-break: break-all</p>
+<h2 id="2017-8-31"><a href="#2017-8-31" class="headerlink" title="2017-8-31"></a>2017-8-31</h2><p>快速扁平化一个数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr=[1,2,[3,4,[5,6,7]]]</span><br><span class="line">arr.join(&quot;,&quot;).split(&quot;,&quot;) ==[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;]</span><br></pre></td></tr></table></figure></p>
+<h2 id="2017-9-4"><a href="#2017-9-4" class="headerlink" title="2017-9-4"></a>2017-9-4</h2><ol>
+<li>微信公众号页面的输入框获得焦点会有请勿输入QQ号密码等的提示<br> 需在公众号设置里面添加业务域名即可</li>
+</ol>
+<h2 id="2017-9-5"><a href="#2017-9-5" class="headerlink" title="2017-9-5"></a>2017-9-5</h2><p>pad添加扫码插件：<br>方法1: <a href="http://blog.csdn.net/ecnu_df/article/details/50507075" target="_blank" rel="noopener">http://blog.csdn.net/ecnu_df/article/details/50507075</a><br>        按此方法来；并修改D:\RuYiClass\RuyiKetang17-8-25\platforms\android\assets\www\cordova_plugins.js里内容保持一致</p>
+<p>手机页面直接拨号或者发送短信<br>支持html5的浏览器<br>在web页面里面实现拨打电话的功能<br>2<br><a href="tel:139xxxxxxxx" target="_blank" rel="noopener">一键拨打号码</a><br><a href="sms:139xxxxxxx" target="_blank" rel="noopener">一键发送短信</a></p>
+<h2 id="2017-9-7"><a href="#2017-9-7" class="headerlink" title="2017-9-7"></a>2017-9-7</h2><p>Android App启动错误的问题（connection to the server was unsuccessful）<br>方法1：更新到PhoneGap的最新版本；<br>方法2：设置加载超时属性<br>super.setIntegerProperty(“loadUrlTimeoutValue”,10000);<br>完整代码如下（设置超时为 10 秒）</p>
+<p>@Override<br>publicvoid onCreate(Bundle savedInstanceState){<br>    super.onCreate(savedInstanceState);<br>    super.loadUrl(“file:///android_asset/www/home/index.html”);<br>    super.setIntegerProperty(“loadUrlTimeoutValue”,10000);</p>
+<p>方法3：改名法<br>把index.html更名为main.html，然后新建一个index.html页面，内容如下：<br>&lt;!doctype html&gt; <html> <head> <title>tittle</title> <script> window.location=’./main.html’; </script> </head><body> </body> </html></p>
+<h2 id="2017-9-13"><a href="#2017-9-13" class="headerlink" title="2017-9-13"></a>2017-9-13</h2><p>监听微信物理返回<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">if(window.history.length == 1) &#123; //判断是第一次从微信菜单进入页面</span><br><span class="line">    //写入空白历史记录  </span><br><span class="line">    pushHistory();</span><br><span class="line">&#125;</span><br><span class="line">//延时监听     </span><br><span class="line">/*setTimeout(function() &#123;</span><br><span class="line">    //监听物理返回按钮    </span><br><span class="line">    window.addEventListener(&quot;popstate&quot;, function(e) &#123;</span><br><span class="line">        mui.confirm(&apos;确认离开公众号？&apos;, &apos;您好&apos;, [&apos;确认&apos;, &apos;取消&apos;], function(e) &#123;</span><br><span class="line">            if(e.index == 0) &#123;</span><br><span class="line">                //调用微信浏览器私有API关闭浏览器  </span><br><span class="line">                WeixinJSBridge.call(&apos;closeWindow&apos;);</span><br><span class="line">                pushHistory();</span><br><span class="line">            &#125; else &#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;, false);</span><br><span class="line">&#125;, 300);*/</span><br><span class="line">    /**</span><br><span class="line"> * [pushHistory 写入空白历史记录]</span><br><span class="line"> * @author Rowling·Joe</span><br><span class="line"> * @version [V1.0版本]  </span><br><span class="line"> * @return &#123;[type]&#125; [description]</span><br><span class="line"> */</span><br><span class="line">function pushHistory() &#123;</span><br><span class="line">    var state = &#123;</span><br><span class="line">        title: &quot;title&quot;,</span><br><span class="line">        url: &quot;#&quot;</span><br><span class="line">    &#125;;</span><br><span class="line">    window.history.pushState(state, &quot;title&quot;, &quot;#&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="2017-9-26"><a href="#2017-9-26" class="headerlink" title="2017-9-26"></a>2017-9-26</h2> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> object1 = &#123;<span class="attr">x</span>:<span class="number">1</span>,<span class="attr">y</span>:<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> object2 = <span class="built_in">Object</span>.assign(&#123;&#125;, obejct1);</span><br><span class="line">    object2.x =<span class="number">4</span>;</span><br><span class="line">    不会改变object1的值</span><br></pre></td></tr></table></figure>
+<p> js原生方法实现深拷贝<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">getType</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//tostring会返回对应不同的标签的构造函数</span></span><br><span class="line">    <span class="keyword">var</span> toString = <span class="built_in">Object</span>.prototype.toString;</span><br><span class="line">    <span class="keyword">var</span> map = &#123;</span><br><span class="line">       <span class="string">'[object Boolean]'</span>  : <span class="string">'boolean'</span>, </span><br><span class="line">       <span class="string">'[object Number]'</span>   : <span class="string">'number'</span>, </span><br><span class="line">       <span class="string">'[object String]'</span>   : <span class="string">'string'</span>, </span><br><span class="line">       <span class="string">'[object Function]'</span> : <span class="string">'function'</span>, </span><br><span class="line">       <span class="string">'[object Array]'</span>    : <span class="string">'array'</span>, </span><br><span class="line">       <span class="string">'[object Date]'</span>     : <span class="string">'date'</span>, </span><br><span class="line">       <span class="string">'[object RegExp]'</span>   : <span class="string">'regExp'</span>, </span><br><span class="line">       <span class="string">'[object Undefined]'</span>: <span class="string">'undefined'</span>,</span><br><span class="line">       <span class="string">'[object Null]'</span>     : <span class="string">'null'</span>, </span><br><span class="line">       <span class="string">'[object Object]'</span>   : <span class="string">'object'</span></span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> Element) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'element'</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> map[toString.call(obj)];</span><br><span class="line">&#125;</span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> type = getType(data);</span><br><span class="line">    <span class="keyword">var</span> obj;</span><br><span class="line">    <span class="keyword">if</span>(type === <span class="string">'array'</span>)&#123;</span><br><span class="line">        obj = [];</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(type === <span class="string">'object'</span>)&#123;</span><br><span class="line">        obj = &#123;&#125;;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//不再具有下一层次</span></span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(type === <span class="string">'array'</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, len = data.length; i &lt; len; i++)&#123;</span><br><span class="line">            obj.push(deepClone(data[i]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(type === <span class="string">'object'</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> data)&#123;</span><br><span class="line">            obj[key] = deepClone(data[key]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>brower-sync<br>    命令 browser-sync start –server –files  “*<em>/</em>.html”<br>    files路径相对于当前打开命令行目录的路径</p>
+</blockquote>
+<h2 id="2017-10-18"><a href="#2017-10-18" class="headerlink" title="2017-10-18"></a>2017-10-18</h2><p> 按位运算符（&amp;，|， ^， &lt;&lt;，&gt;&gt;，&gt;&gt;&gt;，~）<br>| 运算符      | 用法           | 描述  |<br>| ————- |:————-:| —–:|<br>| 按位与      | a&amp;b | 对于每一个比特位，只有两个操作数相应的比特位都是1是结果才位1，否则为0 |<br>| 按位或      | a|b      |  对于每一个比特位，当两个操作数相应的比特位至少有一个1时。结果为1，否则为0 |<br>| 按位异或  | a^b      |    对于每一个比特位，当两个操作数相应的别特为有且只有一个1是结果为1，否则为0 |<br>| 按位非    |  ~a      |   反转操作数的比特位，0变1；1变0   |<br>| 左移    |  a&lt;&lt;b     |   将a的二进制形式向左移b（&lt;32）比特位，右边用0填充 |<br>| 有符号右移 |  a&gt;&gt;b | 将a的二进制形式向左移b（&lt;32）比特位，丢弃被移出的位|<br>| 无符号右移 |  a&gt;&gt;&gt;b    |  将a的二进制形式向左移b（&lt;32）比特位,并使用0在左侧填充   |</p>
+<ol>
+<li>按位或&amp;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="2017-10-19"><a href="#2017-10-19" class="headerlink" title="2017-10-19"></a>2017-10-19</h2><h3 id="猿计划"><a href="#猿计划" class="headerlink" title="猿计划"></a>猿计划</h3><pre><code>1. 监测url的改变
+    &gt; 使用钩子函数
+    watch() {
+        $route(){
+            }
+        }
+2. 路由跳转会在当前的url后追加而不影响整个url；而window.loaction.href也不行；使用了window.open
+    期有时间新开一个页面而不是不进行这样的操作
+
+3. 微信扫码登录
+1. 根据微信资源中心[api](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN)
+    提供一个链接，链接url里包括这些信息
+    | 参数      | 是否必须           | 描述  |
+    | ------------- |:-------------:| -----:|
+    | appid         |  是      |  应用唯一标识；每个公众号都有的 |
+    | redirect_uri  |  是         |  重定向的url地址；必须在微信公众号的安全域下，且需要进行urlEncode加密 |
+    | response_type |  是         |  填code |
+    | scope         |  是      | 应用授权作用域，拥有多个作用域用逗号（,）分隔，网页应用目前仅填写snsapi_login即可     |
+    | state         |  否      | 用于保持请求和回调的状态，授权请求后原样带回给第三方。该参数可用于防止csrf攻击（跨站请求伪造攻击），建议第三方带上该参数，可设置为简单的随机数加session进行校验   |
+本来想跳到我们的http://web.li-shang-bin.com/#/login页面的；但发现微信识别不了#
+此处我们的项目填写的url是https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;
+appid:wxc649fbdaa41fc636
+redirect_uri:http://web.li-shang-bin.com;
+用户点击此链接后会跳到一个二维码界面
+2. 用户扫面二维码界面并点击确定后则跳到redirec_uri定义的url里并且把code（后台可以通过code获取用户的openid及昵称等信息）带过来形成
+    redirec_uri?code=********&amp;state=***;此处我们还没用到state只用了code
+3. 在此页面通过解析页面的url获取到code
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">//可以用此方法解析url</span></span><br><span class="line">    getUrlVars(url) &#123;</span><br><span class="line">                <span class="keyword">var</span> hash;</span><br><span class="line">                <span class="keyword">var</span> myJson = &#123;&#125;;</span><br><span class="line">                <span class="keyword">var</span> hashes = url.slice(url.indexOf(<span class="string">'?'</span>) + <span class="number">1</span>).split(<span class="string">'&amp;'</span>);</span><br><span class="line">                <span class="keyword">var</span> arr=[];</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; hashes.length; i++) &#123;</span><br><span class="line">                    hash = hashes[i].split(<span class="string">'='</span>);</span><br><span class="line">                    <span class="keyword">if</span>(myJson.hasOwnProperty(hash[<span class="number">0</span>]))&#123;</span><br><span class="line">                        myJson[hash[<span class="number">0</span>]]=myJson[hash[<span class="number">0</span>]]+<span class="string">','</span>+hash[<span class="number">1</span>]</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        myJson[hash[<span class="number">0</span>]] = hash[<span class="number">1</span>]                       </span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> myJson;</span><br><span class="line">            &#125;</span><br><span class="line">    <span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">    将code传给后台让他获取用户的信息获取信息后后台分以下几步</span></span><br><span class="line"><span class="string">        1. 获取了用户的openid；从数据根据openid查找看是否有此用户；</span></span><br><span class="line"><span class="string">            如果没有没有返回给前端false(0)；让其跳到注册页面，并把openid，等信息页传递过去；前端存在缓存里</span></span><br><span class="line"><span class="string">                此时用户注册会在基础注册上增加openid等信息；完成用户和微信的绑定；然后删除缓存</span></span><br><span class="line"><span class="string">            如果有，将查询到的用户信息返回给前端，前端完成登录</span></span><br><span class="line"><span class="string">        2. 跳到个人信息页的问题；</span></span><br><span class="line"><span class="string">            开始用的是路由跳转router.push的方法跳转到用户信息页；但发现此方法会在url?code=****&amp;state=后面追加相关路由；</span></span><br><span class="line"><span class="string">            然后改用window.location.href=‘你想跳的页面url’；但也还是在后面继续追加；具体原因依然不明</span></span><br><span class="line"><span class="string">            现在使用的是window.open('你想跳的页面url','_self')使其跳转</span></span><br><span class="line"><span class="string">    至此登录完成；</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-10-24</span></span><br><span class="line"><span class="string">format 序列化时间对象</span></span><br><span class="line"><span class="string">var value = parseInt(value) * 1000</span></span><br><span class="line"><span class="string">      return moment(value).format('YYYY-MM-DD');</span></span><br><span class="line"><span class="string"># 2017-10-25</span></span><br><span class="line"><span class="string">关于++</span></span><br><span class="line"><span class="string">![++]('./')</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">正则匹配出一堆含有html标签里的第一个有内容的标签的里面的内容</span></span><br><span class="line"><span class="string">eg: &lt;div&gt;&lt;p&gt;&lt;h&gt;要匹配的&lt;/h&gt;&lt;span&gt;不要匹配的&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">reg: var reg = /[&gt;]([^&lt;|^&gt;]+)[&lt;]/g</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-10-26</span></span><br><span class="line"><span class="string">devicePixelRatio称为设备像素比，每款设备的devicePixelRatio都是已知，并且不变的，目前高清屏，普遍都是2，不过还有更高的，比如2.5, 3 等</span></span><br><span class="line"><span class="string"> devicePixelRatio</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">华为canvas无法绘制图片</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-10-30</span></span><br><span class="line"><span class="string">Q: vue项目生成的二维码ios设备无法长按识别二维码</span></span><br><span class="line"><span class="string">A: 不要将二维码放在模态框组件里</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-11-6</span></span><br><span class="line"><span class="string">10.26晚 小米pad整套给赵总拿走</span></span><br><span class="line"><span class="string">11.6  由魏姐返还，仅返还Pad</span></span><br><span class="line"><span class="string">魏姐说：‘顾总给她的时候就是那一个袋子里的:有手写板，答题卡，电脑。电脑电源，pad’</span></span><br><span class="line"><span class="string">但没有pad的充电头和电源</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-11-20</span></span><br><span class="line"><span class="string">eclipse工作空间c/user/admin/workspace</span></span><br><span class="line"><span class="string">h5+app使用eclipse打包</span></span><br><span class="line"><span class="string">1.按照网站[http://ask.dcloud.net.cn/question/15183]走下去</span></span><br><span class="line"><span class="string">2.对于出现的报错信息部分予以删除</span></span><br><span class="line"><span class="string">3.对于title的报错则更爱其内容随便输入什么都可以的</span></span><br><span class="line"><span class="string">4.导入eclipse后汉字出现乱码重新输入即可</span></span><br><span class="line"><span class="string">5. &lt;item name="android:colorEdgeEffect"&gt;#333333&lt;/item&gt;这个错误删除，这个适用于APP没有加载出来时的背景颜色</span></span><br><span class="line"><span class="string">6.active.main.xml里的android:text="@string/hello_world"，双引号里面随便改点啥</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-11-28</span></span><br><span class="line"><span class="string">1. proxy table 的配置</span></span><br><span class="line"><span class="string"> proxyTable: &#123;</span></span><br><span class="line"><span class="string">      '/web':&#123;</span></span><br><span class="line"><span class="string">        target:'http://api.skyeducation.cn',</span></span><br><span class="line"><span class="string">        changeOrigin:true,</span></span><br><span class="line"><span class="string">        pathRewrite:&#123;</span></span><br><span class="line"><span class="string">         '^/web':'/web'</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    配置完成后需用/web代表target</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">2. 若果在服务器直接用txt更改php代码会导致编码问题引发500错误</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. vue-cli默认安装vue2.5.2版本的相关配置，目前我尚不熟悉</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-12-5</span></span><br><span class="line"><span class="string">vue 的element-ui由1.0升级到2.0时在npn run dev的时候对于element-ui、index.css的引用依然是theme-default而不是更改后的theme-chalk</span></span><br><span class="line"><span class="string">原因是在.babelrc文件中还是theme-default；更改它即可</span></span><br><span class="line"><span class="string">element-ui升级到2.0代码更改</span></span><br><span class="line"><span class="string">import  'element-ui/lib/theme-default/index.css';</span></span><br><span class="line"><span class="string">                    ↓</span></span><br><span class="line"><span class="string">                    ↓</span></span><br><span class="line"><span class="string">import  'element-ui/lib/theme-chalk/index.css';</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-12-8</span></span><br><span class="line"><span class="string">获取一个对象数组的某个属性值的集合arr.map(function(x)&#123;return x.key&#125;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-12-15</span></span><br><span class="line"><span class="string">使用vuex进行组件间的通信</span></span><br><span class="line"><span class="string">step1. </span></span><br><span class="line"><span class="string">    在state.js里初始化需要通信的信息</span></span><br><span class="line"><span class="string">    在mutation-types.js里初始化增删改查需要通信的信息的方法</span></span><br><span class="line"><span class="string">    在mutation.js里定义具体相关的方法</span></span><br><span class="line"><span class="string">step2.</span></span><br><span class="line"><span class="string">    在组件A中先引用vuex的相关方法以及通信信息</span></span><br><span class="line"><span class="string">        import &#123; mapState, mapMutations &#125; from "vuex";</span></span><br><span class="line"><span class="string">        ...mapMutations(["INIT_STATE","WRONG_ADD"])</span></span><br><span class="line"><span class="string">        computed:&#123;</span></span><br><span class="line"><span class="string">            ...mapState(["wrongQues"])</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        this.INIT_STATE()</span></span><br><span class="line"><span class="string">step3.</span></span><br><span class="line"><span class="string">    在组件A中使用相关方法</span></span><br><span class="line"><span class="string">        this.WRONG_ADD(this.currentQues.keys);</span></span><br><span class="line"><span class="string">step4.在组件B中同样的先引用vuex相关的方法以及通信信息</span></span><br><span class="line"><span class="string">    import &#123; mapState, mapMutations &#125; from "vuex"</span></span><br><span class="line"><span class="string">    methods:&#123;</span></span><br><span class="line"><span class="string">        ...mapMutations(["INIT_STATE"])</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    created()&#123;</span></span><br><span class="line"><span class="string">        this.INIT_STATE();</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    computer:&#123;</span></span><br><span class="line"><span class="string">        ...mapState(["wrongQues"])</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    这样既可使用如wrongQues的这个挂载在this上的数据了</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string"># 2017-12-19</span></span><br><span class="line"><span class="string">递归查找某个较深的对象数组里含有某个特定属性值的对象</span></span><br><span class="line"><span class="string">function getObjByprop(arr,key,value)&#123;</span></span><br><span class="line"><span class="string">    var obj='';</span></span><br><span class="line"><span class="string">     x(arr, key, value)</span></span><br><span class="line"><span class="string">     return obj</span></span><br><span class="line"><span class="string">    function x(arr, key, value) &#123;</span></span><br><span class="line"><span class="string">    for (var i = 0; i &lt; arr.length; i++) &#123;</span></span><br><span class="line"><span class="string">        if (arr[i].hasOwnProperty(key) &amp;&amp; arr[i][key] == value) &#123;</span></span><br><span class="line"><span class="string">            return obj=arr[i]</span></span><br><span class="line"><span class="string">        &#125; else &#123;</span></span><br><span class="line"><span class="string">            for (var k in arr[i]) &#123;</span></span><br><span class="line"><span class="string">                if (Array.isArray(arr[i][k])) &#123;</span></span><br><span class="line"><span class="string">                    x(arr[i][k], key, value)</span></span><br><span class="line"><span class="string">                &#125;</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-12-20</span></span><br><span class="line"><span class="string">全屏和退出全屏</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"> //进入全屏</span></span><br><span class="line"><span class="string">function requestFullScreen() &#123;</span></span><br><span class="line"><span class="string">   var de = document.documentElement;</span></span><br><span class="line"><span class="string">   if (de.requestFullscreen) &#123;</span></span><br><span class="line"><span class="string">       de.requestFullscreen();</span></span><br><span class="line"><span class="string">   &#125; else if (de.mozRequestFullScreen) &#123;</span></span><br><span class="line"><span class="string">       de.mozRequestFullScreen();</span></span><br><span class="line"><span class="string">    &#125; else if (de.webkitRequestFullScreen) &#123;</span></span><br><span class="line"><span class="string">        de.webkitRequestFullScreen();</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string"> //退出全屏</span></span><br><span class="line"><span class="string"> function exitFullscreen() &#123;</span></span><br><span class="line"><span class="string">   var de = document;</span></span><br><span class="line"><span class="string">   if (de.exitFullscreen) &#123;</span></span><br><span class="line"><span class="string">      de.exitFullscreen();</span></span><br><span class="line"><span class="string">   &#125; else if (de.mozCancelFullScreen) &#123;</span></span><br><span class="line"><span class="string">      de.mozCancelFullScreen();</span></span><br><span class="line"><span class="string">   &#125; else if (de.webkitCancelFullScreen) &#123;</span></span><br><span class="line"><span class="string">        de.webkitCancelFullScreen();</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-12-26</span></span><br><span class="line"><span class="string">var arr=[</span></span><br><span class="line"><span class="string">        &#123;id:1,age:2&#125;,</span></span><br><span class="line"><span class="string">        &#123;id:1,age:2&#125;,</span></span><br><span class="line"><span class="string">        &#123;id:1,age:2&#125;,</span></span><br><span class="line"><span class="string">        &#123;id:1,age:2&#125;,</span></span><br><span class="line"><span class="string">        &#123;id:1,age:2&#125;,</span></span><br><span class="line"><span class="string">        &#123;id:1,age:2&#125;</span></span><br><span class="line"><span class="string">    ]</span></span><br><span class="line"><span class="string">获取次数组的id的集合</span></span><br><span class="line"><span class="string">var arr=arr.map(function(x)&#123;return x.id&#125;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">深拷贝</span></span><br><span class="line"><span class="string">function deepCopy(p, c) &#123;</span></span><br><span class="line"><span class="string">　　　　var c = c || &#123;&#125;;</span></span><br><span class="line"><span class="string">　　　　for (var i in p) &#123;</span></span><br><span class="line"><span class="string">　　　　　　if (typeof p[i] === 'object') &#123;</span></span><br><span class="line"><span class="string">　　　　　　　　c[i] = (p[i].constructor === Array) ? [] : &#123;&#125;;</span></span><br><span class="line"><span class="string">　　　　　　　　deepCopy(p[i], c[i]);</span></span><br><span class="line"><span class="string">　　　　　　&#125; else &#123;</span></span><br><span class="line"><span class="string">　　　　　　　　　c[i] = p[i];</span></span><br><span class="line"><span class="string">　　　　　　&#125;</span></span><br><span class="line"><span class="string">　　　　&#125;</span></span><br><span class="line"><span class="string">　　　　return c;</span></span><br><span class="line"><span class="string">　　&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2017-12-29</span></span><br><span class="line"><span class="string">vuex是即时变化，比如说购物车加减数量，</span></span><br><span class="line"><span class="string">你需要在操作的同时去改变它的数量，这时候就要用vuex控制数量，</span></span><br><span class="line"><span class="string">如果用本地存储的话无法做到即刻显示。为啥有时候需要和本地存储配合呢，</span></span><br><span class="line"><span class="string">因为我们有时候既需要看到即时变化，又要保证刷新的时候看到最新改变的效果。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 2018-1-2</span></span><br><span class="line"><span class="string">路由卫士</span></span><br><span class="line"><span class="string">1. 在路由控制文件内增加此代码</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (to.matched.some(<span class="function">(<span class="params">item</span>) =&gt;</span> item.meta.login)) &#123;</span><br><span class="line"></span><br><span class="line">    store.commit(<span class="string">'INIT_STATE'</span>)</span><br><span class="line">    <span class="keyword">if</span> (!store.state.userlogin) &#123;</span><br><span class="line">      router.push(&#123;</span><br><span class="line">        path: <span class="string">'/login'</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      next();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</code></pre><ol start="2">
+<li>在每个路由控制里增加<br>meta:{<br> login:true<br>}</li>
+<li>export default router</li>
+</ol>
+<h1 id="2018-1-4"><a href="#2018-1-4" class="headerlink" title="2018-1-4"></a>2018-1-4</h1><p>本地仓库传入到远成仓库</p>
+<ol>
+<li>git init </li>
+<li>git add .</li>
+<li>git commit -m ‘提交信息’</li>
+<li>git remote add origin 远程库地址</li>
+<li>git pull –rebase origin master </li>
+<li>git push -u origin master<br>指导网址：<a href="https://www.cnblogs.com/eedc/p/6168430.html" target="_blank" rel="noopener">https://www.cnblogs.com/eedc/p/6168430.html</a></li>
+</ol>
+<p>强制推送到远程仓库<br>git push -f origin master<br>注释： origin 远程仓库名， master 分支名，-f 为force，意为：强行、强制。</p>
+<p>修改远程仓库地址<br>git remote set-url origin <a href="mailto:git@192.168.1.18" target="_blank" rel="noopener">git@192.168.1.18</a>:mStar/OTT-dual/K3S/supernova</p>
+<p>回退版本<br>git log 查看提交的版本信息<br>git reset –hard 某个版本id    回退到id对应的版本</p>
+<h1 id="2018-1-4-1"><a href="#2018-1-4-1" class="headerlink" title="2018-1-4"></a>2018-1-4</h1><p>JS Unicode<br>“好”.charCodeAt(0).toString(16)==&gt;”597d”<br>“\u597d”==&gt;”好”</p>
+<p>//字符转ASC<br>function getAsc(str){<br>return str.charCodeAt(0);<br>}<br>//ASC转字符<br>function backAsc(str){<br>return String.fromCharCode(str);<br>}</p>
+<h1 id="2018-1-12-vue-UI框架"><a href="#2018-1-12-vue-UI框架" class="headerlink" title="2018-1-12 vue UI框架"></a>2018-1-12 vue UI框架</h1><p>vux：<a href="https://vux.li/#/" target="_blank" rel="noopener">https://vux.li/#/</a></p>
+<p>mint：<a href="http://mint-ui.github.io/#!/zh-cn" target="_blank" rel="noopener">http://mint-ui.github.io/#!/zh-cn</a></p>
+<p>vue-carbon：<a href="https://myronliu347.github.io/vue-carbon/#!/" target="_blank" rel="noopener">https://myronliu347.github.io/vue-carbon/#!/</a></p>
+<p>vue-mobile：<a href="https://github.com/vum-team/vum" target="_blank" rel="noopener">https://github.com/vum-team/vum</a></p>
+<p>vue-material：<a href="https://vuematerial.github.io/#/" target="_blank" rel="noopener">https://vuematerial.github.io/#/</a></p>
+<p>vue-strap：<a href="http://yuche.github.io/vue-strap/" target="_blank" rel="noopener">http://yuche.github.io/vue-strap/</a></p>
+<p>vue-mdl：<a href="https://posva.net/vue-mdl/#/installation" target="_blank" rel="noopener">https://posva.net/vue-mdl/#/installation</a></p>
+<h1 id="2018-09-12-element-ui日期时间组件内存溢出问题"><a href="#2018-09-12-element-ui日期时间组件内存溢出问题" class="headerlink" title="2018-09-12 element-ui日期时间组件内存溢出问题"></a>2018-09-12 element-ui日期时间组件内存溢出问题</h1><p> vue2.5.17版本问题，需转回2.5.3版本</p>
+<h1 id="获取数组里指定元素的索引"><a href="#获取数组里指定元素的索引" class="headerlink" title="获取数组里指定元素的索引"></a>获取数组里指定元素的索引</h1><p>Array.prototype.indexOf = (val, key) =&gt; {<br>// 判断是不是对象<br>  if (typeof val != ‘object’) {<br>    for (let x = 0; x &lt; this.length; x++) {<br>      if (this[x] === val) return x<br>    }<br>    return -1<br>  } else {<br>    for (let x = 0; x &lt; this.length; x++) {<br>      if (this[x][key] === val) return x<br>    }<br>    return -1<br>  }<br>}</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你的每一次打赏是我创作的动力！谢谢！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/5882b2b7d0a20cf4dd8ab77b7f094b36acaf9978.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2f738bd4b31c87012fa3fb422e7f9e2f0708ff79.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/09/12/reademe/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/09/18/uni-app的学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          uni-app的学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/09/12/vue减小打包体积/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue减小打包体积</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="reademe" data-title="reademe" data-url="http://yoursite.com/2018/09/12/reademe/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 Rowling Joe
+    	</div>
+      	<div class="footer-right">
+      		@zhoulelin0824@163.com
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络优化</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://www.ruanyifeng.com/home.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>阮一峰</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://stackoverflow.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>stackoverflow</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gold.xitu.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>掘金</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.w2bc.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>爱编程</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.oschina.net/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>开源中国</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.csdn.net/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>CSDN</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">我是周乐林对于我的博客有什么疑问可以在博客下方参与评论也可以通过zhoulelin0824@163.com联系我。</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

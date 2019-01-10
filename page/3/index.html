@@ -144,6 +144,490 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ES6的学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/10/ES6的学习/">ES6的学习</a>
+    </h1>
+  
+
+        
+        <a href="/2016/09/10/ES6的学习/" class="archive-article-date">
+  	<time datetime="2016-09-10T12:50:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ECMAScript6"><a href="#ECMAScript6" class="headerlink" title="ECMAScript6"></a>ECMAScript6</h1>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/09/10/ES6的学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-express与mongoDB的配合使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/02/express与mongoDB的配合使用/">express与mongoDB的配合使用</a>
+    </h1>
+  
+
+        
+        <a href="/2016/07/02/express与mongoDB的配合使用/" class="archive-article-date">
+  	<time datetime="2016-07-02T13:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Express 是一个简洁而灵活的 node.js Web应用框架, 提供一系列强大特性帮助你创建各种Web应用。Express 不对 node.js 已有的特性进行二次抽象，我们只是在它之上扩展了Web应用所需的功能。丰富的HTTP工具以及来自Connect框架的中间件随取随用，创建强健、友好的API变得快速又简单<br>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/07/02/express与mongoDB的配合使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-主流跨域方法及原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/10/主流跨域方法及原理/">主流跨域方法及原理</a>
+    </h1>
+  
+
+        
+        <a href="/2016/06/10/主流跨域方法及原理/" class="archive-article-date">
+  	<time datetime="2016-06-10T12:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h2><p>是指浏览器出于安全的考虑不允许执行其他网站的脚本代码，是有浏览器的同源策略造成，的，同源是指，域名，协议，端口均相同，不明白没关系，举个栗子<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//www.123.com/index.html 调用 http://www.123.com/server.PHP （非跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com/index.html 调用 http://www.456.com/server.php （主域名不同:123/456，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//abc.123.com/index.html 调用 http://def.123.com/server.php （子域名不同:abc/def，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com:8080/index.html 调用 http://www.123.com:8081/server.php （端口不同:8080/8081，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com/index.html 调用 https://www.123.com/server.php （协议不同:http/https，跨域）</span></span><br><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这些都是跨域。<br>但是有时我们又必须通过跨域获取数据，所以又开发出两种可以跨域的方法</p>
+<h2 id="Hack类跨域方案"><a href="#Hack类跨域方案" class="headerlink" title="Hack类跨域方案"></a>Hack类跨域方案</h2><h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><ul>
+<li>原理： script标签的src可以跨域，而且在跨域脚本中可以直接回调当前脚本的函数。</li>
+<li>限制：需要创建一个DOM对象并且添加到DOM数中，只能用于GET方法。<br>JSONP跨域URL返回的脚本不仅包含数据，还包含一个回调：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//URL:http://b.a.com/foo</span></span><br><span class="line"><span class="keyword">var</span> data = &#123;</span><br><span class="line">   foo: <span class="string">'bar'</span> ,</span><br><span class="line">   bar: <span class="string">'foo'</span></span><br><span class="line">   &#125;</span><br><span class="line"> callback(data)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后在我们主站<a href="http://a.com中可以这样来跨域获取http://b.a.com的数据" target="_blank" rel="noopener">http://a.com中可以这样来跨域获取http://b.a.com的数据</a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//URL:http://a.com/foo</span></span><br><span class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//处理跨域请求得到的数据</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> script = $(<span class="string">'&lt;script&gt;'</span>,&#123;<span class="attr">src</span>:<span class="string">'htttp://b.a.com/bar'</span>&#125;)</span><br><span class="line">$(<span class="string">'body'</span>).append(srcipt)</span><br><span class="line"><span class="comment">//其实就是本地脚本准备好函数，在跨域回来的数据中带回了（）则可以调用本地的函数企鹅将带回的数据当作函数的参数来处理</span></span><br></pre></td></tr></table></figure></p>
+<p>在jQuery中我们可以这样来使用JSONP<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.getJSON(<span class="string">"http://b.a.com/bar?callback=callback"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//处理跨域请求得到的数据</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>$.getJSON与$.get的区别是前者回吧responseText转换为JSON，而且当URL具有callback参数是，jQuery将会把它解析为一个JSONP请求，创建一个<script>标签来完成该请求</p>
+<h3 id="navigation-对象跨域"><a href="#navigation-对象跨域" class="headerlink" title="navigation 对象跨域"></a>navigation 对象跨域</h3><ul>
+<li>原理：iframe之间是共享navigator对象的，用它来传递信息</li>
+<li>限制： IE6/7<br>有些人注意到了IE6/7的一个漏洞：iframe之间window.navigator对象是共享的。我们可以把它作为一个Messenger,通过它来船体信息。比如：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a.com</span></span><br><span class="line">navigation.onData()&#123;</span><br><span class="line">    <span class="comment">//数据到达的处理函数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">typeof</span> navigation.getData === <span class="string">'function'</span></span><br><span class="line">||navigation.getData()</span><br><span class="line"><span class="comment">// b.com</span></span><br><span class="line">nacigation.getData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $.get(<span class="string">'/path/under/b.com'</span>).success(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">typeof</span> navigation.onData === <span class="string">'function'</span> || navigation.onData(data)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="document-domain-跨域"><a href="#document-domain-跨域" class="headerlink" title="document.domain 跨域"></a>document.domain 跨域</h3><ul>
+<li>原理： 相同主域名不同子域名下的页面可以设置document.domain让他们同于</li>
+<li>限制： 同域document提供的是页面间的互操作，需要载入iframe页面<br>下面几个域名下的页面都是可以通过 document.domain 跨域互操作的： <a href="http://a.com/foo">http://a.com/foo</a> , <a href="http://b.a.com/bar">http://b.a.com/bar</a> , <a href="http://c.a.com/bar">http://c.a.com/bar</a> 。 但只能以页面嵌套的方式来进行页面互操作，比如常见的 iframe 方式就可以完成页面嵌套：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// URL http://a.com/foo</span></span><br><span class="line"><span class="keyword">var</span> ifr = <span class="built_in">document</span>.createElement(<span class="string">'iframe'</span>);</span><br><span class="line">ifr.src = <span class="string">'http://b.a.com/bar'</span>; </span><br><span class="line">ifr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ifrdoc = ifr.contentDocument || ifr.contentWindow.document;</span><br><span class="line">    ifrdoc.getElementsById(<span class="string">"foo"</span>).innerHTML);</span><br><span class="line">&#125;;</span><br><span class="line">ifr.style.display = <span class="string">'none'</span>;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(ifr);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上述代码所在的URL是 <a href="http://a.com/foo">http://a.com/foo</a> ，它对 <a href="http://b.a.com/bar">http://b.a.com/bar</a> 的DOM访问要求后者将 document.domain 往上设置一级：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//URL:http://b.a.com/bar</span></span><br><span class="line"><span class="built_in">document</span>.domain = <span class="string">'a.com'</span></span><br></pre></td></tr></table></figure></p>
+<p>document.domain只能从子域设置到主域，往下设置以及往其他域名设置都是不允许的，如果实在chrome中运行则报错<br>Uncaught DOMException: Failed to set the ‘domain’ property on ‘Document’: ‘baidu.com’ is not a suffix of ‘b.a.com’</p>
+<h2 id="使用代理服务器来进行跨域"><a href="#使用代理服务器来进行跨域" class="headerlink" title="使用代理服务器来进行跨域"></a>使用代理服务器来进行跨域</h2><p>从同一个源（表现为同一访问协议、同一端口和同一域名下）获取数据不就符合同源策略了？<br>为了实现从同一源获取，我们在b.com的源上设置一个代理，通过这个代理传递数据到A.com，这个代理负责和A.com进行通信，这在服务器端是很容易实现的。</p>
+<ol>
+<li><p>在某小系统b的页面中，ajax(使用jQuery)请求代理，传递参数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$.post(</span><br><span class="line">    <span class="string">'http://b.com/proxy.php'</span>,   <span class="comment">// 代理程序地址</span></span><br><span class="line">    &#123;</span><br><span class="line">        email:<span class="string">"impng@impng.com"</span>,</span><br><span class="line">        subject:<span class="string">"ajax跨域之代理"</span>,</span><br><span class="line">        body:<span class="string">"这里是邮件内容"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(data == <span class="number">1</span>) alert(<span class="string">'发送成功！'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>某小系统b的代理程序(proxy.php)，复杂向某系统A传递数据：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$post = $_POST;  <span class="comment">// 简单接收客户端传递来的参数</span></span><br><span class="line">$data = array(</span><br><span class="line">            <span class="string">'email'</span>     =&gt; $post[<span class="string">'email'</span>],</span><br><span class="line">            <span class="string">'subject'</span>   =&gt; $post[<span class="string">'subject'</span>],</span><br><span class="line">            <span class="string">'body'</span>      =&gt; $post[<span class="string">'body'</span>],</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">$url = <span class="string">'http://A.com/ISendMail.php?'</span>;   <span class="comment">// 某系统A的发送邮件接口</span></span><br><span class="line">$url .= http_build_query($data);        <span class="comment">// 传递从某小系统b传递来的数据</span></span><br><span class="line"></span><br><span class="line">$rt = file_get_contents($url);</span><br><span class="line">echo $rt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="cors跨域方法"><a href="#cors跨域方法" class="headerlink" title="cors跨域方法"></a>cors跨域方法</h2><p>CORS需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE浏览器不能低于IE10。</p>
+<p>整个CORS通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS通信与同源的AJAX通信没有差别，代码完全一样。浏览器一旦发现AJAX请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。</p>
+<p>因此，实现CORS通信的关键是服务器。只要服务器实现了CORS接口，就可以跨源通信。</p>
+<h3 id="两种请求"><a href="#两种请求" class="headerlink" title="两种请求"></a>两种请求</h3><p>浏览器将CORS请求分成两类：简单请求（simple request）和非简单请求（not-so-simple request）。</p>
+<p>只要同时满足以下两大条件，就属于简单请求。</p>
+<blockquote>
+<p>（1) 请求方法是以下三种方法之一：</p>
+<ul>
+<li>HEAD</li>
+<li>GET</li>
+<li>POST</li>
+</ul>
+<p>（2）HTTP的头信息不超出以下几种字段：</p>
+<ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Last-Event-ID</li>
+<li>Content-Type：只限于三个值<code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code>、<code>text/plain</code></li>
+</ul>
+</blockquote>
+<p>凡是不同时满足上面两个条件，就属于非简单请求。</p>
+<p>浏览器对这两种请求的处理，是不一样的。</p>
+<h4 id="简单请求"><a href="#简单请求" class="headerlink" title="简单请求"></a>简单请求</h4><p>对于简单请求，浏览器直接发出CORS请求。具体来说，就是在头信息之中，增加一个<code>Origin</code>字段。</p>
+<p>下面是一个例子，浏览器发现这次跨源AJAX请求是简单请求，就自动在头信息之中，添加一个<code>Origin</code>字段。</p>
+<blockquote>
+<pre><code>GET /cors HTTP/1.1
+Origin: http://api.bob.com
+Host: api.alice.com
+Accept-Language: en-US
+Connection: keep-alive
+User-Agent: Mozilla/5.0...
+</code></pre></blockquote>
+<p>上面的头信息中，<code>Origin</code>字段用来说明，本次请求来自哪个源（协议 + 域名 + 端口）。服务器根据这个值，决定是否同意这次请求。</p>
+<p>如果<code>Origin</code>指定的源，不在许可范围内，服务器会返回一个正常的HTTP回应。浏览器发现，这个回应的头信息没有包含<code>Access-Control-Allow-Origin</code>字段（详见下文），就知道出错了，从而抛出一个错误，被<code>XMLHttpRequest</code>的<code>onerror</code>回调函数捕获。注意，这种错误无法通过状态码识别，因为HTTP回应的状态码有可能是200。</p>
+<p>如果<code>Origin</code>指定的域名在许可范围内，服务器返回的响应，会多出几个头信息字段。</p>
+<blockquote>
+<pre><code>Access-Control-Allow-Origin: http://api.bob.com
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: FooBar
+Content-Type: text/html; charset=utf-8
+</code></pre></blockquote>
+<p>上面的头信息之中，有三个与CORS请求相关的字段，都以<code>Access-Control-</code>开头。</p>
+<p><strong>（1）Access-Control-Allow-Origin</strong></p>
+<p>该字段是必须的。它的值要么是请求时<code>Origin</code>字段的值，要么是一个<code>*</code>，表示接受任意域名的请求。</p>
+<p><strong>（2）Access-Control-Allow-Credentials</strong></p>
+<p>该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为<code>true</code>，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为<code>true</code>，如果服务器不要浏览器发送Cookie，删除该字段即可。</p>
+<p><strong>（3）Access-Control-Expose-Headers</strong></p>
+<p>该字段可选。CORS请求时，<code>XMLHttpRequest</code>对象的<code>getResponseHeader()</code>方法只能拿到6个基本字段：<code>Cache-Control</code>、<code>Content-Language</code>、<code>Content-Type</code>、<code>Expires</code>、<code>Last-Modified</code>、<code>Pragma</code>。如果想拿到其他字段，就必须在<code>Access-Control-Expose-Headers</code>里面指定。上面的例子指定，<code>getResponseHeader(&#39;FooBar&#39;)</code>可以返回<code>FooBar</code>字段的值。</p>
+<blockquote>
+<p>withCredentials 属性</p>
+</blockquote>
+<p>上面说到，CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服务器，一方面要服务器同意，指定<code>Access-Control-Allow-Credentials</code>字段。</p>
+<blockquote>
+<pre><code>Access-Control-Allow-Credentials: true
+</code></pre></blockquote>
+<p>另一方面，开发者必须在AJAX请求中打开<code>withCredentials</code>属性。</p>
+<blockquote>
+<pre><code>var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+</code></pre></blockquote>
+<p>否则，即使服务器同意发送Cookie，浏览器也不会发送。或者，服务器要求设置Cookie，浏览器也不会处理。</p>
+<p>但是，如果省略<code>withCredentials</code>设置，有的浏览器还是会一起发送Cookie。这时，可以显式关闭<code>withCredentials</code>。</p>
+<blockquote>
+<pre><code>xhr.withCredentials = false;
+</code></pre></blockquote>
+<p>需要注意的是，如果要发送Cookie，<code>Access-Control-Allow-Origin</code>就不能设为星号，必须指定明确的、与请求网页一致的域名。同时，Cookie依然遵循同源政策，只有用服务器域名设置的Cookie才会上传，其他域名的Cookie并不会上传，且（跨源）原网页代码中的<code>document.cookie</code>也无法读取服务器域名下的Cookie。</p>
+<h4 id="非简单请求"><a href="#非简单请求" class="headerlink" title="非简单请求"></a>非简单请求</h4><blockquote>
+<p>预检请求</p>
+</blockquote>
+<p>非简单请求是那种对服务器有特殊要求的请求，比如请求方法是<code>PUT</code>或<code>DELETE</code>，或者<code>Content-Type</code>字段的类型是<code>application/json</code>。</p>
+<p>非简单请求的CORS请求，会在正式通信之前，增加一次HTTP查询请求，称为”预检”请求（preflight）。</p>
+<p>浏览器先询问服务器，当前网页所在的域名是否在服务器的许可名单之中，以及可以使用哪些HTTP动词和头信息字段。只有得到肯定答复，浏览器才会发出正式的<code>XMLHttpRequest</code>请求，否则就报错。</p>
+<p>下面是一段浏览器的JavaScript脚本。</p>
+<blockquote>
+<pre><code>var url = &apos;http://api.alice.com/cors&apos;;
+var xhr = new XMLHttpRequest();
+xhr.open(&apos;PUT&apos;, url, true);
+xhr.setRequestHeader(&apos;X-Custom-Header&apos;, &apos;value&apos;);
+xhr.send();
+</code></pre></blockquote>
+<p>上面代码中，HTTP请求的方法是<code>PUT</code>，并且发送一个自定义头信息<code>X-Custom-Header</code>。</p>
+<p>浏览器发现，这是一个非简单请求，就自动发出一个”预检”请求，要求服务器确认可以这样请求。下面是这个”预检”请求的HTTP头信息。</p>
+<blockquote>
+<pre><code>OPTIONS /cors HTTP/1.1
+Origin: http://api.bob.com
+Access-Control-Request-Method: PUT
+Access-Control-Request-Headers: X-Custom-Header
+Host: api.alice.com
+Accept-Language: en-US
+Connection: keep-alive
+User-Agent: Mozilla/5.0...
+</code></pre></blockquote>
+<p>“预检”请求用的请求方法是<code>OPTIONS</code>，表示这个请求是用来询问的。头信息里面，关键字段是<code>Origin</code>，表示请求来自哪个源。</p>
+<p>除了<code>Origin</code>字段，”预检”请求的头信息包括两个特殊字段。</p>
+<p><strong>（1）Access-Control-Request-Method</strong></p>
+<p>该字段是必须的，用来列出浏览器的CORS请求会用到哪些HTTP方法，上例是<code>PUT</code>。</p>
+<p><strong>（2）Access-Control-Request-Headers</strong></p>
+<p>该字段是一个逗号分隔的字符串，指定浏览器CORS请求会额外发送的头信息字段，上例是<code>X-Custom-Header</code>。</p>
+<blockquote>
+<p>预检请求的回应 </p>
+</blockquote>
+<p>服务器收到”预检”请求以后，检查了<code>Origin</code>、<code>Access-Control-Request-Method</code>和<code>Access-Control-Request-Headers</code>字段以后，确认允许跨源请求，就可以做出回应。</p>
+<blockquote>
+<pre><code>HTTP/1.1 200 OK
+Date: Mon, 01 Dec 2008 01:15:39 GMT
+Server: Apache/2.0.61 (Unix)
+Access-Control-Allow-Origin: http://api.bob.com
+Access-Control-Allow-Methods: GET, POST, PUT
+Access-Control-Allow-Headers: X-Custom-Header
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Content-Length: 0
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+Content-Type: text/plain
+</code></pre></blockquote>
+<p>上面的HTTP回应中，关键的是<code>Access-Control-Allow-Origin</code>字段，表示<code>http://api.bob.com</code>可以请求数据。该字段也可以设为星号，表示同意任意跨源请求。</p>
+<blockquote>
+<pre><code>Access-Control-Allow-Origin: *
+</code></pre></blockquote>
+<p>如果浏览器否定了”预检”请求，会返回一个正常的HTTP回应，但是没有任何CORS相关的头信息字段。这时，浏览器就会认定，服务器不同意预检请求，因此触发一个错误，被<code>XMLHttpRequest</code>对象的<code>onerror</code>回调函数捕获。控制台会打印出如下的报错信息。</p>
+<blockquote>
+<pre><code>XMLHttpRequest cannot load http://api.alice.com.
+Origin http://api.bob.com is not allowed by Access-Control-Allow-Origin.
+</code></pre></blockquote>
+<p>服务器回应的其他CORS相关字段如下。</p>
+<blockquote>
+<pre><code>Access-Control-Allow-Methods: GET, POST, PUT
+Access-Control-Allow-Headers: X-Custom-Header
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 1728000
+</code></pre></blockquote>
+<p><strong>（1）Access-Control-Allow-Methods</strong></p>
+<p>该字段必需，它的值是逗号分隔的一个字符串，表明服务器支持的所有跨域请求的方法。注意，返回的是所有支持的方法，而不单是浏览器请求的那个方法。这是为了避免多次”预检”请求。</p>
+<p><strong>（2）Access-Control-Allow-Headers</strong></p>
+<p>如果浏览器请求包括<code>Access-Control-Request-Headers</code>字段，则<code>Access-Control-Allow-Headers</code>字段是必需的。它也是一个逗号分隔的字符串，表明服务器支持的所有头信息字段，不限于浏览器在”预检”中请求的字段。</p>
+<p><strong>（3）Access-Control-Allow-Credentials</strong></p>
+<p>该字段与简单请求时的含义相同。</p>
+<p><strong>（4）Access-Control-Max-Age</strong></p>
+<p>该字段可选，用来指定本次预检请求的有效期，单位为秒。上面结果中，有效期是20天（1728000秒），即允许缓存该条回应1728000秒（即20天），在此期间，不用发出另一条预检请求。</p>
+<blockquote>
+<p>浏览器的正常请求和回应</p>
+</blockquote>
+<p>一旦服务器通过了”预检”请求，以后每次浏览器正常的CORS请求，就都跟简单请求一样，会有一个<code>Origin</code>头信息字段。服务器的回应，也都会有一个<code>Access-Control-Allow-Origin</code>头信息字段。</p>
+<p>下面是”预检”请求之后，浏览器的正常CORS请求。</p>
+<blockquote>
+<pre><code>PUT /cors HTTP/1.1
+Origin: http://api.bob.com
+Host: api.alice.com
+X-Custom-Header: value
+Accept-Language: en-US
+Connection: keep-alive
+User-Agent: Mozilla/5.0...
+</code></pre></blockquote>
+<p>上面头信息的<code>Origin</code>字段是浏览器自动添加的。</p>
+<p>下面是服务器正常的回应。</p>
+<blockquote>
+<pre><code>Access-Control-Allow-Origin: http://api.bob.com
+Content-Type: text/html; charset=utf-8
+</code></pre></blockquote>
+<p>上面头信息中，<code>Access-Control-Allow-Origin</code>字段是每次回应都必定包含的。</p>
+<p>###与JSONP的比较</p>
+<p>CORS与JSONP的使用目的相同，但是比JSONP更强大。</p>
+<p>JSONP只支持<code>GET</code>请求，CORS支持所有类型的HTTP请求。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。</p>
+</script></p>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/06/10/主流跨域方法及原理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-函数的三种方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/10/函数的三种方式/">函数的三种方式</a>
+    </h1>
+  
+
+        
+        <a href="/2016/04/10/函数的三种方式/" class="archive-article-date">
+  	<time datetime="2016-04-10T09:31:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="创建函数的三种方式"><a href="#创建函数的三种方式" class="headerlink" title="创建函数的三种方式"></a>创建函数的三种方式</h2>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/04/10/函数的三种方式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-关于AMD与CMD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/06/关于AMD与CMD/">关于AMD与CMD</a>
+    </h1>
+  
+
+        
+        <a href="/2016/03/06/关于AMD与CMD/" class="archive-article-date">
+  	<time datetime="2016-03-06T11:30:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="在了解AMD，CMD规范前，还是需要先来简单地了解下什么是模块化，模块化开发？"><a href="#在了解AMD，CMD规范前，还是需要先来简单地了解下什么是模块化，模块化开发？" class="headerlink" title="在了解AMD，CMD规范前，还是需要先来简单地了解下什么是模块化，模块化开发？"></a>在了解AMD，CMD规范前，还是需要先来简单地了解下什么是模块化，模块化开发？</h1><pre><code>模块化是指在解决某一个复杂问题或者一系列的杂糅问题时，依照一种分类的思维把问题进行系统性的分解以之处理。模块化是一种处理复杂系统分解为代码结构更合理，可维护性更高的可管理的模块的方式。可以想象一个巨大的系统代码，被整合优化分割成逻辑性很强的模块时，对于软件是一种何等意义的存在。对于软件行业来说：解耦软件系统的复杂性，使得不管多么大的系统，也可以将管理，开发，维护变得“有理可循”。
+</code></pre>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/03/06/关于AMD与CMD/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-关于SEO的那些事儿" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -510,119 +994,9 @@
 
 
   
-    <article id="post-CSS3的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/08/CSS3的使用/">CSS3的使用</a>
-    </h1>
-  
-
-        
-        <a href="/2015/02/08/CSS3的使用/" class="archive-article-date">
-  	<time datetime="2015-02-08T11:28:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-02-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="CSS3的新特性"><a href="#CSS3的新特性" class="headerlink" title="CSS3的新特性"></a>CSS3的新特性</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/02/08/CSS3的使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-MarkDown的书写规则" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/07/MarkDown的书写规则/">MarkDown的书写规则</a>
-    </h1>
-  
-
-        
-        <a href="/2015/02/07/MarkDown的书写规则/" class="archive-article-date">
-  	<time datetime="2015-02-07T08:44:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-02-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Markdown-编辑"><a href="#Markdown-编辑" class="headerlink" title="Markdown 编辑"></a>Markdown 编辑</h1><hr>
-<blockquote>
-<ul>
-<li>整理知识，学习笔记</li>
-<li>发布日记，杂文，所见所想</li>
-<li>撰写发布技术文稿（代码支持）</li>
-<li>撰写发布学术论文（LaTeX 公式支持）</li>
-</ul>
-</blockquote>
-<hr>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/02/07/MarkDown的书写规则/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -634,7 +1008,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Rowling Joe
+    		&copy; 2019 Rowling Joe
     	</div>
       	<div class="footer-right">
       		@zhoulelin0824@163.com
