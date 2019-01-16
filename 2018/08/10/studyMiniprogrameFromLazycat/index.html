@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/mpvue%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2.png?raw=true">
 <meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/mpvuex.gif?raw=true">
 <meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/mpvue%E6%B2%A1%E8%A3%85node-sas%E6%8A%A5%E9%94%99.png?raw=true">
-<meta property="og:updated_time" content="2019-01-10T09:37:45.458Z">
+<meta property="og:updated_time" content="2019-01-16T09:46:35.045Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从猫开始学习小程序">
 <meta name="twitter:description" content="关于小程序首先我很讨厌小程序,仅以此图略表个人主观情感 但是呢，出于目前技术发展及职业需要有不得不涉及小程序，故还是得学习一番。小程序的框架目前比较好的就是美团的基于vue的mpvue">
@@ -248,6 +248,7 @@
 <li>./functions/下通过微信开发者工具右击添加云函数</li>
 <li>调用<br>const cloud = require(‘wx-server-sdk’)<br>cloud.init()<br>// 1. 先init后饮用获取数据库引用<br>const db = cloud.database()<br>console.log(db)<br>// 云函数入口函数<br>exports.main = async (event, context) =&gt; {<br> const wxContext = cloud.getWXContext()<br> return db.collection(‘user’).where({<br>   openid: wxContext.OPENID<br> }).get({<br>   success(res) {<br>   // 输出 [{ “title”: “The Catcher in the Rye”, … }]<pre><code>return res
 </code></pre>   }<br> })<br>}</li>
+<li>云函数修改数据先where 然后再update或set<br>exports.main = async (event, context) =&gt; {<br>// event是传入云函数参数的集合<br>// 修改add 为update<br>return db.collection(‘commodity’).where({<br> code: event.code<br>}).update({<br> data: {<br>   code: event.code,<br>   price: event.price,<br>   name: event.name,<br>   unit: event.unit<br> },<br> success (res) {<br>   return res<br> }<br>})<br>}</li>
 </ol>
 
       
