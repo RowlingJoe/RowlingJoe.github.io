@@ -16,7 +16,7 @@
 <meta property="og:description" content="功能点：  websocketk express里websocket 断线重连 多用户登录线程相关">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/websocketCode.png?raw=true">
-<meta property="og:updated_time" content="2019-03-22T07:26:24.288Z">
+<meta property="og:updated_time" content="2019-03-22T07:31:36.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="websocket">
 <meta name="twitter:description" content="功能点：  websocketk express里websocket 断线重连 多用户登录线程相关">
@@ -202,7 +202,7 @@
 </ol>
 <p>会导致多个客户端连接进入是定时器混乱的问题</p>
 <ol start="3">
-<li>使用<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timing, clients=[]</span><br><span class="line">ws.connection(fucntion(ws)&#123;</span><br><span class="line">  clients.push(ws)</span><br><span class="line">  clearInterval(timing)</span><br><span class="line">timing = setInterval(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">  clients.foreach(<span class="function"><span class="params">x</span> =&gt;</span> &#123;</span><br><span class="line">    x.send(<span class="string">'someTHIng'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;, <span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<li>使用<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timing, clients=[]</span><br><span class="line">ws.connection(fucntion(ws)&#123;</span><br><span class="line">  clients.push(ws)</span><br><span class="line">  clearInterval(timing)</span><br><span class="line">timing = setInterval(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">  clients.foreach(<span class="function"><span class="params">x</span> =&gt;</span> &#123;</span><br><span class="line">    x.send(<span class="string">'someTHIng'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;, <span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// OK</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>server 里定义一个变量i=0;并改变它<br>client1 连接到 输出为i=5<br>client2 连接过来 也是从5开始输出</p>
