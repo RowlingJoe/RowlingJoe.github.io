@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 周乐林的博客</title>
+  <title>websocket | 周乐林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="周乐林的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="功能点：  websocketk express里websocket 断线重连 多用户登录线程相关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="websocket">
+<meta property="og:url" content="http://yoursite.com/2019/03/22/websocket/index.html">
 <meta property="og:site_name" content="周乐林的博客">
+<meta property="og:description" content="功能点：  websocketk express里websocket 断线重连 多用户登录线程相关">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/websocketCode.png?raw=true">
+<meta property="og:updated_time" content="2019-03-22T07:26:24.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="周乐林的博客">
+<meta name="twitter:title" content="websocket">
+<meta name="twitter:description" content="功能点：  websocketk express里websocket 断线重连 多用户登录线程相关">
+<meta name="twitter:image" content="https://github.com/RowlingJoe/figureBed/blob/master/image/websocketCode.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
   
@@ -142,328 +148,203 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-websocket" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      websocket
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/22/websocket/" class="archive-article-date">
+
+        
+        <a href="/2019/03/22/websocket/" class="archive-article-date">
   	<time datetime="2019-03-22T05:30:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/22/websocket/">websocket</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/18/linux上使用node/" class="archive-article-date">
-  	<time datetime="2019-03-18T10:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/18/linux上使用node/">linux上使用node</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <p>功能点：</p>
+<ol>
+<li>websocketk</li>
+<li>express里websocket</li>
+<li>断线重连</li>
+<li>多用户登录线程相关<a id="more"></a>
+<blockquote>
+<p>client<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket" target="_blank" rel="noopener">webscoket-MDN</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> WebSocket(<span class="string">'ws://0.0.0.0:3000'</span>)</span><br><span class="line"><span class="comment">// 新建一个websocket对象，websocket服务以ws开头而不是http或者https</span></span><br><span class="line">ws.onopen = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123; <span class="comment">// 连接建立时触发</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'connection to server:'</span> + ws.readyState);</span><br><span class="line">&#125;</span><br><span class="line">ws.onmessage = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123; <span class="comment">// 客户端接收到服务端发送的数据时触发</span></span><br><span class="line">  <span class="built_in">console</span>.log(e.data)</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123; <span class="comment">// 连接关闭时出发</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'websocketClosed: code='</span> + e.code)</span><br><span class="line">  <span class="comment">// 1000 正常关闭</span></span><br><span class="line">  <span class="comment">// 1006 网络异常</span></span><br><span class="line">  <span class="comment">// 见下表</span></span><br><span class="line">&#125;</span><br><span class="line">ws.send(<span class="string">'我连上来了'</span>); <span class="comment">// 向服务端发送数据</span></span><br><span class="line">ws.close(); <span class="comment">// 关闭连接</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/websocketCode.png?raw=true" alt="websocket状态码"></p>
+<h2 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h2><blockquote>
+<p>server (本文server端以node语言为例)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">var</span> WebSocket = <span class="built_in">require</span>(<span class="string">'ws'</span>);</span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>)</span>&#123;</span><br><span class="line">  response.writeHead(<span class="number">200</span>,&#123;<span class="string">'Content-Type'</span>:<span class="string">'text/plain'</span>&#125;)</span><br><span class="line">  response.write(<span class="string">'Hello World'</span>);</span><br><span class="line">  response.end()</span><br><span class="line">&#125;).listen(<span class="number">3000</span>,<span class="string">'0.0.0.0'</span>)</span><br><span class="line"><span class="keyword">var</span> wss = <span class="keyword">new</span> WebSocket.Server(&#123;</span><br><span class="line">  server: server;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// new 出web socket服务对象</span></span><br><span class="line"><span class="comment">// 客户端接入是触发函数connection</span></span><br><span class="line">wss.on(<span class="string">"connection"</span>, <span class="function"><span class="keyword">function</span> <span class="title">connection</span>(<span class="params">ws, req</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> ip = req.connection.remoteAddress; <span class="comment">// 获取客户端ip</span></span><br><span class="line">  ws.send(ip+<span class="string">'你连上来了'</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 收到客户端发送来的消息是触发message</span></span><br><span class="line">  ws.on(<span class="string">"message"</span>,<span class="function"><span class="keyword">function</span> <span class="title">incoming</span>(<span class="params">message</span>)</span>&#123;</span><br><span class="line">    ws.send(<span class="string">'hello World'</span>)</span><br><span class="line">    wss.broadcastToElse(<span class="string">'helloWorld'</span>,ws) <span class="comment">// 想其它客户端发消息</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 向其他客户端发消息</span></span><br><span class="line">wss.broadcastToElse = <span class="function"><span class="keyword">function</span> <span class="title">broadcast</span>(<span class="params">data, ws</span>)</span>&#123;</span><br><span class="line">  wss.clients.forEach(<span class="function"><span class="params">client</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (client!==ws &amp;&amp; client.readyState === WebSocket.OPEN)&#123;</span><br><span class="line">      client.send(data)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="espress-ws"><a href="#espress-ws" class="headerlink" title="espress-ws"></a>espress-ws</h2><blockquote>
+<p>server<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"><span class="keyword">var</span> expressWs = <span class="built_in">require</span>(<span class="string">'express-ws'</span>)(app);</span><br><span class="line">app.ws(<span class="string">'/ws'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">ws, req</span>)</span>&#123;</span><br><span class="line">  ws.send(<span class="string">'你连上来了'</span>);</span><br><span class="line">  ws.on(<span class="string">'message'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">    ws.send(<span class="string">'收到你的消息了'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="string">'0.0.0.0'</span>)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="短线重连"><a href="#短线重连" class="headerlink" title="短线重连"></a>短线重连</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _ws = &#123;&#125;;</span><br><span class="line">_ws.init = <span class="function"><span class="keyword">function</span>(<span class="params">uri</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.wsUri = uri;</span><br><span class="line">    <span class="keyword">this</span>.lastHeartBeat = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">    <span class="keyword">this</span>.overtime = <span class="number">8000</span>; <span class="comment">// 设置超时时间</span></span><br><span class="line">    _ws.websocket = <span class="keyword">new</span> WebSocket(_ws.wsUri);</span><br><span class="line"></span><br><span class="line">    _ws.websocket.onopen = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'websocket Open'</span>)</span><br><span class="line">    &#125;;</span><br><span class="line">    _ws.websocket.onclose = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'websocket close'</span>, evt)</span><br><span class="line">    &#125;;</span><br><span class="line">    _ws.websocket.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(evt.data)</span><br><span class="line">     _ws.lastHeartBeat = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">        </span><br><span class="line">    &#125;;</span><br><span class="line">    _ws.websocket.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(evt)</span><br><span class="line">    &#125;;</span><br><span class="line">  setInterval(checkConnect,<span class="number">5000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkConnect</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">if</span> ((<span class="keyword">new</span> <span class="built_in">Date</span>().getTime() - _ws.lastHeartBeat) &gt; _ws.overtime) &#123;</span><br><span class="line">         reConnect();</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">onMessage</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">     _ws.lastHeartBeat = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//* 重新连接</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reConnect</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"socket 连接断开，正在尝试重新建立连接"</span>);</span><br><span class="line">    _ws.init(<span class="string">"ws://0.0.0.0:3000/ws"</span>);</span><br><span class="line">&#125;</span><br><span class="line">_ws.init(<span class="string">"ws://0.0.0.0:3000/ws"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="线程卡死问题"><a href="#线程卡死问题" class="headerlink" title="线程卡死问题"></a>线程卡死问题</h2><blockquote>
+<p>server<br> 如果需要间歇的想客户端发送消息</p>
+<ol>
+<li>使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while (true)&#123;</span><br><span class="line">  sleep.sleep(2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<p>会导致其他客户端无法访问服务端，服务会卡死在这一块，直至客户端断开</p>
+<ol start="2">
+<li>使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setInterval(v =&gt;&#123;</span><br><span class="line"></span><br><span class="line">&#125;, 2000)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>会导致多个客户端连接进入是定时器混乱的问题</p>
+<ol start="3">
+<li>使用<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timing, clients=[]</span><br><span class="line">ws.connection(fucntion(ws)&#123;</span><br><span class="line">  clients.push(ws)</span><br><span class="line">  clearInterval(timing)</span><br><span class="line">timing = setInterval(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">  clients.foreach(<span class="function"><span class="params">x</span> =&gt;</span> &#123;</span><br><span class="line">    x.send(<span class="string">'someTHIng'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;, <span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>server 里定义一个变量i=0;并改变它<br>client1 连接到 输出为i=5<br>client2 连接过来 也是从5开始输出</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你的每一次打赏是我创作的动力！谢谢！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/5882b2b7d0a20cf4dd8ab77b7f094b36acaf9978.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2f738bd4b31c87012fa3fb422e7f9e2f0708ff79.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/23/my-wychat-application/" class="archive-article-date">
-  	<time datetime="2018-10-23T08:31:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/23/my-wychat-application/">my_wychat_application</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2019/03/22/websocket/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/18/uni-app的学习/" class="archive-article-date">
-  	<time datetime="2018-09-18T07:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/18/uni-app的学习/">uni-app的学习</a>
-    </h1>
+  
+    <a href="/2019/03/18/linux上使用node/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux上使用node</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="websocket" data-title="websocket" data-url="http://yoursite.com/2019/03/22/websocket/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/12/reademe/" class="archive-article-date">
-  	<time datetime="2018-09-12T08:51:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/12/reademe/">reademe</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/12/vue减小打包体积/" class="archive-article-date">
-  	<time datetime="2018-09-12T08:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/12/vue减小打包体积/">vue减小打包体积</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/10/减小webpack打包体积/" class="archive-article-date">
-  	<time datetime="2018-09-10T10:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/10/减小webpack打包体积/">减小webpack打包体积</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/10/studyMiniprogrameFromLazycat/" class="archive-article-date">
-  	<time datetime="2018-08-10T10:19:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/10/studyMiniprogrameFromLazycat/">从猫开始学习小程序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/09/node中间层的初步学习-三/" class="archive-article-date">
-  	<time datetime="2018-08-09T02:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/09/node中间层的初步学习-三/">node中间层的初步学习(三)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/07/node中间层的初步学习-二/" class="archive-article-date">
-  	<time datetime="2018-08-07T09:47:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/07/node中间层的初步学习-二/">node中间层的初步学习(二)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -486,8 +367,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
