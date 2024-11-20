@@ -10,13 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="Apifox的使用1 介绍 Apifox 是 API 文档、API 调试、API Mock、API 自动化测试一体化协作平台，定位 Postman + Swagger + Mock + JMeter。通过一套系统、一份数据，解决多个系统之间的数据同步问题。只要定义好 API 文档，API 调试、API 数据 Mock、API 自动化测试就可以直接使用，无需再次定义；API 文档和 API 开发调试">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Apifox的使用">
 <meta property="og:url" content="https://rowlingjoe.github.io/2022/09/27/Apifox%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="周乐林的博客">
+<meta property="og:description" content="Apifox的使用1 介绍 Apifox 是 API 文档、API 调试、API Mock、API 自动化测试一体化协作平台，定位 Postman + Swagger + Mock + JMeter。通过一套系统、一份数据，解决多个系统之间的数据同步问题。只要定义好 API 文档，API 调试、API 数据 Mock、API 自动化测试就可以直接使用，无需再次定义；API 文档和 API 开发调试">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-09-27T02:21:05.000Z">
-<meta property="article:modified_time" content="2022-09-27T02:21:05.187Z">
+<meta property="article:modified_time" content="2024-11-20T06:45:13.243Z">
 <meta property="article:author" content="Rowling Joe">
 <meta name="twitter:card" content="summary">
   
@@ -40,9 +42,6 @@
   
 
   
-    
- 	  <script src="/lib/clickLove.js"></script>
-  
   
 
 
@@ -64,7 +63,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/yilia-plus-demo/" class="profilepic">
-			<img src="https://www.thispersondoesnotexist.com/image" class="js-avatar">
+			<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/yilia-plus-demo/"></a></h1>
@@ -140,7 +139,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 				<a href="/yilia-plus-demo/">
-					<img src="https://www.thispersondoesnotexist.com/image" class="js-avatar">
+					<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
 				</a>
 			</div>
 			<hgroup>
@@ -222,7 +221,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">1.2k字</span>
     </span>
   </span>
 
@@ -231,7 +230,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -242,7 +241,32 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <h1 id="Apifox的使用"><a href="#Apifox的使用" class="headerlink" title="Apifox的使用"></a><a target="_blank" rel="noopener" href="https://www.apifox.cn/help/">Apifox</a>的使用</h1><h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h2><blockquote>
+<p>Apifox 是 API 文档、API 调试、API Mock、API 自动化测试一体化协作平台，定位 Postman + Swagger + Mock + JMeter。通过一套系统、一份数据，解决多个系统之间的数据同步问题。只要定义好 API 文档，API 调试、API 数据 Mock、API 自动化测试就可以直接使用，无需再次定义；API 文档和 API 开发调试使用同一个工具，API 调试完成后即可保证和 API 文档定义完全一致。高效、及时、准确！</p>
+</blockquote>
+<h4 id="1-1-接口管理现状"><a href="#1-1-接口管理现状" class="headerlink" title="1.1 接口管理现状"></a>1.1 接口管理现状</h4><p><strong>1.1.1 常用解决方案</strong></p>
+<ol>
+<li>使用swagger管理API文档</li>
+<li>使用postman调试API</li>
+<li>使用mockjs等工具Mock API 数据</li>
+<li>使用JMeter做API自动化测试<span id="more"></span>
+<strong>1.1.2 存在的问题</strong><br>维护不同工具之间数据一致性非常困难、低效。并且这里不仅仅是工作量的问题，更大的问题是多个系统之间数据不一致，导致协作低效、频繁出问题，开发人员痛苦不堪。</li>
+</ol>
+<h4 id="1-2-Apifox解决方案"><a href="#1-2-Apifox解决方案" class="headerlink" title="1.2 Apifox解决方案"></a>1.2 Apifox解决方案</h4><p>Apifox = Postman + Swagger + Mock + JMeter</p>
+<p>Apifox 是 API 文档、API 调试、API Mock、API 自动化测试一体化协作平台。</p>
+<p>通过一套系统、一份数据，解决多个系统之间的数据同步问题。只要定义好接口文档，接口调试、数据 Mock、接口测试就可以直接使用，无需再次定义；接口文档和接口开发调试使用同一个工具，接口调试完成后即可保证和接口文档定义完全一致。高效、及时、准确！</p>
+<h4 id="1-3-Apifox-功能"><a href="#1-3-Apifox-功能" class="headerlink" title="1.3 Apifox 功能"></a>1.3 Apifox 功能</h4><p>接口设计：Apifox 接口文档遵循 OpenApi 3.0 (原 Swagger)、JSON Schema 规范的同时，提供了非常好用的可视化文档管理功能，零学习成本，非常高效。并且支持在线分享接口文档。<br>数据模型：可复用的数据结构，定义接口返回数据结构及请求参数数据结构（仅 JSON 和 XML 模式）时可直接引用。支持模型直接嵌套引用，直接 JSON/XML 智能导入，支持 oneOf、allOf 等高级组合模式。<br>接口调试：Postman 有的功能，比如环境变量、前置/后置脚本、Cookie/Session 全局共享 等功能，Apifox 都有，并且比 Postman 更高效好用。接口运行完之后点击保存为用例按钮，即可生成接口用例，后续可直接运行接口用例，无需再输入参数，非常方便。自定义脚本 100% 兼容 Postman 语法，并且支持运行 javascript、java、python、php、js、BeanShell、go、shell、ruby、lua 等各种语言代码。<br>接口用例：通常一个接口会有多种情况用例，比如参数正确用例、参数错误用例、数据为空用例、不同数据状态用例等等。运行接口用例时会自动校验数据正确性，用接口用例来调试接口非常高效。<br>接口数据 Mock：内置 Mock.js 规则引擎，非常方便 mock 出各种数据，并且可以在定义数据结构的同时写好 mock 规则。支持添加“期望”，根据请求参数返回不同 mock 数据。最重要的是 Apifox 零配置 即可 Mock 出非常人性化的数据，具体在本文后面介绍。<br>数据库操作：支持读取数据库数据，作为接口请求参数使用。支持读取数据库数据，用来校验(断言)接口请求是否成功。<br>接口自动化测试：提供接口集合测试，可以通过选择接口（或接口用例）快速创建测试集。目前接口自动化测试更多功能还在开发中，敬请期待！目标是： JMeter 有的功能基本都会有，并且要更好用。<br>快捷请求：类似 Postman 的接口调试方式，主要用途为临时调试一些无需文档化的接口，无需提前定义接口即可快速调试。<br>代码生成：根据接口及数据数据模型定义，系统自动生成接口请求代码、前端业务代码及后端业务代码。<br>团队协作：Apifox 天生就是为团队协作而生的，接口云端实时同步更新，成熟的团队/项目/成员权限管理，满足各类企业的需求。</p>
+<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2 使用"></a>2 使用</h2><p>下载完安装包进行安装。<br>在面板中添加对应的项目目录<br>需要设置的流程</p>
+<ol>
+<li>设置环境<ol>
+<li>开发环境、测试环境、本地mock、云端mock</li>
+</ol>
+</li>
+<li>设置数据模型<br>设置好数据模型可以快速的作为引用数据来设置响应体</li>
+<li>编写或导入接口</li>
+<li>前置条件、后置条件</li>
+</ol>
+
     
 
     
@@ -367,6 +391,15 @@
 
 <nav id="article-nav">
   
+    <a href="/2022/09/27/CSS%E7%9A%84%E6%BB%9A%E5%8A%A8%E8%A7%86%E5%B7%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS的滚动视差
+        
+      </div>
+    </a>
+  
   
     <a href="/2022/06/29/Three-js%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
@@ -436,7 +469,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018-2022 Rowling Joe
+    		&copy; 2018-2024 Rowling Joe
     	</div>
       	<div class="footer-right">
 			
@@ -580,6 +613,66 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">观影感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vite</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">打包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
             
             <div class="clearfix"></div>

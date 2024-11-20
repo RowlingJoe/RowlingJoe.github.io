@@ -10,16 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="编码encodeURI 用来编码URI如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。escape 函数可对字符串进行编码，编码城十六进制，这样就可以在所有的计算机上读取该字符串。 解码decodeURI 用来解码URIunescape 函数可对字符串进行解码，decodeURIComponent ##　解析url1">
+  <meta name="description" content="编码encodeURI 用来编码URI如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。escape 函数可对字符串进行编码，编码城十六进制，这样就可以在所有的计算机上读取该字符串。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="&#39;编码解码url解析&#39;">
 <meta property="og:url" content="https://rowlingjoe.github.io/2017/07/09/%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81url%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="周乐林的博客">
-<meta property="og:description" content="编码encodeURI 用来编码URI如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。escape 函数可对字符串进行编码，编码城十六进制，这样就可以在所有的计算机上读取该字符串。 解码decodeURI 用来解码URIunescape 函数可对字符串进行解码，decodeURIComponent ##　解析url1">
+<meta property="og:description" content="编码encodeURI 用来编码URI如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。escape 函数可对字符串进行编码，编码城十六进制，这样就可以在所有的计算机上读取该字符串。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2017-07-09T14:18:11.000Z">
-<meta property="article:modified_time" content="2021-03-18T11:22:41.304Z">
+<meta property="article:modified_time" content="2024-11-20T06:50:05.530Z">
 <meta property="article:author" content="Rowling Joe">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="周乐林的博客" type="application/atom+xml">
@@ -42,9 +43,6 @@
   
 
   
-    
- 	  <script src="/lib/clickLove.js"></script>
-  
   
 
 
@@ -66,7 +64,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/yilia-plus-demo/" class="profilepic">
-			<img src="https://www.thispersondoesnotexist.com/image" class="js-avatar">
+			<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/yilia-plus-demo/"></a></h1>
@@ -142,7 +140,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 				<a href="/yilia-plus-demo/">
-					<img src="https://www.thispersondoesnotexist.com/image" class="js-avatar">
+					<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
 				</a>
 			</div>
 			<hgroup>
@@ -244,7 +242,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>encodeURI 用来编码URI<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br>escape 函数可对字符串进行编码，编码城十六进制，这样就可以在所有的计算机上读取该字符串。</p>
+    <h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>encodeURI 用来编码URI<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br>escape 函数可对字符串进行编码，编码城十六进制，这样就可以在所有的计算机上读取该字符串。<br><span id="more"></span></p>
 <h2 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h2><p>decodeURI 用来解码URI<br>unescape 函数可对字符串进行解码，decodeURIComponent</p>
 <p>##　解析url<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">var arr&#x3D; &#123;&quot;周乐林&quot;:98.00%, &quot;汪亦然&quot;:98.12%, &quot;江流儿&quot;:98.34%, &quot;张庆杰&quot;:19.98%, &quot;苏一&quot;:98.88%&#125;</span><br><span class="line">在index页面需将此arr传给另一页面server，</span><br><span class="line">通过接口获取到的数据arr</span><br><span class="line">var arr &#x3D; out.data.arr; </span><br><span class="line">    console.log(JSON.stringify(arr))</span><br><span class="line">    &#x2F;&#x2F;1. 用正则匹配属性值，去掉%</span><br><span class="line">    &#x2F;&#x2F;2. 用正则匹配&quot;去掉它</span><br><span class="line">    &#x2F;&#x2F;3. 用正则匹配,改成&#125;,&#123;形式</span><br><span class="line">    得到arr&#x3D;&#123;周乐林:98.00&#125;,&#123; 汪亦然:98.12&#125;,&#123;江流儿:98.34&#125;,&#123;张庆杰:19.98&#125;,&#123;苏一:98.88&#125;</span><br><span class="line"></span><br><span class="line">    arr &#x3D; JSON.stringify(arr).replace(&#x2F;\&quot;(\d+\..\d+)%\&quot;&#x2F;g, &quot;$1&quot;).replace(&#x2F;\&quot;&#x2F;g ,&quot;&quot;).replace(&#x2F;,&#x2F;g , &quot;&#125;,&#123;&quot;)                </span><br><span class="line">    $(&quot;.showRight&quot;).unbind().click(function()&#123;</span><br><span class="line">         window.location.href &#x3D; &quot;praxisRankingList.aspx?arr&#x3D;&quot;+arr+&quot;&amp;nums&#x3D;&quot;+out.data.dataList.length+&quot;&amp;accuracys&#x3D;&quot;+out.data.accuracys+&quot;&amp;takeParts&#x3D;&quot;+out.data.takeParts</span><br><span class="line">        &#125;)               </span><br><span class="line"></span><br><span class="line">另一页面操作</span><br><span class="line">var data &#x3D; getUrlVars(window.location.href) </span><br><span class="line">        &#x2F;&#x2F;首先进行解码 </span><br><span class="line"></span><br><span class="line">        data.stuaccuracys&#x3D;decodeURI(data.stuaccuracys);  </span><br><span class="line">        &#x2F;&#x2F;再分割成数组</span><br><span class="line">        var arr &#x3D; data.stuaccuracys.split(&quot;,&quot;)</span><br><span class="line">        &#x2F;&#x2F;arr&#x3D;[&#123;周乐林:98.90&#125;,&#123;汪亦然:98.12&#125;,&#123;江流儿:98.34&#125;,&#123;张庆杰:19.98&#125;,&#123;苏一:98.88&#125;]</span><br><span class="line">        &#x2F;&#x2F;再将内部的中午属性值用&quot;&quot;包裹并利用JSON.parse进行解析为对象</span><br><span class="line">        for(let i&#x3D;0; i&lt;arr.length; i++)&#123;        </span><br><span class="line">            arr[i]&#x3D;JSON.parse(arr[i].replace(&#x2F;&#123;(\W+):&#x2F;g, &quot;&#123;\&quot;$1\&quot;:&quot;))</span><br><span class="line">            for(var k in arr[i])&#123;</span><br><span class="line">                arr[i][&quot;num&quot;]&#x3D;arr[i][k]</span><br><span class="line">                arr[i][&quot;name&quot;]&#x3D;k</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#x2F;&#x2F;此方法可将url里的简直对解析成对象</span><br><span class="line"></span><br><span class="line">function getUrlVars(url) &#123;</span><br><span class="line">    var hash;</span><br><span class="line">    var myJson &#x3D; &#123;&#125;;</span><br><span class="line">    var hashes &#x3D; url.slice(url.indexOf(&#39;?&#39;) + 1).split(&#39;&amp;&#39;);</span><br><span class="line">    for (var i &#x3D; 0; i &lt; hashes.length; i++) &#123;</span><br><span class="line">        hash &#x3D; hashes[i].split(&#39;&#x3D;&#39;);</span><br><span class="line">        myJson[hash[0]] &#x3D; hash[1];</span><br><span class="line">    &#125;</span><br><span class="line">    return myJson;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 <p>var arr是数组格式的字符串，可用eval(“(“+arr+”)”)转为数组</p>
@@ -308,6 +306,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -451,7 +460,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018-2022 Rowling Joe
+    		&copy; 2018-2024 Rowling Joe
     	</div>
       	<div class="footer-right">
 			
@@ -595,6 +604,66 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">观影感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vite</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">打包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
             
             <div class="clearfix"></div>

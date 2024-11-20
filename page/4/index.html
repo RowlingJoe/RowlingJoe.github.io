@@ -41,9 +41,6 @@
   
 
   
-    
- 	  <script src="/lib/clickLove.js"></script>
-  
   
 
 
@@ -65,7 +62,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/yilia-plus-demo/" class="profilepic">
-			<img src="https://www.thispersondoesnotexist.com/image" class="js-avatar">
+			<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/yilia-plus-demo/"></a></h1>
@@ -141,7 +138,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 				<a href="/yilia-plus-demo/">
-					<img src="https://www.thispersondoesnotexist.com/image" class="js-avatar">
+					<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
 				</a>
 			</div>
 			<hgroup>
@@ -200,7 +197,7 @@
 
 
   
-    <article id="post-缓存" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-vue减小打包体积" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -208,7 +205,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2017/01/01/%E7%BC%93%E5%AD%98/" target="_blank">缓存</a>
+	  <a class="article-title" href="/2018/09/12/vue%E5%87%8F%E5%B0%8F%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/" target="_blank">vue减小打包体积</a>
   
     </h1>
   
@@ -216,8 +213,8 @@
 
   
   
-<a href="/2017/01/01/%E7%BC%93%E5%AD%98/" class="archive-article-date">
-        <time datetime="2017-01-01T07:38:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
+<a href="/2018/09/12/vue%E5%87%8F%E5%B0%8F%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/" class="archive-article-date">
+        <time datetime="2018-09-12T08:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
 </a>
 
   
@@ -229,782 +226,720 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><p>将数据临时的存储起来以提高访问效率<br>
-    
-    <a class="article-more-a" href="/2017/01/01/%E7%BC%93%E5%AD%98/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2017/01/01/%E7%BC%93%E5%AD%98/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-利用Node快速搭建一个文件发送服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2016/11/10/%E5%88%A9%E7%94%A8Node%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8F%91%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank">利用Node快速搭建一个文件发送服务器</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2016/11/10/%E5%88%A9%E7%94%A8Node%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8F%91%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-        <time datetime="2016-11-10T07:14:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="方法一：-使用-ecstatic包"><a href="#方法一：-使用-ecstatic包" class="headerlink" title="方法一： 使用 ecstatic包"></a>方法一： 使用 ecstatic包</h2><ol>
-<li>$ npm init -y  快速创建packjson文件</li>
-<li>$ npm install ecstatic -save  安装ecstatic包
-    
-    <a class="article-more-a" href="/2016/11/10/%E5%88%A9%E7%94%A8Node%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8F%91%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2016/11/10/%E5%88%A9%E7%94%A8Node%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8F%91%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-node中的JavaScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2016/11/02/node%E4%B8%AD%E7%9A%84JavaScript/" target="_blank">node中的JavaScript</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2016/11/02/node%E4%B8%AD%E7%9A%84JavaScript/" class="archive-article-date">
-        <time datetime="2016-11-02T13:11:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Node 是一个平台，Node 是一个框架，基于 Ecmascript 语言，在这个平台（或者说框架）之上<br>给 Ecmascript 提供了很多操作系统级别的编程接口。做 Node 编程实际上就是通过 Ecmascript、Node平台内置的核心模块、第三方社区提供的模块构建高度模块化的程序。<br>
-    
-    <a class="article-more-a" href="/2016/11/02/node%E4%B8%AD%E7%9A%84JavaScript/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2016/11/02/node%E4%B8%AD%E7%9A%84JavaScript/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-node中常用的API" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2016/11/02/node%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84API/" target="_blank">node中常用的API</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2016/11/02/node%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84API/" class="archive-article-date">
-        <time datetime="2016-11-02T13:00:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>   Node.js是一个Javascript运行环境(runtime)。实际上它是对Google V8引擎进行了封装。V8引 擎执行Javascript的速度非常快，性能非常好。Node.js对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动，非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行数据密集型的实时应用。<br>
-    
-    <a class="article-more-a" href="/2016/11/02/node%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84API/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2016/11/02/node%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84API/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Angular自学-从菜鸟教程到RowlingJoe" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2016/10/17/Angular%E8%87%AA%E5%AD%A6-%E4%BB%8E%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B%E5%88%B0RowlingJoe/" target="_blank">Angular自学:从菜鸟教程到RowlingJoe</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2016/10/17/Angular%E8%87%AA%E5%AD%A6-%E4%BB%8E%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B%E5%88%B0RowlingJoe/" class="archive-article-date">
-        <time datetime="2016-10-17T00:55:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h1><blockquote>
-<p>Angular是一个由原生JS编写的JS框架，它扩展了HTML，是得HTML能通过一些新的属性和表达式来完成以前需要JS才能完成的效果，从而可以构建一个单一页面的应用程序，如非常知名的teambition<br>
-    
-    <a class="article-more-a" href="/2016/10/17/Angular%E8%87%AA%E5%AD%A6-%E4%BB%8E%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B%E5%88%B0RowlingJoe/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2016/10/17/Angular%E8%87%AA%E5%AD%A6-%E4%BB%8E%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B%E5%88%B0RowlingJoe/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ES6的学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2016/09/10/ES6%E7%9A%84%E5%AD%A6%E4%B9%A0/" target="_blank">ES6的学习</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2016/09/10/ES6%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2016-09-10T12:50:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="ECMAScript6"><a href="#ECMAScript6" class="headerlink" title="ECMAScript6"></a>ECMAScript6</h1>
-    
-    <a class="article-more-a" href="/2016/09/10/ES6%E7%9A%84%E5%AD%A6%E4%B9%A0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2016/09/10/ES6%E7%9A%84%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-express与mongoDB的配合使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2016/07/02/express%E4%B8%8EmongoDB%E7%9A%84%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8/" target="_blank">express与mongoDB的配合使用</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2016/07/02/express%E4%B8%8EmongoDB%E7%9A%84%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2016-07-02T13:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Express 是一个简洁而灵活的 node.js Web应用框架, 提供一系列强大特性帮助你创建各种Web应用。Express 不对 node.js 已有的特性进行二次抽象，我们只是在它之上扩展了Web应用所需的功能。丰富的HTTP工具以及来自Connect框架的中间件随取随用，创建强健、友好的API变得快速又简单<br>
-    
-    <a class="article-more-a" href="/2016/07/02/express%E4%B8%8EmongoDB%E7%9A%84%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2016/07/02/express%E4%B8%8EmongoDB%E7%9A%84%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-主流跨域方法及原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2016/06/10/%E4%B8%BB%E6%B5%81%E8%B7%A8%E5%9F%9F%E6%96%B9%E6%B3%95%E5%8F%8A%E5%8E%9F%E7%90%86/" target="_blank">主流跨域方法及原理</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2016/06/10/%E4%B8%BB%E6%B5%81%E8%B7%A8%E5%9F%9F%E6%96%B9%E6%B3%95%E5%8F%8A%E5%8E%9F%E7%90%86/" class="archive-article-date">
-        <time datetime="2016-06-10T12:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h2><p>是指浏览器出于安全的考虑不允许执行其他网站的脚本代码，是有浏览器的同源策略造成，的，同源是指，域名，协议，端口均相同，不明白没关系，举个栗子<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//www.123.com/index.html 调用 http://www.123.com/server.PHP （非跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com/index.html 调用 http://www.456.com/server.php （主域名不同:123/456，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//abc.123.com/index.html 调用 http://def.123.com/server.php （子域名不同:abc/def，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com:8080/index.html 调用 http://www.123.com:8081/server.php （端口不同:8080/8081，跨域）</span></span><br><span class="line"></span><br><span class="line">http:<span class="comment">//www.123.com/index.html 调用 https://www.123.com/server.php （协议不同:http/https，跨域）</span></span><br><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure><br>这些都是跨域。<br>但是有时我们又必须通过跨域获取数据，所以又开发出两种可以跨域的方法</p>
-<h2 id="Hack类跨域方案"><a href="#Hack类跨域方案" class="headerlink" title="Hack类跨域方案"></a>Hack类跨域方案</h2><h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><ul>
-<li>原理： script标签的src可以跨域，而且在跨域脚本中可以直接回调当前脚本的函数。</li>
-<li>限制：需要创建一个DOM对象并且添加到DOM数中，只能用于GET方法。<br>JSONP跨域URL返回的脚本不仅包含数据，还包含一个回调：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//URL:http://b.a.com/foo</span></span><br><span class="line"><span class="keyword">var</span> data = &#123;</span><br><span class="line">   foo: <span class="string">&#x27;bar&#x27;</span> ,</span><br><span class="line">   bar: <span class="string">&#x27;foo&#x27;</span></span><br><span class="line">   &#125;</span><br><span class="line"> callback(data)</span><br></pre></td></tr></table></figure>
-然后在我们主站<a target="_blank" rel="noopener" href="http://a.com中可以这样来跨域获取http://b.a.com的数据">http://a.com中可以这样来跨域获取http://b.a.com的数据</a><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//URL:http://a.com/foo</span></span><br><span class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//处理跨域请求得到的数据</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> script = $(<span class="string">&#x27;&lt;script&gt;&#x27;</span>,&#123;<span class="attr">src</span>:<span class="string">&#x27;htttp://b.a.com/bar&#x27;</span>&#125;)</span><br><span class="line">$(<span class="string">&#x27;body&#x27;</span>).append(srcipt)</span><br><span class="line"><span class="comment">//其实就是本地脚本准备好函数，在跨域回来的数据中带回了（）则可以调用本地的函数企鹅将带回的数据当作函数的参数来处理</span></span><br></pre></td></tr></table></figure>
-在jQuery中我们可以这样来使用JSONP<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.getJSON(<span class="string">&quot;http://b.a.com/bar?callback=callback&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//处理跨域请求得到的数据</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-$.getJSON与$.get的区别是前者回吧responseText转换为JSON，而且当URL具有callback参数是，jQuery将会把它解析为一个JSONP请求，创建一个<script>标签来完成该请求</li>
-</ul>
-<h3 id="navigation-对象跨域"><a href="#navigation-对象跨域" class="headerlink" title="navigation 对象跨域"></a>navigation 对象跨域</h3><ul>
-<li>原理：iframe之间是共享navigator对象的，用它来传递信息</li>
-<li>限制： IE6/7<br>有些人注意到了IE6/7的一个漏洞：iframe之间window.navigator对象是共享的。我们可以把它作为一个Messenger,通过它来船体信息。比如：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a.com</span></span><br><span class="line">navigation.onData()&#123;</span><br><span class="line">    <span class="comment">//数据到达的处理函数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">typeof</span> navigation.getData === <span class="string">&#x27;function&#x27;</span></span><br><span class="line">||navigation.getData()</span><br><span class="line"><span class="comment">// b.com</span></span><br><span class="line">nacigation.getData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $.get(<span class="string">&#x27;/path/under/b.com&#x27;</span>).success(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">typeof</span> navigation.onData === <span class="string">&#x27;function&#x27;</span> || navigation.onData(data)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="document-domain-跨域"><a href="#document-domain-跨域" class="headerlink" title="document.domain 跨域"></a>document.domain 跨域</h3><ul>
-<li>原理： 相同主域名不同子域名下的页面可以设置document.domain让他们同于</li>
-<li>限制： 同域document提供的是页面间的互操作，需要载入iframe页面<br>下面几个域名下的页面都是可以通过 document.domain 跨域互操作的： <a target="_blank" rel="noopener" href="http://a.com/foo">http://a.com/foo</a> , <a target="_blank" rel="noopener" href="http://b.a.com/bar">http://b.a.com/bar</a> , <a target="_blank" rel="noopener" href="http://c.a.com/bar">http://c.a.com/bar</a> 。 但只能以页面嵌套的方式来进行页面互操作，比如常见的 iframe 方式就可以完成页面嵌套：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// URL http://a.com/foo</span></span><br><span class="line"><span class="keyword">var</span> ifr = <span class="built_in">document</span>.createElement(<span class="string">&#x27;iframe&#x27;</span>);</span><br><span class="line">ifr.src = <span class="string">&#x27;http://b.a.com/bar&#x27;</span>; </span><br><span class="line">ifr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ifrdoc = ifr.contentDocument || ifr.contentWindow.document;</span><br><span class="line">    ifrdoc.getElementsById(<span class="string">&quot;foo&quot;</span>).innerHTML);</span><br><span class="line">&#125;;</span><br><span class="line">ifr.style.display = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(ifr);</span><br></pre></td></tr></table></figure>
-上述代码所在的URL是 <a target="_blank" rel="noopener" href="http://a.com/foo">http://a.com/foo</a> ，它对 <a target="_blank" rel="noopener" href="http://b.a.com/bar">http://b.a.com/bar</a> 的DOM访问要求后者将 document.domain 往上设置一级：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//URL:http://b.a.com/bar</span></span><br><span class="line"><span class="built_in">document</span>.domain = <span class="string">&#x27;a.com&#x27;</span></span><br></pre></td></tr></table></figure>
-document.domain只能从子域设置到主域，往下设置以及往其他域名设置都是不允许的，如果实在chrome中运行则报错<br>Uncaught DOMException: Failed to set the ‘domain’ property on ‘Document’: ‘baidu.com’ is not a suffix of ‘b.a.com’</li>
-</ul>
-<h2 id="使用代理服务器来进行跨域"><a href="#使用代理服务器来进行跨域" class="headerlink" title="使用代理服务器来进行跨域"></a>使用代理服务器来进行跨域</h2><p>从同一个源（表现为同一访问协议、同一端口和同一域名下）获取数据不就符合同源策略了？<br>为了实现从同一源获取，我们在b.com的源上设置一个代理，通过这个代理传递数据到A.com，这个代理负责和A.com进行通信，这在服务器端是很容易实现的。</p>
+    <p>webpack项目打包后vender高达800K，</p>
 <ol>
-<li>在某小系统b的页面中，ajax(使用jQuery)请求代理，传递参数：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$.post(</span><br><span class="line">    <span class="string">&#x27;http://b.com/proxy.php&#x27;</span>,   <span class="comment">// 代理程序地址</span></span><br><span class="line">    &#123;</span><br><span class="line">        email:<span class="string">&quot;impng@impng.com&quot;</span>,</span><br><span class="line">        subject:<span class="string">&quot;ajax跨域之代理&quot;</span>,</span><br><span class="line">        body:<span class="string">&quot;这里是邮件内容&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(data == <span class="number">1</span>) alert(<span class="string">&#x27;发送成功！&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure></li>
-<li>某小系统b的代理程序(proxy.php)，复杂向某系统A传递数据：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$post = $_POST;  <span class="comment">// 简单接收客户端传递来的参数</span></span><br><span class="line">$data = array(</span><br><span class="line">            <span class="string">&#x27;email&#x27;</span>     =&gt; $post[<span class="string">&#x27;email&#x27;</span>],</span><br><span class="line">            <span class="string">&#x27;subject&#x27;</span>   =&gt; $post[<span class="string">&#x27;subject&#x27;</span>],</span><br><span class="line">            <span class="string">&#x27;body&#x27;</span>      =&gt; $post[<span class="string">&#x27;body&#x27;</span>],</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">$url = <span class="string">&#x27;http://A.com/ISendMail.php?&#x27;</span>;   <span class="comment">// 某系统A的发送邮件接口</span></span><br><span class="line">$url .= http_build_query($data);        <span class="comment">// 传递从某小系统b传递来的数据</span></span><br><span class="line"></span><br><span class="line">$rt = file_get_contents($url);</span><br><span class="line">echo $rt;</span><br></pre></td></tr></table></figure>
+<li>在打包的时候将UI框架，vue等依赖也打入了vender里</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容</td>
+<td>内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>内容</td>
+</tr>
+</tbody>
+</table>
+<p>可通过webpack的enternal来设置某些依赖可不打入vender中而是通过引用的方式使用<br>
+    
+    <a class="article-more-a" href="/2018/09/12/vue%E5%87%8F%E5%B0%8F%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/09/12/vue%E5%87%8F%E5%B0%8F%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-减小webpack打包体积" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/09/10/%E5%87%8F%E5%B0%8Fwebpack%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/" target="_blank">减小webpack打包体积</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/09/10/%E5%87%8F%E5%B0%8Fwebpack%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/" class="archive-article-date">
+        <time datetime="2018-09-10T10:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="近来发现vue项目打包后体积真大，寻求减小打包体积的方法，一番百度得出一些方法"><a href="#近来发现vue项目打包后体积真大，寻求减小打包体积的方法，一番百度得出一些方法" class="headerlink" title="近来发现vue项目打包后体积真大，寻求减小打包体积的方法，一番百度得出一些方法"></a>近来发现vue项目打包后体积真大，寻求减小打包体积的方法，一番百度得出一些方法</h1>
+    
+    <a class="article-more-a" href="/2018/09/10/%E5%87%8F%E5%B0%8Fwebpack%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/09/10/%E5%87%8F%E5%B0%8Fwebpack%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-studyMiniprogrameFromLazycat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/08/10/studyMiniprogrameFromLazycat/" target="_blank">从猫开始学习小程序</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/08/10/studyMiniprogrameFromLazycat/" class="archive-article-date">
+        <time datetime="2018-08-10T10:19:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="关于小程序"><a href="#关于小程序" class="headerlink" title="关于小程序"></a>关于小程序</h2><p>首先我很讨厌小程序,仅以此图略表个人主观情感<br><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/%E5%96%9C%E6%AC%A2%E5%8F%91%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%84%BF%E5%AD%90.png?raw=true" alt="喜欢发小程序的儿子"></p>
+<p>但是呢，出于目前技术发展及职业需要有不得不涉及小程序，故还是得学习一番。<br>小程序的框架目前比较好的就是美团的基于vue的mpvue</p>
+    
+    <a class="article-more-a" href="/2018/08/10/studyMiniprogrameFromLazycat/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/08/10/studyMiniprogrameFromLazycat/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-node中间层的初步学习-三" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/08/09/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%89/" target="_blank">node中间层的初步学习(三)</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/08/09/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%89/" class="archive-article-date">
+        <time datetime="2018-08-09T02:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="模板的渲染及项目的部署"><a href="#模板的渲染及项目的部署" class="headerlink" title="模板的渲染及项目的部署"></a>模板的渲染及项目的部署</h1><p>上面讲到通过路由到达指定的模板并将数据传入给模板。<br>以首页模板为例<br>
+    
+    <a class="article-more-a" href="/2018/08/09/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%89/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/08/09/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%89/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-node中间层的初步学习-二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%BA%8C/" target="_blank">node中间层的初步学习(二)</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%BA%8C/" class="archive-article-date">
+        <time datetime="2018-08-07T09:47:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>上篇文章已经了解到为什么需要node中间层配合的前后端分离以及有什么优缺点<br>下面将从一个demo的角度来具体学习node中间层<br>在这里感谢@西兰 的文章我也是从他那里进行学习的，此处是他的博客地址 <a target="_blank" rel="noopener" href="http://xilan.me/">Keyon Y</a><br>
+    
+    <a class="article-more-a" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%BA%8C/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%BA%8C/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-node中间层的初步学习-一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%80/" target="_blank">node中间层的初步学习(一)</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%80/" class="archive-article-date">
+        <time datetime="2018-08-07T04:53:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下<br>
+    
+    <a class="article-more-a" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%80/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%80/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-空间留言板自动留言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/07/05/%E7%A9%BA%E9%97%B4%E7%95%99%E8%A8%80%E6%9D%BF%E8%87%AA%E5%8A%A8%E7%95%99%E8%A8%80/" target="_blank">空间留言板自动留言</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/07/05/%E7%A9%BA%E9%97%B4%E7%95%99%E8%A8%80%E6%9D%BF%E8%87%AA%E5%8A%A8%E7%95%99%E8%A8%80/" class="archive-article-date">
+        <time datetime="2018-07-05T05:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-05</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>以前那谁要我给她空间留言；觉得很烦；鉴于此；就如此操作了；当然此数组有点过大了；而且是死的，可以通过聚合api等接口获取数据，写入也是可以的；简单的替换一下<br>
+    
+    <a class="article-more-a" href="/2018/07/05/%E7%A9%BA%E9%97%B4%E7%95%99%E8%A8%80%E6%9D%BF%E8%87%AA%E5%8A%A8%E7%95%99%E8%A8%80/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/07/05/%E7%A9%BA%E9%97%B4%E7%95%99%E8%A8%80%E6%9D%BF%E8%87%AA%E5%8A%A8%E7%95%99%E8%A8%80/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-weex开发框架的搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/04/17/weex%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA/" target="_blank">weex开发框架的搭建</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/04/17/weex%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+        <time datetime="2018-04-17T03:05:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>[TOC]</p>
+<h2 id="weex的简单上手"><a href="#weex的简单上手" class="headerlink" title="weex的简单上手"></a>weex的简单上手</h2><blockquote>
+<p>为了能在本地机器上打开 Android 和 iOS 项目，应该配置好客户端的开发环境。<br>对于 iOS，你应该安装并且配置好 Xcode。<br>对于 Android，首先Java环境使用java8版本，你应该安装并且配置好 Android Studio。</p>
+</blockquote>
+<ol>
+<li>参考文档 <a target="_blank" rel="noopener" href="https://weex.apache.org/cn/guide/">weex开发文档</a></li>
+<li>安装weex-toolkit 需要npm 5.0以上；如若不是请首先升级npm <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install weex-toolkit -g</span><br><span class="line"><span class="comment">//升级weexpack</span></span><br><span class="line">weex update weexpack@<span class="number">1.2</span><span class="number">.1</span></span><br></pre></td></tr></table></figure></li>
+<li>创建项目 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weex create helloWeex</span><br></pre></td></tr></table></figure></li>
+<li>进入项目并安装依赖运行 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd helloWeex</span><br><span class="line">npm install</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure></li>
+<li>添加IOS或Android平台 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">weex platform add android</span><br><span class="line">weex platform add ios</span><br></pre></td></tr></table></figure></li>
+<li>编译运行<blockquote>
+<p>当开发环境准备就绪后，运行下面的命令，可以在模拟器或真实设备上启动应用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weex run android</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>启动图标以及启动图的修改<blockquote>
+<p>  <a target="_blank" rel="noopener" href="http://liuguixue.com/15125784694068.html">weex启动图的修改</a><br> 目录Android/app/src/main/</p>
+</blockquote>
+</li>
+<li>weex原生功能插件<a target="_blank" rel="noopener" href="http://natjs.com/#/">插件市场</a></li>
+<li>最终工程目录<br><img src="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328" alt="工程目录"></li>
+</ol>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/04/17/weex%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-在Mac上安装Android开发环境" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/04/12/%E5%9C%A8Mac%E4%B8%8A%E5%AE%89%E8%A3%85Android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" target="_blank">在Mac上安装Android开发环境</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/04/12/%E5%9C%A8Mac%E4%B8%8A%E5%AE%89%E8%A3%85Android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="archive-article-date">
+        <time datetime="2018-04-12T14:02:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-12</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><ol>
+<li>brew install jdk/brew install java <a target="_blank" rel="noopener" href="https://www.cnblogs.com/lidyan/p/6973492.html">mac安装java</a>应安装java8 brew install caskroom/versios/java8</li>
+<li>配置Java环境变量。</li>
+<li><code>`</code>javascript</li>
+<li>cd ~/</li>
+<li>nano .bashrc</li>
+<li>写入Java的路径</li>
+<li>source .bashrc</li>
+<li><code>`</code></li>
+<li><a target="_blank" rel="noopener" href="http://tools.android-studio.org/index.php/sdk">下载SDK</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.android-studio.org/">下载AndroidStudio及SDKtools</a></li>
+<li>使用sdktools安装相关Android API<blockquote>
+<p>进入到android-sdk-macoxs下的Tools文件夹，双击Android文件。即可启动Android SDK Manager。<br>在启动后的页面，选择 Android SDK Tools 和 AndroidSDKPlatform-tools，进行安装。</p>
+</blockquote>
 </li>
 </ol>
-<h2 id="cors跨域方法"><a href="#cors跨域方法" class="headerlink" title="cors跨域方法"></a>cors跨域方法</h2><p>CORS需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE浏览器不能低于IE10。</p>
-<p>整个CORS通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS通信与同源的AJAX通信没有差别，代码完全一样。浏览器一旦发现AJAX请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。</p>
-<p>因此，实现CORS通信的关键是服务器。只要服务器实现了CORS接口，就可以跨源通信。</p>
-<h3 id="两种请求"><a href="#两种请求" class="headerlink" title="两种请求"></a>两种请求</h3><p>浏览器将CORS请求分成两类：简单请求（simple request）和非简单请求（not-so-simple request）。</p>
-<p>只要同时满足以下两大条件，就属于简单请求。</p>
-<blockquote>
-<p>（1) 请求方法是以下三种方法之一：</p>
-<ul>
-<li>HEAD</li>
-<li>GET</li>
-<li>POST</li>
-</ul>
-<p>（2）HTTP的头信息不超出以下几种字段：</p>
-<ul>
-<li>Accept</li>
-<li>Accept-Language</li>
-<li>Content-Language</li>
-<li>Last-Event-ID</li>
-<li>Content-Type：只限于三个值<code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code>、<code>text/plain</code></li>
-</ul>
-</blockquote>
-<p>凡是不同时满足上面两个条件，就属于非简单请求。</p>
-<p>浏览器对这两种请求的处理，是不一样的。</p>
-<h4 id="简单请求"><a href="#简单请求" class="headerlink" title="简单请求"></a>简单请求</h4><p>对于简单请求，浏览器直接发出CORS请求。具体来说，就是在头信息之中，增加一个<code>Origin</code>字段。</p>
-<p>下面是一个例子，浏览器发现这次跨源AJAX请求是简单请求，就自动在头信息之中，添加一个<code>Origin</code>字段。</p>
-<blockquote>
-<pre><code>GET /cors HTTP/1.1
-Origin: http://api.bob.com
-Host: api.alice.com
-Accept-Language: en-US
-Connection: keep-alive
-User-Agent: Mozilla/5.0...
-</code></pre></blockquote>
-<p>上面的头信息中，<code>Origin</code>字段用来说明，本次请求来自哪个源（协议 + 域名 + 端口）。服务器根据这个值，决定是否同意这次请求。</p>
-<p>如果<code>Origin</code>指定的源，不在许可范围内，服务器会返回一个正常的HTTP回应。浏览器发现，这个回应的头信息没有包含<code>Access-Control-Allow-Origin</code>字段（详见下文），就知道出错了，从而抛出一个错误，被<code>XMLHttpRequest</code>的<code>onerror</code>回调函数捕获。注意，这种错误无法通过状态码识别，因为HTTP回应的状态码有可能是200。</p>
-<p>如果<code>Origin</code>指定的域名在许可范围内，服务器返回的响应，会多出几个头信息字段。</p>
-<blockquote>
-<pre><code>Access-Control-Allow-Origin: http://api.bob.com
-Access-Control-Allow-Credentials: true
-Access-Control-Expose-Headers: FooBar
-Content-Type: text/html; charset=utf-8
-</code></pre></blockquote>
-<p>上面的头信息之中，有三个与CORS请求相关的字段，都以<code>Access-Control-</code>开头。</p>
-<p><strong>（1）Access-Control-Allow-Origin</strong></p>
-<p>该字段是必须的。它的值要么是请求时<code>Origin</code>字段的值，要么是一个<code>*</code>，表示接受任意域名的请求。</p>
-<p><strong>（2）Access-Control-Allow-Credentials</strong></p>
-<p>该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为<code>true</code>，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为<code>true</code>，如果服务器不要浏览器发送Cookie，删除该字段即可。</p>
-<p><strong>（3）Access-Control-Expose-Headers</strong></p>
-<p>该字段可选。CORS请求时，<code>XMLHttpRequest</code>对象的<code>getResponseHeader()</code>方法只能拿到6个基本字段：<code>Cache-Control</code>、<code>Content-Language</code>、<code>Content-Type</code>、<code>Expires</code>、<code>Last-Modified</code>、<code>Pragma</code>。如果想拿到其他字段，就必须在<code>Access-Control-Expose-Headers</code>里面指定。上面的例子指定，<code>getResponseHeader(&#39;FooBar&#39;)</code>可以返回<code>FooBar</code>字段的值。</p>
-<blockquote>
-<p>withCredentials 属性</p>
-</blockquote>
-<p>上面说到，CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服务器，一方面要服务器同意，指定<code>Access-Control-Allow-Credentials</code>字段。</p>
-<blockquote>
-<pre><code>Access-Control-Allow-Credentials: true
-</code></pre></blockquote>
-<p>另一方面，开发者必须在AJAX请求中打开<code>withCredentials</code>属性。</p>
-<blockquote>
-<pre><code>var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-</code></pre></blockquote>
-<p>否则，即使服务器同意发送Cookie，浏览器也不会发送。或者，服务器要求设置Cookie，浏览器也不会处理。</p>
-<p>但是，如果省略<code>withCredentials</code>设置，有的浏览器还是会一起发送Cookie。这时，可以显式关闭<code>withCredentials</code>。</p>
-<blockquote>
-<pre><code>xhr.withCredentials = false;
-</code></pre></blockquote>
-<p>需要注意的是，如果要发送Cookie，<code>Access-Control-Allow-Origin</code>就不能设为星号，必须指定明确的、与请求网页一致的域名。同时，Cookie依然遵循同源政策，只有用服务器域名设置的Cookie才会上传，其他域名的Cookie并不会上传，且（跨源）原网页代码中的<code>document.cookie</code>也无法读取服务器域名下的Cookie。</p>
-<h4 id="非简单请求"><a href="#非简单请求" class="headerlink" title="非简单请求"></a>非简单请求</h4><blockquote>
-<p>预检请求</p>
-</blockquote>
-<p>非简单请求是那种对服务器有特殊要求的请求，比如请求方法是<code>PUT</code>或<code>DELETE</code>，或者<code>Content-Type</code>字段的类型是<code>application/json</code>。</p>
-<p>非简单请求的CORS请求，会在正式通信之前，增加一次HTTP查询请求，称为”预检”请求（preflight）。</p>
-<p>浏览器先询问服务器，当前网页所在的域名是否在服务器的许可名单之中，以及可以使用哪些HTTP动词和头信息字段。只有得到肯定答复，浏览器才会发出正式的<code>XMLHttpRequest</code>请求，否则就报错。</p>
-<p>下面是一段浏览器的JavaScript脚本。</p>
-<blockquote>
-<pre><code>var url = &apos;http://api.alice.com/cors&apos;;
-var xhr = new XMLHttpRequest();
-xhr.open(&apos;PUT&apos;, url, true);
-xhr.setRequestHeader(&apos;X-Custom-Header&apos;, &apos;value&apos;);
-xhr.send();
-</code></pre></blockquote>
-<p>上面代码中，HTTP请求的方法是<code>PUT</code>，并且发送一个自定义头信息<code>X-Custom-Header</code>。</p>
-<p>浏览器发现，这是一个非简单请求，就自动发出一个”预检”请求，要求服务器确认可以这样请求。下面是这个”预检”请求的HTTP头信息。</p>
-<blockquote>
-<pre><code>OPTIONS /cors HTTP/1.1
-Origin: http://api.bob.com
-Access-Control-Request-Method: PUT
-Access-Control-Request-Headers: X-Custom-Header
-Host: api.alice.com
-Accept-Language: en-US
-Connection: keep-alive
-User-Agent: Mozilla/5.0...
-</code></pre></blockquote>
-<p>“预检”请求用的请求方法是<code>OPTIONS</code>，表示这个请求是用来询问的。头信息里面，关键字段是<code>Origin</code>，表示请求来自哪个源。</p>
-<p>除了<code>Origin</code>字段，”预检”请求的头信息包括两个特殊字段。</p>
-<p><strong>（1）Access-Control-Request-Method</strong></p>
-<p>该字段是必须的，用来列出浏览器的CORS请求会用到哪些HTTP方法，上例是<code>PUT</code>。</p>
-<p><strong>（2）Access-Control-Request-Headers</strong></p>
-<p>该字段是一个逗号分隔的字符串，指定浏览器CORS请求会额外发送的头信息字段，上例是<code>X-Custom-Header</code>。</p>
-<blockquote>
-<p>预检请求的回应 </p>
-</blockquote>
-<p>服务器收到”预检”请求以后，检查了<code>Origin</code>、<code>Access-Control-Request-Method</code>和<code>Access-Control-Request-Headers</code>字段以后，确认允许跨源请求，就可以做出回应。</p>
-<blockquote>
-<pre><code>HTTP/1.1 200 OK
-Date: Mon, 01 Dec 2008 01:15:39 GMT
-Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://api.bob.com
-Access-Control-Allow-Methods: GET, POST, PUT
-Access-Control-Allow-Headers: X-Custom-Header
-Content-Type: text/html; charset=utf-8
-Content-Encoding: gzip
-Content-Length: 0
-Keep-Alive: timeout=2, max=100
-Connection: Keep-Alive
-Content-Type: text/plain
-</code></pre></blockquote>
-<p>上面的HTTP回应中，关键的是<code>Access-Control-Allow-Origin</code>字段，表示<code>http://api.bob.com</code>可以请求数据。该字段也可以设为星号，表示同意任意跨源请求。</p>
-<blockquote>
-<pre><code>Access-Control-Allow-Origin: *
-</code></pre></blockquote>
-<p>如果浏览器否定了”预检”请求，会返回一个正常的HTTP回应，但是没有任何CORS相关的头信息字段。这时，浏览器就会认定，服务器不同意预检请求，因此触发一个错误，被<code>XMLHttpRequest</code>对象的<code>onerror</code>回调函数捕获。控制台会打印出如下的报错信息。</p>
-<blockquote>
-<pre><code>XMLHttpRequest cannot load http://api.alice.com.
-Origin http://api.bob.com is not allowed by Access-Control-Allow-Origin.
-</code></pre></blockquote>
-<p>服务器回应的其他CORS相关字段如下。</p>
-<blockquote>
-<pre><code>Access-Control-Allow-Methods: GET, POST, PUT
-Access-Control-Allow-Headers: X-Custom-Header
-Access-Control-Allow-Credentials: true
-Access-Control-Max-Age: 1728000
-</code></pre></blockquote>
-<p><strong>（1）Access-Control-Allow-Methods</strong></p>
-<p>该字段必需，它的值是逗号分隔的一个字符串，表明服务器支持的所有跨域请求的方法。注意，返回的是所有支持的方法，而不单是浏览器请求的那个方法。这是为了避免多次”预检”请求。</p>
-<p><strong>（2）Access-Control-Allow-Headers</strong></p>
-<p>如果浏览器请求包括<code>Access-Control-Request-Headers</code>字段，则<code>Access-Control-Allow-Headers</code>字段是必需的。它也是一个逗号分隔的字符串，表明服务器支持的所有头信息字段，不限于浏览器在”预检”中请求的字段。</p>
-<p><strong>（3）Access-Control-Allow-Credentials</strong></p>
-<p>该字段与简单请求时的含义相同。</p>
-<p><strong>（4）Access-Control-Max-Age</strong></p>
-<p>该字段可选，用来指定本次预检请求的有效期，单位为秒。上面结果中，有效期是20天（1728000秒），即允许缓存该条回应1728000秒（即20天），在此期间，不用发出另一条预检请求。</p>
-<blockquote>
-<p>浏览器的正常请求和回应</p>
-</blockquote>
-<p>一旦服务器通过了”预检”请求，以后每次浏览器正常的CORS请求，就都跟简单请求一样，会有一个<code>Origin</code>头信息字段。服务器的回应，也都会有一个<code>Access-Control-Allow-Origin</code>头信息字段。</p>
-<p>下面是”预检”请求之后，浏览器的正常CORS请求。</p>
-<blockquote>
-<pre><code>PUT /cors HTTP/1.1
-Origin: http://api.bob.com
-Host: api.alice.com
-X-Custom-Header: value
-Accept-Language: en-US
-Connection: keep-alive
-User-Agent: Mozilla/5.0...
-</code></pre></blockquote>
-<p>上面头信息的<code>Origin</code>字段是浏览器自动添加的。</p>
-<p>下面是服务器正常的回应。</p>
-<blockquote>
-<pre><code>Access-Control-Allow-Origin: http://api.bob.com
-Content-Type: text/html; charset=utf-8
-</code></pre></blockquote>
-<p>上面头信息中，<code>Access-Control-Allow-Origin</code>字段是每次回应都必定包含的。</p>
-<p>###与JSONP的比较</p>
-<p>CORS与JSONP的使用目的相同，但是比JSONP更强大。</p>
-<p>JSONP只支持<code>GET</code>请求，CORS支持所有类型的HTTP请求。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。</p>
+<p>因为，Android SDK Manager需要有Java的支持，如果您的电脑没有安装java。则第一次在双击Andriod文件的时候，会提示您下载Java，请下载安装java。</p>
+<p>至此您就可以在Android SDK Manager中下载和更新 Android SDK Tolls 和 Android SDK Platform-tools 。<br>adb调试工具一般位于Platform-tools下。<br><a target="_blank" rel="noopener" href="https://www.imooc.com/article/16145?block_id=tuijian_wz">如何在Mac中使用Android SDK</a></p>
+<p><a href="blogs.csdn.net/weixin_38327562/details/7105726">解决adb :command not found问题</a></p>
+<p><a href="www.ddiinnxx.com/solving-not-determine-java-version-9-0-1-gradle-intellij-macosx">解决could not determine java version from ‘10.0’</a><br>版本冲突 android-studio安装了8版本的 jdk🈶️安装了10版本导致的</p>
 
     
 
@@ -1021,7 +956,11 @@ Content-Type: text/html; charset=utf-8
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
         		</li>
       		
 		</ul>
@@ -1031,7 +970,7 @@ Content-Type: text/html; charset=utf-8
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2016/06/10/%E4%B8%BB%E6%B5%81%E8%B7%A8%E5%9F%9F%E6%96%B9%E6%B3%95%E5%8F%8A%E5%8E%9F%E7%90%86/">展开全文 >></a>
+      <a class="article-more-a" href="/2018/04/12/%E5%9C%A8Mac%E4%B8%8A%E5%AE%89%E8%A3%85Android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">展开全文 >></a>
     </p>
     
 
@@ -1061,7 +1000,7 @@ Content-Type: text/html; charset=utf-8
 
 
   
-    <article id="post-函数的三种方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-微信扫码登录pc网站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1069,7 +1008,7 @@ Content-Type: text/html; charset=utf-8
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2016/04/10/%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/" target="_blank">函数的三种方式</a>
+	  <a class="article-title" href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/" target="_blank">微信扫码登录pc网站</a>
   
     </h1>
   
@@ -1077,8 +1016,8 @@ Content-Type: text/html; charset=utf-8
 
   
   
-<a href="/2016/04/10/%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2016-04-10T09:31:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-10</time>
+<a href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/" class="archive-article-date">
+        <time datetime="2018-04-01T12:16:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
 </a>
 
   
@@ -1090,10 +1029,27 @@ Content-Type: text/html; charset=utf-8
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="创建函数的三种方式"><a href="#创建函数的三种方式" class="headerlink" title="创建函数的三种方式"></a>创建函数的三种方式</h2>
-    
-    <a class="article-more-a" href="/2016/04/10/%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/#more">more >></a>
-    
+    <span id="more"></span>
+<ol>
+<li><p>根据微信资源中心<a target="_blank" rel="noopener" href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN">api</a><br>提供一个链接，链接url里包括这些信息</p>
+<p> | 参数      | 是否必须           | 描述  |<br> | ————- |————-| —–|<br> | appid           |  是       |     应用唯一标识；每个公众号都有的 |<br> | redirect_uri  |  是         |  重定向的url地址；必须在微信公众号的安全域下，且需要进行urlEncode加密 |<br> | response_type |  是         |  填code |<br> | scope            |  是       | 应用授权作用域，拥有多个作用域用逗号（,）分隔，网页应用目前仅填写snsapi_login即可     |<br> | state            |  否      |    用于保持请求和回调的状态，授权请求后原样带回给第三方。该参数可用于防止csrf攻击（跨站请求伪造攻击），建议第三方带上该参数，可设置为简单的随机数加session进行校验    |<br> 本来想跳到我们的 <em><a target="_blank" rel="noopener" href="http://web.li-shang-bin.com/#/login">http://web.li-shang-bin.com/#/login</a></em> 页面的；但发现微信识别不了 <strong>#</strong><br> 此处我们的项目填写的url是 <em><a target="_blank" rel="noopener" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;">https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;</a></em></p>
+<p> appid: wxc649fbdaa41fc636</p>
+<p> redirect_uri: <a target="_blank" rel="noopener" href="http://web.li-shang-bin.com">http://web.li-shang-bin.com</a>;</p>
+</li>
+<li><p>用户点击此链接后会跳到一个二维码界面<br>用户扫面二维码界面并点击确定后则跳到redirec_uri定义的url里并且把code（后台可以通过code获取用户的openid及昵称等信息）带过来形成 <strong>redirec_uri?code=<em>&amp;state=</em></strong>;此处我们还没用到state只用了code</p>
+</li>
+<li>在此页面通过解析页面的url获取到code <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以用此方法解析url</span></span><br><span class="line"><span class="function"><span class="title">getUrlVars</span>(<span class="params">url</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">var</span> hash;</span><br><span class="line">	<span class="keyword">var</span> myJson = &#123;&#125;;</span><br><span class="line">	<span class="keyword">var</span> hashes = url.slice(url.indexOf(<span class="string">&#x27;?&#x27;</span>) + <span class="number">1</span>).split(<span class="string">&#x27;&amp;&#x27;</span>);</span><br><span class="line">	<span class="keyword">var</span> arr=[];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; hashes.length; i++) &#123;</span><br><span class="line">		hash = hashes[i].split(<span class="string">&#x27;=&#x27;</span>);</span><br><span class="line">		<span class="keyword">if</span>(myJson.hasOwnProperty(hash[<span class="number">0</span>]))&#123;</span><br><span class="line">			myJson[hash[<span class="number">0</span>]]=myJson[hash[<span class="number">0</span>]]+<span class="string">&#x27;,&#x27;</span>+hash[<span class="number">1</span>]</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			myJson[hash[<span class="number">0</span>]] = hash[<span class="number">1</span>]						</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> myJson;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>将code传给后台让他获取用户的信息获取信息后后台分以下几步<pre><code>1. 获取了用户的openid；从数据根据openid查找看是否有此用户；
+    如果没有没有返回给前端false(0)；让其跳到注册页面，并把openid，等信息页传递过去；前端存在缓存里
+        此时用户注册会在基础注册上增加openid等信息；完成用户和微信的绑定；然后删除缓存
+    如果有，将查询到的用户信息返回给前端，前端完成登录
+2. 跳到个人信息页的问题；
+    开始用的是路由跳转router.push的方法跳转到用户信息页；但发现此方法会在url?code=****&amp;state=后面追加相关路由；
+    然后改用window.location.href=‘你想跳的页面url’；但也还是在后面继续追加；具体原因依然不明
+    现在使用的是window.open(&apos;你想跳的页面url&apos;,&apos;_self&apos;)使其跳转
+</code></pre> 至此登录完成；</li>
+</ol>
+
     
 
     
@@ -1111,94 +1067,9 @@ Content-Type: text/html; charset=utf-8
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2016/04/10/%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于AMD与CMD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2016/03/06/%E5%85%B3%E4%BA%8EAMD%E4%B8%8ECMD/" target="_blank">关于AMD与CMD</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2016/03/06/%E5%85%B3%E4%BA%8EAMD%E4%B8%8ECMD/" class="archive-article-date">
-        <time datetime="2016-03-06T11:30:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="在了解AMD，CMD规范前，还是需要先来简单地了解下什么是模块化，模块化开发？"><a href="#在了解AMD，CMD规范前，还是需要先来简单地了解下什么是模块化，模块化开发？" class="headerlink" title="在了解AMD，CMD规范前，还是需要先来简单地了解下什么是模块化，模块化开发？"></a>在了解AMD，CMD规范前，还是需要先来简单地了解下什么是模块化，模块化开发？</h1><pre><code>模块化是指在解决某一个复杂问题或者一系列的杂糅问题时，依照一种分类的思维把问题进行系统性的分解以之处理。模块化是一种处理复杂系统分解为代码结构更合理，可维护性更高的可管理的模块的方式。可以想象一个巨大的系统代码，被整合优化分割成逻辑性很强的模块时，对于软件是一种何等意义的存在。对于软件行业来说：解耦软件系统的复杂性，使得不管多么大的系统，也可以将管理，开发，维护变得“有理可循”。
-</code></pre>
-    
-    <a class="article-more-a" href="/2016/03/06/%E5%85%B3%E4%BA%8EAMD%E4%B8%8ECMD/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">微信</a>
         		</li>
       		
 		</ul>
@@ -1208,7 +1079,7 @@ Content-Type: text/html; charset=utf-8
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2016/03/06/%E5%85%B3%E4%BA%8EAMD%E4%B8%8ECMD/">展开全文 >></a>
+      <a class="article-more-a" href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/">展开全文 >></a>
     </p>
     
 
@@ -1240,7 +1111,7 @@ Content-Type: text/html; charset=utf-8
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1252,7 +1123,7 @@ Content-Type: text/html; charset=utf-8
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018-2022 Rowling Joe
+    		&copy; 2018-2024 Rowling Joe
     	</div>
       	<div class="footer-right">
 			
@@ -1396,6 +1267,66 @@ Content-Type: text/html; charset=utf-8
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">观影感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vite</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">打包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
             
             <div class="clearfix"></div>

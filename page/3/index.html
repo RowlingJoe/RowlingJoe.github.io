@@ -41,9 +41,6 @@
   
 
   
-    
- 	  <script src="/lib/clickLove.js"></script>
-  
   
 
 
@@ -65,7 +62,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/yilia-plus-demo/" class="profilepic">
-			<img src="https://www.thispersondoesnotexist.com/image" class="js-avatar">
+			<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/yilia-plus-demo/"></a></h1>
@@ -141,7 +138,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 				<a href="/yilia-plus-demo/">
-					<img src="https://www.thispersondoesnotexist.com/image" class="js-avatar">
+					<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
 				</a>
 			</div>
 			<hgroup>
@@ -200,7 +197,7 @@
 
 
   
-    <article id="post-studyMiniprogrameFromLazycat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ffmpeg的初步使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -208,7 +205,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2018/08/10/studyMiniprogrameFromLazycat/" target="_blank">从猫开始学习小程序</a>
+	  <a class="article-title" href="/2021/10/19/ffmpeg%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/" target="_blank">ffmpeg的初步使用</a>
   
     </h1>
   
@@ -216,8 +213,8 @@
 
   
   
-<a href="/2018/08/10/studyMiniprogrameFromLazycat/" class="archive-article-date">
-        <time datetime="2018-08-10T10:19:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+<a href="/2021/10/19/ffmpeg%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+        <time datetime="2021-10-19T08:50:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-19</time>
 </a>
 
   
@@ -229,10 +226,720 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="关于小程序"><a href="#关于小程序" class="headerlink" title="关于小程序"></a>关于小程序</h2><p>首先我很讨厌小程序,仅以此图略表个人主观情感<br><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/%E5%96%9C%E6%AC%A2%E5%8F%91%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%84%BF%E5%AD%90.png?raw=true" alt="喜欢发小程序的儿子"></p>
-<p>但是呢，出于目前技术发展及职业需要有不得不涉及小程序，故还是得学习一番。<br>小程序的框架目前比较好的就是美团的基于vue的mpvue</p>
+    <h3 id="ffmpeg"><a href="#ffmpeg" class="headerlink" title="ffmpeg"></a>ffmpeg</h3><h3 id="nginx搭建rtmp服务器"><a href="#nginx搭建rtmp服务器" class="headerlink" title="nginx搭建rtmp服务器"></a>nginx搭建rtmp服务器</h3><pre><code>下载包含rtmp服务模块的nginx
+[windos下载地址](http://nginx-win.ecsds.eu/download/)
+
+linux需下载对应的此模块，然后进行编译，详情度娘
+配置
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rtmp &#123;</span><br><span class="line">  server &#123;</span><br><span class="line">    listen 1936;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h3><h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://ffmpeg.org/">ffmpeg官网</a></li>
+<li><a target="_blank" rel="noopener" href="http://nginx-win.ecsds.eu/download/">nginx下载地址</a></li>
+</ol>
+
     
-    <a class="article-more-a" href="/2018/08/10/studyMiniprogrameFromLazycat/#more">more >></a>
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/10/19/ffmpeg%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-web离线地图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/10/11/web%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE/" target="_blank">web离线地图</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/10/11/web%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE/" class="archive-article-date">
+        <time datetime="2021-10-11T02:39:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-11</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <hr>
+<h3 id="问题背景："><a href="#问题背景：" class="headerlink" title="问题背景："></a>问题背景：</h3><blockquote>
+<p>在某些环境内无法获得互联网地图瓦片资源，故而得使用离线地图完成相关业务功能</p>
+</blockquote>
+<h3 id="所需材料"><a href="#所需材料" class="headerlink" title="所需材料"></a>所需材料</h3><blockquote>
+<ol>
+<li>gis瓦片服务</li>
+<li>瓦片资源</li>
+<li>客户端程序</li>
+</ol>
+</blockquote>
+    
+    <a class="article-more-a" href="/2021/10/11/web%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/10/11/web%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Websocket-stomp-js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/04/24/Websocket-stomp-js/" target="_blank">Websocket-stomp.js</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/04/24/Websocket-stomp-js/" class="archive-article-date">
+        <time datetime="2021-04-24T02:18:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-24</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p><a target="_blank" rel="noopener" href="http://stomp.github.io/">官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4ef5004a1c81">简书-ws+sockJs+stop</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bbsmax.com/A/n2d9269ozD/">stompJs使用文档</a></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/04/24/Websocket-stomp-js/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vue3开始使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/02/24/vue3%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8/" target="_blank">vue3开始使用</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/02/24/vue3%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+        <time datetime="2021-02-24T03:07:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-24</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>参考文档</p>
+</blockquote>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://vue3js.cn/docs/zh/guide/introduction.html">Vue3 中文文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://cli.vuejs.org/">Vuecli 文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pipipi.net/vite/">Vite</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/vincentzyc/vue3-demo">Vue3+ts demo</a></li>
+<li><a target="_blank" rel="noopener" href="https://codechina.csdn.net/mirrors/anncwb/vue-vben-admin?utm_source=csdn_github_accelerator">vue3+ts+vite demo</a></li>
+<li><a target="_blank" rel="noopener" href="https://2x.antdv.com/components/overview/">ant-design vue3</a></li>
+<li><a target="_blank" rel="noopener" href="https://element-plus.gitee.io/#/zh-CN">element-plus vue3</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35844177/article/details/114852991?utm_term=vite%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-2-114852991&amp;spm=3001.4430">vite.config.js配置</a>
+    
+    <a class="article-more-a" href="/2021/02/24/vue3%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/02/24/vue3%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-哪吒-魔童降世" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/08/01/%E5%93%AA%E5%90%92-%E9%AD%94%E7%AB%A5%E9%99%8D%E4%B8%96/" target="_blank">哪吒_魔童降世</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/08/01/%E5%93%AA%E5%90%92-%E9%AD%94%E7%AB%A5%E9%99%8D%E4%B8%96/" class="archive-article-date">
+        <time datetime="2019-08-01T06:20:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>近些天去看了最近很火的《哪吒·魔童降世》，自我感觉也还不错，与以往的故事有所不同但结果又趋相似。人心中的成见、成功道路上的牺牲、亲情等</p>
+<hr>
+<h2 id="故事梗概"><a href="#故事梗概" class="headerlink" title="故事梗概"></a>故事梗概</h2><h3 id="1-魔童起源"><a href="#1-魔童起源" class="headerlink" title="1. 魔童起源"></a>1. 魔童起源</h3><blockquote>
+<p>世间本有一颗灵珠子，可吞噬天地间所有能量，后被元始天尊分为魔丸和灵珠。为之一善一恶，故在魔丸之上下了天劫，三年后天劫降临将摧毁魔丸。本欲将灵珠赐予守护陈塘关有功的李靖为其第三子，并令太乙真人教其本领使其在封神事业中建功立业，同事让太乙真人成为昆仑十二金仙最后一位金仙。彼时，申公豹也在一旁，但却之字未与之言语，或如申公豹所言，它是由豹（妖）修成仙的，而太乙是人修炼的。这可能就是元始天尊心中的<strong>成见</strong>吧。</p>
+</blockquote>
+<h3 id="2-龙族羁绊"><a href="#2-龙族羁绊" class="headerlink" title="2. 龙族羁绊"></a>2. 龙族羁绊</h3><blockquote>
+<p>上古之时龙王率领龙族追随玉帝镇压妖王，后玉帝封其为海龙王，龙宫实为镇压妖王之用。而龙族亦被囚禁于九幽龙宫之处。申公豹借此与龙族合作，希望通过教导龙王之子敖丙修炼成仙，龙王也将龙族脱离囚禁寄希望于此。</p>
+</blockquote>
+<h3 id="3-魔童降世"><a href="#3-魔童降世" class="headerlink" title="3. 魔童降世"></a>3. 魔童降世</h3><blockquote>
+<p>太乙真人带着魔丸和灵珠来到李靖家中，准备将灵珠注入李靖夫人胎中，怎料被申公豹夺取灵珠，反而却将魔丸注入了李靖夫人胎中。顿时火光大作，哪吒降世了，初为肉丸，各处喷火，百姓因其是魔丸，皆希望将它灭杀在幼年之期。但毕竟是其母所孕育三年，不舍就此夺去性命。因此还是留下了哪吒。</p>
+</blockquote>
+<h3 id="4-灵珠降世"><a href="#4-灵珠降世" class="headerlink" title="4. 灵珠降世"></a>4. 灵珠降世</h3><blockquote>
+<p>申公豹带着夺来的灵珠，注入龙蛋之中，敖丙就此诞生。并常年跟随申公豹修炼，希望能炼化成人行，这样就能减少人（仙）心中的成见。而敖丙就带着一颗赤子之心终日修炼。</p>
+</blockquote>
+<h3 id="5-孤独生活"><a href="#5-孤独生活" class="headerlink" title="5. 孤独生活"></a>5. 孤独生活</h3><blockquote>
+<p>因为是魔丸转世，哪吒被一直囚禁于李府之中。偶尔哪吒出来，人们也惊慌失措，各种嫌弃与谩骂，使其备受精神上的欺凌</p>
+</blockquote>
+<h3 id="6-灵珠会面"><a href="#6-灵珠会面" class="headerlink" title="6. 灵珠会面"></a>6. 灵珠会面</h3><blockquote>
+<p>在一次追击夜叉时在海边遇到了彼此，而彼此在生活中都是很孤独的，心心相惜。是的魔丸和灵珠成为了彼此唯一的朋友<br><img src="https://upload-images.jianshu.io/upload_images/3984510-0ebde8360a677926.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</blockquote>
+<h3 id="7-天劫降临"><a href="#7-天劫降临" class="headerlink" title="7. 天劫降临"></a>7. 天劫降临</h3><blockquote>
+<p>天劫之期已到，李靖想用从元始天尊云托那里求来的替身符来代替哪吒承受天劫，并将哪吒追击夜叉一事的真相告知大家，希望大家消除对哪吒的成见，并让哪吒成为一个受人尊重之人。而哪吒也特别高兴，并邀请敖丙来参加他的生日宴。宴会开始，哪吒却被申公豹告之自身的真实身份。并通过申公豹教会的解除封印的方法使自身入魔了。而敖丙也在此时来到陈塘关，在申公豹的计划下，哪吒入魔，杀死李靖夫妇等人，而后敖丙降服哪吒，此乃大功德一件，可令其步入金仙之路更近一步。当敖丙看到哪吒就要杀了李靖之时，不忍不管，前去搭救。<br>最终敖丙身份暴露，意欲覆灭整个陈塘关，而在通过一番较量之后，哪吒了解了父母情深，觉醒了自己，将危机接触，也放过了敖丙。此时天空之中雷云汇聚，天劫咔咔的劈了下来，敖丙上去帮助哪吒，最终哪吒和敖丙肉身皆被毁灭，只有灵魂被太乙真人保护下来了。</p>
+</blockquote>
+    
+    <a class="article-more-a" href="/2019/08/01/%E5%93%AA%E5%90%92-%E9%AD%94%E7%AB%A5%E9%99%8D%E4%B8%96/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">观影感</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/08/01/%E5%93%AA%E5%90%92-%E9%AD%94%E7%AB%A5%E9%99%8D%E4%B8%96/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-websocket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/03/22/websocket/" target="_blank">websocket</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/03/22/websocket/" class="archive-article-date">
+        <time datetime="2019-03-22T05:30:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>功能点：</p>
+<ol>
+<li>websocketk</li>
+<li>express里websocket</li>
+<li>断线重连</li>
+<li>多用户登录线程相关
+    
+    <a class="article-more-a" href="/2019/03/22/websocket/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/03/22/websocket/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-linux上使用node" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/03/18/linux%E4%B8%8A%E4%BD%BF%E7%94%A8node/" target="_blank">linux上使用node</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/03/18/linux%E4%B8%8A%E4%BD%BF%E7%94%A8node/" class="archive-article-date">
+        <time datetime="2019-03-18T10:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="通过PM2在linux上起node服务"><a href="#通过PM2在linux上起node服务" class="headerlink" title="通过PM2在linux上起node服务"></a>通过PM2在linux上起node服务</h1><blockquote>
+<p>工具：</p>
+<ol>
+<li>Linux</li>
+<li>node</li>
+<li>PM2
+    
+    <a class="article-more-a" href="/2019/03/18/linux%E4%B8%8A%E4%BD%BF%E7%94%A8node/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/03/18/linux%E4%B8%8A%E4%BD%BF%E7%94%A8node/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-my-wychat-application" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/10/23/my-wychat-application/" target="_blank">my_wychat_application</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/10/23/my-wychat-application/" class="archive-article-date">
+        <time datetime="2018-10-23T08:31:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-23</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">test</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/10/23/my-wychat-application/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-uni-app的学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/09/18/uni-app%E7%9A%84%E5%AD%A6%E4%B9%A0/" target="_blank">uni-app的学习</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/09/18/uni-app%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+        <time datetime="2018-09-18T07:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>前端目前有各种平台导致前端打包已经编码过程需要符合不同平台规范，如android、ios、微信小程序、H5、支付宝小程序、流应用等<br>uni-pp提供一个解决方案，前端只需按uni-app的标准，使用类似vue框架的即可使用uni-app来统一打包。<br>
+    
+    <a class="article-more-a" href="/2018/09/18/uni-app%E7%9A%84%E5%AD%A6%E4%B9%A0/#more">more >></a>
     
     
 
@@ -259,7 +966,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2018/08/10/studyMiniprogrameFromLazycat/">展开全文 >></a>
+      <a class="article-more-a" href="/2018/09/18/uni-app%E7%9A%84%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
     </p>
     
 
@@ -289,7 +996,7 @@
 
 
   
-    <article id="post-node中间层的初步学习-三" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-reademe" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -297,7 +1004,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2018/08/09/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%89/" target="_blank">node中间层的初步学习(三)</a>
+	  <a class="article-title" href="/2018/09/12/reademe/" target="_blank">reademe</a>
   
     </h1>
   
@@ -305,316 +1012,8 @@
 
   
   
-<a href="/2018/08/09/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%89/" class="archive-article-date">
-        <time datetime="2018-08-09T02:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="模板的渲染及项目的部署"><a href="#模板的渲染及项目的部署" class="headerlink" title="模板的渲染及项目的部署"></a>模板的渲染及项目的部署</h1><p>上面讲到通过路由到达指定的模板并将数据传入给模板。<br>以首页模板为例<br>
-    
-    <a class="article-more-a" href="/2018/08/09/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%89/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/08/09/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%89/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-node中间层的初步学习-二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%BA%8C/" target="_blank">node中间层的初步学习(二)</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2018-08-07T09:47:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>上篇文章已经了解到为什么需要node中间层配合的前后端分离以及有什么优缺点<br>下面将从一个demo的角度来具体学习node中间层<br>在这里感谢@西兰 的文章我也是从他那里进行学习的，此处是他的博客地址 <a target="_blank" rel="noopener" href="http://xilan.me/">Keyon Y</a><br>
-    
-    <a class="article-more-a" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%BA%8C/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%BA%8C/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-node中间层的初步学习-一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%80/" target="_blank">node中间层的初步学习(一)</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%80/" class="archive-article-date">
-        <time datetime="2018-08-07T04:53:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>最近看到了一片文章，是关于nodeJS中间层-前后端分离的，结合自己目前所做的一些项目中存在的一些问题如seo，加载速度等，顾学习一下<br>
-    
-    <a class="article-more-a" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%80/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/08/07/node%E4%B8%AD%E9%97%B4%E5%B1%82%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0-%E4%B8%80/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-空间留言板自动留言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/07/05/%E7%A9%BA%E9%97%B4%E7%95%99%E8%A8%80%E6%9D%BF%E8%87%AA%E5%8A%A8%E7%95%99%E8%A8%80/" target="_blank">空间留言板自动留言</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/07/05/%E7%A9%BA%E9%97%B4%E7%95%99%E8%A8%80%E6%9D%BF%E8%87%AA%E5%8A%A8%E7%95%99%E8%A8%80/" class="archive-article-date">
-        <time datetime="2018-07-05T05:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-05</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>以前那谁要我给她空间留言；觉得很烦；鉴于此；就如此操作了；当然此数组有点过大了；而且是死的，可以通过聚合api等接口获取数据，写入也是可以的；简单的替换一下<br>
-    
-    <a class="article-more-a" href="/2018/07/05/%E7%A9%BA%E9%97%B4%E7%95%99%E8%A8%80%E6%9D%BF%E8%87%AA%E5%8A%A8%E7%95%99%E8%A8%80/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/07/05/%E7%A9%BA%E9%97%B4%E7%95%99%E8%A8%80%E6%9D%BF%E8%87%AA%E5%8A%A8%E7%95%99%E8%A8%80/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-weex开发框架的搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/04/17/weex%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA/" target="_blank">weex开发框架的搭建</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/04/17/weex%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-        <time datetime="2018-04-17T03:05:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+<a href="/2018/09/12/reademe/" class="archive-article-date">
+        <time datetime="2018-09-12T08:51:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
 </a>
 
   
@@ -627,369 +1026,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <p>[TOC]</p>
-<h2 id="weex的简单上手"><a href="#weex的简单上手" class="headerlink" title="weex的简单上手"></a>weex的简单上手</h2><blockquote>
-<p>为了能在本地机器上打开 Android 和 iOS 项目，应该配置好客户端的开发环境。<br>对于 iOS，你应该安装并且配置好 Xcode。<br>对于 Android，首先Java环境使用java8版本，你应该安装并且配置好 Android Studio。</p>
-</blockquote>
-<ol>
-<li>参考文档 <a target="_blank" rel="noopener" href="https://weex.apache.org/cn/guide/">weex开发文档</a></li>
-<li>安装weex-toolkit 需要npm 5.0以上；如若不是请首先升级npm <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install weex-toolkit -g</span><br><span class="line"><span class="comment">//升级weexpack</span></span><br><span class="line">weex update weexpack@<span class="number">1.2</span><span class="number">.1</span></span><br></pre></td></tr></table></figure></li>
-<li>创建项目 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weex create helloWeex</span><br></pre></td></tr></table></figure></li>
-<li>进入项目并安装依赖运行 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd helloWeex</span><br><span class="line">npm install</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure></li>
-<li>添加IOS或Android平台 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">weex platform add android</span><br><span class="line">weex platform add ios</span><br></pre></td></tr></table></figure></li>
-<li>编译运行<blockquote>
-<p>当开发环境准备就绪后，运行下面的命令，可以在模拟器或真实设备上启动应用：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weex run android</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-<li>启动图标以及启动图的修改<blockquote>
-<p>  <a target="_blank" rel="noopener" href="http://liuguixue.com/15125784694068.html">weex启动图的修改</a><br> 目录Android/app/src/main/</p>
-</blockquote>
-</li>
-<li>weex原生功能插件<a target="_blank" rel="noopener" href="http://natjs.com/#/">插件市场</a></li>
-<li>最终工程目录<br><img src="https://upload-images.jianshu.io/upload_images/3984510-dee882aed4c87018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/328" alt="工程目录"></li>
-</ol>
-
+<p>###Welcome to use MarkDown<br>
     
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/04/17/weex%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-在Mac上安装Android开发环境" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/04/12/%E5%9C%A8Mac%E4%B8%8A%E5%AE%89%E8%A3%85Android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" target="_blank">在Mac上安装Android开发环境</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/04/12/%E5%9C%A8Mac%E4%B8%8A%E5%AE%89%E8%A3%85Android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="archive-article-date">
-        <time datetime="2018-04-12T14:02:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><ol>
-<li>brew install jdk/brew install java <a target="_blank" rel="noopener" href="https://www.cnblogs.com/lidyan/p/6973492.html">mac安装java</a>应安装java8 brew install caskroom/versios/java8</li>
-<li>配置Java环境变量。</li>
-<li><code>`</code>javascript</li>
-<li>cd ~/</li>
-<li>nano .bashrc</li>
-<li>写入Java的路径</li>
-<li>source .bashrc</li>
-<li><code>`</code></li>
-<li><a target="_blank" rel="noopener" href="http://tools.android-studio.org/index.php/sdk">下载SDK</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.android-studio.org/">下载AndroidStudio及SDKtools</a></li>
-<li>使用sdktools安装相关Android API<blockquote>
-<p>进入到android-sdk-macoxs下的Tools文件夹，双击Android文件。即可启动Android SDK Manager。<br>在启动后的页面，选择 Android SDK Tools 和 AndroidSDKPlatform-tools，进行安装。</p>
-</blockquote>
-</li>
-</ol>
-<p>因为，Android SDK Manager需要有Java的支持，如果您的电脑没有安装java。则第一次在双击Andriod文件的时候，会提示您下载Java，请下载安装java。</p>
-<p>至此您就可以在Android SDK Manager中下载和更新 Android SDK Tolls 和 Android SDK Platform-tools 。<br>adb调试工具一般位于Platform-tools下。<br><a target="_blank" rel="noopener" href="https://www.imooc.com/article/16145?block_id=tuijian_wz">如何在Mac中使用Android SDK</a></p>
-<p><a href="blogs.csdn.net/weixin_38327562/details/7105726">解决adb :command not found问题</a></p>
-<p><a href="www.ddiinnxx.com/solving-not-determine-java-version-9-0-1-gradle-intellij-macosx">解决could not determine java version from ‘10.0’</a><br>版本冲突 android-studio安装了8版本的 jdk🈶️安装了10版本导致的</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/04/12/%E5%9C%A8Mac%E4%B8%8A%E5%AE%89%E8%A3%85Android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-微信扫码登录pc网站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/" target="_blank">微信扫码登录pc网站</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/" class="archive-article-date">
-        <time datetime="2018-04-01T12:16:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <span id="more"></span>
-<ol>
-<li><p>根据微信资源中心<a target="_blank" rel="noopener" href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN">api</a><br>提供一个链接，链接url里包括这些信息</p>
-<p> | 参数      | 是否必须           | 描述  |<br> | ————- |————-| —–|<br> | appid           |  是       |     应用唯一标识；每个公众号都有的 |<br> | redirect_uri  |  是         |  重定向的url地址；必须在微信公众号的安全域下，且需要进行urlEncode加密 |<br> | response_type |  是         |  填code |<br> | scope            |  是       | 应用授权作用域，拥有多个作用域用逗号（,）分隔，网页应用目前仅填写snsapi_login即可     |<br> | state            |  否      |    用于保持请求和回调的状态，授权请求后原样带回给第三方。该参数可用于防止csrf攻击（跨站请求伪造攻击），建议第三方带上该参数，可设置为简单的随机数加session进行校验    |<br> 本来想跳到我们的 <em><a target="_blank" rel="noopener" href="http://web.li-shang-bin.com/#/login">http://web.li-shang-bin.com/#/login</a></em> 页面的；但发现微信识别不了 <strong>#</strong><br> 此处我们的项目填写的url是 <em><a target="_blank" rel="noopener" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;">https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;</a></em></p>
-<p> appid: wxc649fbdaa41fc636</p>
-<p> redirect_uri: <a target="_blank" rel="noopener" href="http://web.li-shang-bin.com">http://web.li-shang-bin.com</a>;</p>
-</li>
-<li><p>用户点击此链接后会跳到一个二维码界面<br>用户扫面二维码界面并点击确定后则跳到redirec_uri定义的url里并且把code（后台可以通过code获取用户的openid及昵称等信息）带过来形成 <strong>redirec_uri?code=<em>&amp;state=</em></strong>;此处我们还没用到state只用了code</p>
-</li>
-<li>在此页面通过解析页面的url获取到code <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以用此方法解析url</span></span><br><span class="line"><span class="function"><span class="title">getUrlVars</span>(<span class="params">url</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">var</span> hash;</span><br><span class="line">	<span class="keyword">var</span> myJson = &#123;&#125;;</span><br><span class="line">	<span class="keyword">var</span> hashes = url.slice(url.indexOf(<span class="string">&#x27;?&#x27;</span>) + <span class="number">1</span>).split(<span class="string">&#x27;&amp;&#x27;</span>);</span><br><span class="line">	<span class="keyword">var</span> arr=[];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; hashes.length; i++) &#123;</span><br><span class="line">		hash = hashes[i].split(<span class="string">&#x27;=&#x27;</span>);</span><br><span class="line">		<span class="keyword">if</span>(myJson.hasOwnProperty(hash[<span class="number">0</span>]))&#123;</span><br><span class="line">			myJson[hash[<span class="number">0</span>]]=myJson[hash[<span class="number">0</span>]]+<span class="string">&#x27;,&#x27;</span>+hash[<span class="number">1</span>]</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			myJson[hash[<span class="number">0</span>]] = hash[<span class="number">1</span>]						</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> myJson;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>将code传给后台让他获取用户的信息获取信息后后台分以下几步<pre><code>1. 获取了用户的openid；从数据根据openid查找看是否有此用户；
-    如果没有没有返回给前端false(0)；让其跳到注册页面，并把openid，等信息页传递过去；前端存在缓存里
-        此时用户注册会在基础注册上增加openid等信息；完成用户和微信的绑定；然后删除缓存
-    如果有，将查询到的用户信息返回给前端，前端完成登录
-2. 跳到个人信息页的问题；
-    开始用的是路由跳转router.push的方法跳转到用户信息页；但发现此方法会在url?code=****&amp;state=后面追加相关路由；
-    然后改用window.location.href=‘你想跳的页面url’；但也还是在后面继续追加；具体原因依然不明
-    现在使用的是window.open(&apos;你想跳的页面url&apos;,&apos;_self&apos;)使其跳转
-</code></pre> 至此登录完成；</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-编码解码url解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2017/07/09/%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81url%E8%A7%A3%E6%9E%90/" target="_blank">&#39;编码解码url解析&#39;</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2017/07/09/%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81url%E8%A7%A3%E6%9E%90/" class="archive-article-date">
-        <time datetime="2017-07-09T14:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>encodeURI 用来编码URI<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br>escape 函数可对字符串进行编码，编码城十六进制，这样就可以在所有的计算机上读取该字符串。</p>
-<h2 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h2><p>decodeURI 用来解码URI<br>unescape 函数可对字符串进行解码，decodeURIComponent</p>
-<p>##　解析url<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">var arr&#x3D; &#123;&quot;周乐林&quot;:98.00%, &quot;汪亦然&quot;:98.12%, &quot;江流儿&quot;:98.34%, &quot;张庆杰&quot;:19.98%, &quot;苏一&quot;:98.88%&#125;</span><br><span class="line">在index页面需将此arr传给另一页面server，</span><br><span class="line">通过接口获取到的数据arr</span><br><span class="line">var arr &#x3D; out.data.arr; </span><br><span class="line">    console.log(JSON.stringify(arr))</span><br><span class="line">    &#x2F;&#x2F;1. 用正则匹配属性值，去掉%</span><br><span class="line">    &#x2F;&#x2F;2. 用正则匹配&quot;去掉它</span><br><span class="line">    &#x2F;&#x2F;3. 用正则匹配,改成&#125;,&#123;形式</span><br><span class="line">    得到arr&#x3D;&#123;周乐林:98.00&#125;,&#123; 汪亦然:98.12&#125;,&#123;江流儿:98.34&#125;,&#123;张庆杰:19.98&#125;,&#123;苏一:98.88&#125;</span><br><span class="line"></span><br><span class="line">    arr &#x3D; JSON.stringify(arr).replace(&#x2F;\&quot;(\d+\..\d+)%\&quot;&#x2F;g, &quot;$1&quot;).replace(&#x2F;\&quot;&#x2F;g ,&quot;&quot;).replace(&#x2F;,&#x2F;g , &quot;&#125;,&#123;&quot;)                </span><br><span class="line">    $(&quot;.showRight&quot;).unbind().click(function()&#123;</span><br><span class="line">         window.location.href &#x3D; &quot;praxisRankingList.aspx?arr&#x3D;&quot;+arr+&quot;&amp;nums&#x3D;&quot;+out.data.dataList.length+&quot;&amp;accuracys&#x3D;&quot;+out.data.accuracys+&quot;&amp;takeParts&#x3D;&quot;+out.data.takeParts</span><br><span class="line">        &#125;)               </span><br><span class="line"></span><br><span class="line">另一页面操作</span><br><span class="line">var data &#x3D; getUrlVars(window.location.href) </span><br><span class="line">        &#x2F;&#x2F;首先进行解码 </span><br><span class="line"></span><br><span class="line">        data.stuaccuracys&#x3D;decodeURI(data.stuaccuracys);  </span><br><span class="line">        &#x2F;&#x2F;再分割成数组</span><br><span class="line">        var arr &#x3D; data.stuaccuracys.split(&quot;,&quot;)</span><br><span class="line">        &#x2F;&#x2F;arr&#x3D;[&#123;周乐林:98.90&#125;,&#123;汪亦然:98.12&#125;,&#123;江流儿:98.34&#125;,&#123;张庆杰:19.98&#125;,&#123;苏一:98.88&#125;]</span><br><span class="line">        &#x2F;&#x2F;再将内部的中午属性值用&quot;&quot;包裹并利用JSON.parse进行解析为对象</span><br><span class="line">        for(let i&#x3D;0; i&lt;arr.length; i++)&#123;        </span><br><span class="line">            arr[i]&#x3D;JSON.parse(arr[i].replace(&#x2F;&#123;(\W+):&#x2F;g, &quot;&#123;\&quot;$1\&quot;:&quot;))</span><br><span class="line">            for(var k in arr[i])&#123;</span><br><span class="line">                arr[i][&quot;num&quot;]&#x3D;arr[i][k]</span><br><span class="line">                arr[i][&quot;name&quot;]&#x3D;k</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#x2F;&#x2F;此方法可将url里的简直对解析成对象</span><br><span class="line"></span><br><span class="line">function getUrlVars(url) &#123;</span><br><span class="line">    var hash;</span><br><span class="line">    var myJson &#x3D; &#123;&#125;;</span><br><span class="line">    var hashes &#x3D; url.slice(url.indexOf(&#39;?&#39;) + 1).split(&#39;&amp;&#39;);</span><br><span class="line">    for (var i &#x3D; 0; i &lt; hashes.length; i++) &#123;</span><br><span class="line">        hash &#x3D; hashes[i].split(&#39;&#x3D;&#39;);</span><br><span class="line">        myJson[hash[0]] &#x3D; hash[1];</span><br><span class="line">    &#125;</span><br><span class="line">    return myJson;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p>var arr是数组格式的字符串，可用eval(“(“+arr+”)”)转为数组</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2017/07/09/%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81url%E8%A7%A3%E6%9E%90/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git初学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2017/03/02/git%E5%88%9D%E5%AD%A6%E4%B9%A0/" target="_blank">git初学习</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2017/03/02/git%E5%88%9D%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2017-03-02T13:11:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。  Git的读音为/gɪt/。<br>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux<br>内核开发而开发的一个开放源码的版本控制软件。<br>
-    
-    <a class="article-more-a" href="/2017/03/02/git%E5%88%9D%E5%AD%A6%E4%B9%A0/#more">more >></a>
+    <a class="article-more-a" href="/2018/09/12/reademe/#more">more >></a>
     
     
 
@@ -1005,7 +1044,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2017/03/02/git%E5%88%9D%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
+      <a class="article-more-a" href="/2018/09/12/reademe/">展开全文 >></a>
     </p>
     
 
@@ -1037,7 +1076,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1049,7 +1088,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018-2022 Rowling Joe
+    		&copy; 2018-2024 Rowling Joe
     	</div>
       	<div class="footer-right">
 			
@@ -1193,6 +1232,66 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">观影感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vite</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">打包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
             
             <div class="clearfix"></div>
