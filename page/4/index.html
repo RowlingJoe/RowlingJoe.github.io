@@ -197,6 +197,84 @@
 
 
   
+    <article id="post-reademe" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/09/12/reademe/" target="_blank">reademe</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/09/12/reademe/" class="archive-article-date">
+        <time datetime="2018-09-12T08:51:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>[TOC]</p>
+<p>###Welcome to use MarkDown<br>
+    
+    <a class="article-more-a" href="/2018/09/12/reademe/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/09/12/reademe/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vue减小打包体积" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1000,115 +1078,6 @@
 
 
   
-    <article id="post-微信扫码登录pc网站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/" target="_blank">微信扫码登录pc网站</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/" class="archive-article-date">
-        <time datetime="2018-04-01T12:16:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <span id="more"></span>
-<ol>
-<li><p>根据微信资源中心<a target="_blank" rel="noopener" href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN">api</a><br>提供一个链接，链接url里包括这些信息</p>
-<p> | 参数      | 是否必须           | 描述  |<br> | ————- |————-| —–|<br> | appid           |  是       |     应用唯一标识；每个公众号都有的 |<br> | redirect_uri  |  是         |  重定向的url地址；必须在微信公众号的安全域下，且需要进行urlEncode加密 |<br> | response_type |  是         |  填code |<br> | scope            |  是       | 应用授权作用域，拥有多个作用域用逗号（,）分隔，网页应用目前仅填写snsapi_login即可     |<br> | state            |  否      |    用于保持请求和回调的状态，授权请求后原样带回给第三方。该参数可用于防止csrf攻击（跨站请求伪造攻击），建议第三方带上该参数，可设置为简单的随机数加session进行校验    |<br> 本来想跳到我们的 <em><a target="_blank" rel="noopener" href="http://web.li-shang-bin.com/#/login">http://web.li-shang-bin.com/#/login</a></em> 页面的；但发现微信识别不了 <strong>#</strong><br> 此处我们的项目填写的url是 <em><a target="_blank" rel="noopener" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;">https://open.weixin.qq.com/connect/qrconnect?appid=wxc649fbdaa41fc636&amp;scope=snsapi_login&amp;redirect_uri=http%3a%2f%2fweb.li-shang-bin.com&amp;login_type=jssdk&amp;self_redirect=default&quot;</a></em></p>
-<p> appid: wxc649fbdaa41fc636</p>
-<p> redirect_uri: <a target="_blank" rel="noopener" href="http://web.li-shang-bin.com">http://web.li-shang-bin.com</a>;</p>
-</li>
-<li><p>用户点击此链接后会跳到一个二维码界面<br>用户扫面二维码界面并点击确定后则跳到redirec_uri定义的url里并且把code（后台可以通过code获取用户的openid及昵称等信息）带过来形成 <strong>redirec_uri?code=<em>&amp;state=</em></strong>;此处我们还没用到state只用了code</p>
-</li>
-<li>在此页面通过解析页面的url获取到code <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以用此方法解析url</span></span><br><span class="line"><span class="function"><span class="title">getUrlVars</span>(<span class="params">url</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">var</span> hash;</span><br><span class="line">	<span class="keyword">var</span> myJson = &#123;&#125;;</span><br><span class="line">	<span class="keyword">var</span> hashes = url.slice(url.indexOf(<span class="string">&#x27;?&#x27;</span>) + <span class="number">1</span>).split(<span class="string">&#x27;&amp;&#x27;</span>);</span><br><span class="line">	<span class="keyword">var</span> arr=[];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; hashes.length; i++) &#123;</span><br><span class="line">		hash = hashes[i].split(<span class="string">&#x27;=&#x27;</span>);</span><br><span class="line">		<span class="keyword">if</span>(myJson.hasOwnProperty(hash[<span class="number">0</span>]))&#123;</span><br><span class="line">			myJson[hash[<span class="number">0</span>]]=myJson[hash[<span class="number">0</span>]]+<span class="string">&#x27;,&#x27;</span>+hash[<span class="number">1</span>]</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			myJson[hash[<span class="number">0</span>]] = hash[<span class="number">1</span>]						</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> myJson;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>将code传给后台让他获取用户的信息获取信息后后台分以下几步<pre><code>1. 获取了用户的openid；从数据根据openid查找看是否有此用户；
-    如果没有没有返回给前端false(0)；让其跳到注册页面，并把openid，等信息页传递过去；前端存在缓存里
-        此时用户注册会在基础注册上增加openid等信息；完成用户和微信的绑定；然后删除缓存
-    如果有，将查询到的用户信息返回给前端，前端完成登录
-2. 跳到个人信息页的问题；
-    开始用的是路由跳转router.push的方法跳转到用户信息页；但发现此方法会在url?code=****&amp;state=后面追加相关路由；
-    然后改用window.location.href=‘你想跳的页面url’；但也还是在后面继续追加；具体原因依然不明
-    现在使用的是window.open(&apos;你想跳的页面url&apos;,&apos;_self&apos;)使其跳转
-</code></pre> 至此登录完成；</li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">微信</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/04/01/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95pc%E7%BD%91%E7%AB%99/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
@@ -1123,7 +1092,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018-2024 Rowling Joe
+    		&copy; 2018-2026 Rowling Joe
     	</div>
       	<div class="footer-right">
 			
@@ -1242,6 +1211,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">test</a>
               </li>
              
@@ -1258,31 +1231,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网络优化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">观影感</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">svg</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1294,7 +1247,23 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">微信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">观影感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">打包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1318,7 +1287,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">打包</a>
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
               </li>
              
               <li class="article-tag-list-item">
