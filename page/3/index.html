@@ -197,348 +197,6 @@
 
 
   
-    <article id="post-使用OBS及nginx快速构建一个直播服务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/12/22/%E4%BD%BF%E7%94%A8OBS%E5%8F%8Anginx%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%9B%B4%E6%92%AD%E6%9C%8D%E5%8A%A1/" target="_blank">使用OBS及nginx快速构建一个直播服务</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/12/22/%E4%BD%BF%E7%94%A8OBS%E5%8F%8Anginx%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%9B%B4%E6%92%AD%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
-        <time datetime="2021-12-22T06:59:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-22</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="需求场景"><a href="#需求场景" class="headerlink" title="需求场景"></a>需求场景</h2><p>  需要将本机或其他视频源的数据进行二次加工再直播给用户的时候使用此套工具可以在不需要过多专业知识及代码开发的情况下即可完成</p>
-<blockquote>
-<p>场景1<br>      某交通大数据监督平台需将不同路口的监控画面实时转播到用户端，且可实时拖拽的实现切换监控画面，播放不同的背景音乐</p>
-</blockquote>
-<blockquote>
-<p>场景2<br>      某射击场需将不同靶道的监控画面经过导演的裁切再转播到用户端<br>
-    
-    <a class="article-more-a" href="/2021/12/22/%E4%BD%BF%E7%94%A8OBS%E5%8F%8Anginx%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%9B%B4%E6%92%AD%E6%9C%8D%E5%8A%A1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/12/22/%E4%BD%BF%E7%94%A8OBS%E5%8F%8Anginx%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%9B%B4%E6%92%AD%E6%9C%8D%E5%8A%A1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ffmpeg的初步使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/10/19/ffmpeg%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/" target="_blank">ffmpeg的初步使用</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/10/19/ffmpeg%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2021-10-19T08:50:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-19</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="ffmpeg"><a href="#ffmpeg" class="headerlink" title="ffmpeg"></a>ffmpeg</h3><h3 id="nginx搭建rtmp服务器"><a href="#nginx搭建rtmp服务器" class="headerlink" title="nginx搭建rtmp服务器"></a>nginx搭建rtmp服务器</h3><pre><code>下载包含rtmp服务模块的nginx
-[windos下载地址](http://nginx-win.ecsds.eu/download/)
-
-linux需下载对应的此模块，然后进行编译，详情度娘
-配置
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rtmp &#123;</span><br><span class="line">  server &#123;</span><br><span class="line">    listen 1936;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</code></pre><h3 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h3><h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><ol>
-<li><a target="_blank" rel="noopener" href="https://ffmpeg.org/">ffmpeg官网</a></li>
-<li><a target="_blank" rel="noopener" href="http://nginx-win.ecsds.eu/download/">nginx下载地址</a></li>
-</ol>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/10/19/ffmpeg%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-web离线地图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/10/11/web%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE/" target="_blank">web离线地图</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/10/11/web%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE/" class="archive-article-date">
-        <time datetime="2021-10-11T02:39:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <hr>
-<h3 id="问题背景："><a href="#问题背景：" class="headerlink" title="问题背景："></a>问题背景：</h3><blockquote>
-<p>在某些环境内无法获得互联网地图瓦片资源，故而得使用离线地图完成相关业务功能</p>
-</blockquote>
-<h3 id="所需材料"><a href="#所需材料" class="headerlink" title="所需材料"></a>所需材料</h3><blockquote>
-<ol>
-<li>gis瓦片服务</li>
-<li>瓦片资源</li>
-<li>客户端程序</li>
-</ol>
-</blockquote>
-    
-    <a class="article-more-a" href="/2021/10/11/web%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/10/11/web%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Websocket-stomp-js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/04/24/Websocket-stomp-js/" target="_blank">Websocket-stomp.js</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/04/24/Websocket-stomp-js/" class="archive-article-date">
-        <time datetime="2021-04-24T02:18:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-24</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p><a target="_blank" rel="noopener" href="http://stomp.github.io/">官网</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4ef5004a1c81">简书-ws+sockJs+stop</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bbsmax.com/A/n2d9269ozD/">stompJs使用文档</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/04/24/Websocket-stomp-js/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-vue3开始使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1089,6 +747,364 @@ linux需下载对应的此模块，然后进行编译，详情度娘
 
 
   
+    <article id="post-reademe" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/09/12/reademe/" target="_blank">reademe</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/09/12/reademe/" class="archive-article-date">
+        <time datetime="2018-09-12T08:51:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>[TOC]</p>
+<p>###Welcome to use MarkDown<br>
+    
+    <a class="article-more-a" href="/2018/09/12/reademe/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/09/12/reademe/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vue减小打包体积" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/09/12/vue%E5%87%8F%E5%B0%8F%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/" target="_blank">vue减小打包体积</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/09/12/vue%E5%87%8F%E5%B0%8F%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/" class="archive-article-date">
+        <time datetime="2018-09-12T08:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>webpack项目打包后vender高达800K，</p>
+<ol>
+<li>在打包的时候将UI框架，vue等依赖也打入了vender里</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容</td>
+<td>内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>内容</td>
+</tr>
+</tbody>
+</table>
+<p>可通过webpack的enternal来设置某些依赖可不打入vender中而是通过引用的方式使用<br>
+    
+    <a class="article-more-a" href="/2018/09/12/vue%E5%87%8F%E5%B0%8F%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/09/12/vue%E5%87%8F%E5%B0%8F%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-减小webpack打包体积" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/09/10/%E5%87%8F%E5%B0%8Fwebpack%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/" target="_blank">减小webpack打包体积</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/09/10/%E5%87%8F%E5%B0%8Fwebpack%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/" class="archive-article-date">
+        <time datetime="2018-09-10T10:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="近来发现vue项目打包后体积真大，寻求减小打包体积的方法，一番百度得出一些方法"><a href="#近来发现vue项目打包后体积真大，寻求减小打包体积的方法，一番百度得出一些方法" class="headerlink" title="近来发现vue项目打包后体积真大，寻求减小打包体积的方法，一番百度得出一些方法"></a>近来发现vue项目打包后体积真大，寻求减小打包体积的方法，一番百度得出一些方法</h1>
+    
+    <a class="article-more-a" href="/2018/09/10/%E5%87%8F%E5%B0%8Fwebpack%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/09/10/%E5%87%8F%E5%B0%8Fwebpack%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-studyMiniprogrameFromLazycat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/08/10/studyMiniprogrameFromLazycat/" target="_blank">从猫开始学习小程序</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/08/10/studyMiniprogrameFromLazycat/" class="archive-article-date">
+        <time datetime="2018-08-10T10:19:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="关于小程序"><a href="#关于小程序" class="headerlink" title="关于小程序"></a>关于小程序</h2><p>首先我很讨厌小程序,仅以此图略表个人主观情感<br><img src="https://github.com/RowlingJoe/figureBed/blob/master/image/%E5%96%9C%E6%AC%A2%E5%8F%91%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%84%BF%E5%AD%90.png?raw=true" alt="喜欢发小程序的儿子"></p>
+<p>但是呢，出于目前技术发展及职业需要有不得不涉及小程序，故还是得学习一番。<br>小程序的框架目前比较好的就是美团的基于vue的mpvue</p>
+    
+    <a class="article-more-a" href="/2018/08/10/studyMiniprogrameFromLazycat/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/08/10/studyMiniprogrameFromLazycat/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
@@ -1242,7 +1258,11 @@ linux需下载对应的此模块，然后进行编译，详情度娘
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络优化</a>
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1250,7 +1270,15 @@ linux需下载对应的此模块，然后进行编译，详情度娘
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1270,14 +1298,6 @@ linux需下载对应的此模块，然后进行编译，详情度娘
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">打包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vite</a>
               </li>
              
@@ -1287,6 +1307,10 @@ linux需下载对应的此模块，然后进行编译，详情度娘
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">打包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1303,10 +1327,6 @@ linux需下载对应的此模块，然后进行编译，详情度娘
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
             
             <div class="clearfix"></div>
