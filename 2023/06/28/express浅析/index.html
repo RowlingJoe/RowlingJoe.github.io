@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="中间件与 nextexpress 中的中间件（middleware）就是用来处理请求的，当一个中间件处理完，可以通过调用 next() 传递给下一个中间件，如果没有调用 next()，则请求不会往下传递，如内置的 res.render 其实就是渲染完 html 直接返回给客户端，没有调用 next()，从而没有传递给下一个中间件。看个小例子，修改 index.js 如下： index.js 123">
+  <meta name="description" content="中间件与 nextexpress 中的中间件（middleware）就是用来处理请求的，当一个中间件处理完，可以通过调用 next() 传递给下一个中间件，如果没有调用 next()，则请求不会往下传递，如内置的 res.render 其实就是渲染完 html 直接返回给客户端，没有调用 next()，从而没有传递给下一个中间件。看个小例子，修改 index.js 如下： index.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="express浅析">
 <meta property="og:url" content="https://rowlingjoe.github.io/2023/06/28/express%E6%B5%85%E6%9E%90/index.html">
 <meta property="og:site_name" content="周乐林的博客">
-<meta property="og:description" content="中间件与 nextexpress 中的中间件（middleware）就是用来处理请求的，当一个中间件处理完，可以通过调用 next() 传递给下一个中间件，如果没有调用 next()，则请求不会往下传递，如内置的 res.render 其实就是渲染完 html 直接返回给客户端，没有调用 next()，从而没有传递给下一个中间件。看个小例子，修改 index.js 如下： index.js 123">
+<meta property="og:description" content="中间件与 nextexpress 中的中间件（middleware）就是用来处理请求的，当一个中间件处理完，可以通过调用 next() 传递给下一个中间件，如果没有调用 next()，则请求不会往下传递，如内置的 res.render 其实就是渲染完 html 直接返回给客户端，没有调用 next()，从而没有传递给下一个中间件。看个小例子，修改 index.js 如下： index.js">
 <meta property="og:locale">
 <meta property="og:image" content="https://rowlingjoe.github.io/2023/06/28/express%E6%B5%85%E6%9E%90/img/3.4.1.png">
 <meta property="og:image" content="https://rowlingjoe.github.io/2023/06/28/express%E6%B5%85%E6%9E%90/img/3.4.2.png">
 <meta property="article:published_time" content="2023-06-28T13:10:17.000Z">
-<meta property="article:modified_time" content="2023-06-28T13:15:06.125Z">
+<meta property="article:modified_time" content="2026-05-30T03:32:24.034Z">
 <meta property="article:author" content="Rowling Joe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://rowlingjoe.github.io/2023/06/28/express%E6%B5%85%E6%9E%90/img/3.4.1.png">
@@ -66,7 +66,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/yilia-plus-demo/" class="profilepic">
-			<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
+			<img src="https://github.com/RowlingJoe/figureBed/blob/master/image/PIC_20140512_163337_145.jpg?raw=true" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/yilia-plus-demo/"></a></h1>
@@ -142,7 +142,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 				<a href="/yilia-plus-demo/">
-					<img src="https://www.thispersondoesnotexist.com/" class="js-avatar">
+					<img src="https://github.com/RowlingJoe/figureBed/blob/master/image/PIC_20140512_163337_145.jpg?raw=true" class="js-avatar">
 				</a>
 			</div>
 			<hgroup>
@@ -245,7 +245,7 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h2 id="中间件与-next"><a href="#中间件与-next" class="headerlink" title="中间件与 next"></a>中间件与 next</h2><p>express 中的中间件（middleware）就是用来处理请求的，当一个中间件处理完，可以通过调用 <code>next()</code> 传递给下一个中间件，如果没有调用 <code>next()</code>，则请求不会往下传递，如内置的 <code>res.render</code> 其实就是渲染完 html 直接返回给客户端，没有调用 <code>next()</code>，从而没有传递给下一个中间件。看个小例子，修改 index.js 如下：</p>
-<p><strong>index.js</strong></p>
+<p><strong>index.js</strong><br><span id="more"></span></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;2&#x27;</span>)</span><br><span class="line">  res.status(<span class="number">200</span>).end()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
 <p>此时访问 <code>localhost:3000</code>，终端会输出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
@@ -629,11 +629,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color5">网络优化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络优化</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -661,6 +661,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">打包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vite</a>
               </li>
              
@@ -670,10 +674,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">打包</a>
               </li>
              
               <li class="article-tag-list-item">
